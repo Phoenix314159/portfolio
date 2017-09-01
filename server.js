@@ -4,6 +4,9 @@ const express = require('express'),
 
 app.use(express.static(__dirname + '/dist'));
 
+process.env.PWD = process.cwd();
+
+app.use('/', express.static(process.env.PWD + '/dist'));
 
 app.listen(port, () => {
     console.log(`listening on port ${port}`);
