@@ -91,7 +91,7 @@ gulp.task('copy', function() {
 
 
 gulp.task('build', ['minify-css', 'minify-js', 'copy'], () => {
-    return gulp.src('./index.html')
+    return gulp.src('./client/index.html')
         .pipe($.htmlmin({
             collapseWhitespace: true,
         }))
