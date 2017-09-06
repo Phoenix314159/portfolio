@@ -16,16 +16,16 @@ var banner = ['/*!\n',
 ].join('');
 
 // Compiles SCSS files from /scss into /css
-gulp.task('sass', function() {
-  return gulp.src('scss/grayscale.scss')
-    .pipe($.sass())
-      .pipe(gulp.dest('css'))
-
-});
+// gulp.task('sass', function() {
+//   return gulp.src('client/scss/grayscale.scss')
+//     .pipe($.sass())
+//       .pipe(gulp.dest('css'))
+//
+// });
 
 // Minify compiled CSS
-gulp.task('minify-css', ['sass'], function() {
-  return gulp.src('css/*.css')
+gulp.task('minify-css', function() {
+  return gulp.src('./client/css/*.css')
     .pipe($.cleanCss({
       compatibility: 'ie8'
     }))
