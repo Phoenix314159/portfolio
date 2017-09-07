@@ -1,6 +1,6 @@
 const express = require('express'),
     app = express(),
-    port = process.env.PORT || 3215;
+    port = process.env.PORT || 3225;
 
 // app.use(express.static(__dirname + '/client'));
 
