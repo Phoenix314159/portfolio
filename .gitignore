@@ -1,3 +1,6 @@
 
 /node_modules
 /dist
+/client/vendor
+/client/scss
+/client/js
