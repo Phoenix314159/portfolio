@@ -1,0 +1,823 @@
+header .intro-text .skills {
+    font-size: 3.75em;
+}
+
+.cool h2 {
+    color: #ffffff;
+}
+
+.skillsLine {
+    color: black;
+}
+
+.tag {
+    text-align: center;
+    font-family: 'Rozha One', serif;
+    font-weight: bold;
+    font-size: 1.6em;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px black;
+}
+
+.dude {
+    color: whitesmoke;
+}
+
+.dude2 {
+    color: whitesmoke;
+}
+
+#skills .cool {
+    margin-top: -12vh;
+}
+
+.brand-heading {
+    text-shadow: 2px 2px 5px black;
+}
+
+.stack {
+    font-size: 2.1em;
+    font-family: 'Rozha One', serif;
+    text-shadow: 2px 2px 5px black;
+}
+
+.flex p {
+    text-align: center;
+}
+
+.me {
+    background: url("../img/1.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: darken;
+    background-size: cover;
+}
+
+.socialButtons span {
+    font-family: 'Rozha One', serif;
+}
+
+.resumeButtons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.resumeButtons .sheet {
+    margin-right: 14.5px;
+}
+
+.resumeButtons .download2 {
+    margin-left: 14.5px;
+}
+
+.resumeButtons span {
+    font-family: 'Rozha One', serif;
+}
+
+.textButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textButton .text48 {
+    font-family: 'Rozha One', serif;
+    color: whitesmoke;
+}
+
+.text45 {
+    font-size: 1.2em;
+}
+
+#skills {
+    height: 128%;
+    background: url("../img/gray-beach.jpeg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: darken;
+    background-size: cover;
+}
+
+.background {
+    background-image: url("../img/gray-beach.jpeg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: darken;
+    background-size: cover;
+}
+
+.box {
+    border-radius: 7pt;
+    width: 390px;
+    height: 350px;
+    padding: 2.5%;
+    border: 2px solid whitesmoke;
+}
+
+.box:hover {
+    background-color: black;
+    box-shadow: inset 0 0 0 15px #3A5161;
+}
+
+.box29 {
+    text-align: center;
+}
+
+.imageLinks {
+    height: 230px;
+    width: 390px;
+}
+
+.text23 {
+    color: whitesmoke;
+}
+
+.links26 {
+    position: absolute;
+    bottom: 4%;
+    width: 92%
+}
+
+.links25 {
+    display: flex;
+    height: 18vh;
+    justify-content: space-around;
+    font-size: 1.15em;
+}
+
+.links25 span a {
+    width: 90px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;
+    padding: 4%;
+}
+
+.overlay {
+    animation-name: boxswitch;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes boxswitch {
+    0% {
+        box-shadow: inset 0 0 7px 7px #3f5767;
+    }
+    20% {
+        box-shadow: inset 0 0 7px 7px whitesmoke;
+    }
+    40% {
+        box-shadow: inset 0 0 7px 7px #3a5161;
+    }
+    80% {
+        box-shadow: inset 0 0 7px 7px #BCC6CC;
+    }
+    100% {
+        box-shadow: inset 0 0 7px 7px #4C75A3;
+    }
+
+}
+
+.text-center h2 {
+    font-size: 3em;
+}
+
+.flexImage {
+    display: flex;
+    justify-content: space-between;
+}
+
+hr {
+    display: block;
+    color: whitesmoke;
+    margin-top: 0.5em;
+    margin-bottom: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+#skills2 {
+    display: flex;
+    justify-content: space-around;
+    padding: 25px;
+}
+
+.imgWrapper {
+    height: 230px;
+    max-width: 330px;
+    text-align: center;
+}
+
+.imgWrapper img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.tag1 {
+    font-size: 1.9em;
+}
+
+.centerWebpack {
+    position: relative;
+    right: .5vw;
+}
+
+.centerWebpack p {
+    position: relative;
+    right: .5vw;
+}
+
+style-five {
+    border: 0;
+    height: 0;
+    box-shadow: 0 0 10px 1px black;
+}
+
+style-five:after {
+    content: "\00a0";
+}
+
+.feedBack {
+    text-align: center;
+    font-size: 1.4em
+}
+
+.blog {
+    text-align: center;
+    font-size: 1.4em
+}
+
+.hover :hover {
+    color: whitesmoke;
+}
+
+.main {
+    width: 40vw;
+    opacity: .95;
+    border: 2px solid black;
+    margin-left: 30vw;
+    border-radius: 2%;
+    padding: 2%;
+}
+
+.projects {
+    color: whitesmoke;
+}
+
+.contactButtons {
+    color: whitesmoke;
+}
+
+.btn-custom {
+    background-color: #7b8185;
+    border-color: #7b8185;
+    box-shadow: 0 0 .25px .25px whitesmoke,
+    0 0 .5px .5px #808080,
+    0 0 .75px .35px #6f7478;
+}
+
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom.active {
+    background-color: #6f7478;
+    border-color: black;
+}
+
+.btn-custom.disabled:hover,
+.btn-custom.disabled:focus,
+.btn-custom.disabled:active,
+.btn-custom.disabled.active,
+.btn-custom[disabled]:hover,
+.btn-custom[disabled]:focus,
+.btn-custom[disabled]:active,
+.btn-custom[disabled].active,
+fieldset[disabled] .btn-custom:hover,
+fieldset[disabled] .btn-custom:focus,
+fieldset[disabled] .btn-custom:active,
+fieldset[disabled] .btn-custom.active {
+    background-color: #7b8185;
+    border-color: #7b8185;
+}
+
+.card {
+    background-color: #E8E8E8;
+    height: 35vh;
+    max-width: 19.15vw;
+    box-shadow: 0 0 1px .75px whitesmoke,
+    0 0 2.5px 1.5px #808080,
+    0 0 3px 1.75px #778899;
+}
+
+.card-body {
+    padding-top: 109px;
+}
+
+.card-title {
+    text-align: center;
+    margin-top: 2vh;
+    color: #707070;
+    text-shadow: 1px 1px 1px black;
+}
+
+.card-text {
+    padding: 4%;
+    font-size: 1.4em;
+    font-family: 'Rozha One', serif;
+    color: whitesmoke;
+    position: absolute;
+    top: 2%;
+}
+
+.projectInfo2 {
+    margin-bottom: 0;
+    margin-top: 2vh;
+}
+
+.githubLink {
+    font-size: 1.2em;
+    text-align: center;
+    font-family: 'Rozha One', serif;
+    margin-top: auto;
+}
+
+.githubLink a {
+    color: whitesmoke;
+    font-family: 'Rozha One', serif;
+}
+
+.githubLink a:hover {
+    color: lightgrey;
+}
+
+#projects {
+    background-color: black;
+    margin-top: -15vh;
+    height: 164%;
+    background-image: -moz-radial-gradient(circle, #FFFFFF .5px, #C0C0C0 .5px, transparent 10px),
+    -moz-radial-gradient(circle, #FFFFFF .5px, #778899 .5px, transparent 7.5px),
+    -moz-radial-gradient(ellipse, rgba(255, 255, 255, .9) .5px, #D3D3D3 .5px, transparent 10px),
+    -moz-radial-gradient(ellipse, rgba(255, 255, 255, .4), #C0C0C0 .5px, transparent 7.5px);
+
+    /* Webkit */
+    background-image: -webkit-gradient(radial, 50% 50%, 2, 50% 50%, 5, from(white), color-stop(0.1, #C0C0C0), to(transparent)),
+    -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 3.5, from(white), color-stop(0.1, #778899), to(transparent)),
+    -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 5, from(rgba(255, 255, 255, .9)), color-stop(0.05, #D3D3D3), to(transparent)),
+    -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 3.5, from(rgba(255, 255, 255, .4)), color-stop(0.03, #C0C0C0), to(transparent));
+
+    /* Background Attributes */
+    background-size: 550px 550px, 350px 350px, 250px 270px, 220px 200px;
+    background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+
+    /* Animation */
+    animation-name: movement;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    /* Firefox */
+    -moz-animation-name: movement;
+    -moz-animation-duration: 15s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+    /* Webkit */
+    -webkit-animation-name: movement;
+    -webkit-animation-duration: 15s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+}
+
+#projects > .container {
+    max-width: 78vw;
+}
+
+.cool > .container {
+    max-width: 78vw;
+}
+
+.cool > h2 {
+    text-shadow: 2px 2px 5px black;
+}
+
+.contactMe > h2 {
+    text-shadow: 2px 2px 5px black;
+}
+
+.heyman {
+    margin-right: -240px;
+    margin-left: -240px;
+}
+
+.projectsLine {
+    width: 50%;
+}
+
+.textItem {
+    display: none;
+}
+
+.titles {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Rozha One', serif;
+}
+
+.titles2 {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Rozha One', serif;
+}
+
+.row21 {
+    width: 90vh;
+}
+
+#back {
+    padding: 2%;
+    width: 100%;
+    height: 60vh;
+    background-image: url('../img/brushed-metal-background.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: darken;
+    background-size: cover;
+}
+
+#about {
+    height: 120%;
+    margin-bottom: 0;
+    background-image: -moz-radial-gradient(circle, #FFFFFF .5px, #C0C0C0 .5px, transparent 10px),
+    -moz-radial-gradient(circle, #FFFFFF .5px, #778899 .5px, transparent 7.5px),
+    -moz-radial-gradient(ellipse, rgba(255, 255, 255, .9) .5px, #D3D3D3 .5px, transparent 10px),
+    -moz-radial-gradient(ellipse, rgba(255, 255, 255, .4), #C0C0C0 .5px, transparent 7.5px);
+
+    /* Webkit */
+    background-image: -webkit-gradient(radial, 50% 50%, 2, 50% 50%, 5, from(white), color-stop(0.1, #C0C0C0), to(transparent)),
+    -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 3.5, from(white), color-stop(0.1, #778899), to(transparent)),
+    -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 5, from(rgba(255, 255, 255, .9)), color-stop(0.05, #D3D3D3), to(transparent)),
+    -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 3.5, from(rgba(255, 255, 255, .4)), color-stop(0.03, #C0C0C0), to(transparent));
+
+    /* Background Attributes */
+    background-size: 550px 550px, 350px 350px, 250px 270px, 220px 200px;
+    background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+
+    /* Animation */
+    animation-name: movement;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    /* Firefox */
+    -moz-animation-name: movement;
+    -moz-animation-duration: 25s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+    /* Webkit */
+    -webkit-animation-name: movement;
+    -webkit-animation-duration: 25s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+}
+
+#about p {
+    font-family: 'Rozha One', serif;
+    font-size: 1.6em;
+    text-shadow: 2px 2px 5px black;
+}
+
+@keyframes movement {
+    from {
+        background-position: 0 0, -30px -60px, -130px -270px, -70px -150px;
+    }
+    to {
+        background-position: 1000px 1000px, 320px 60px, 120px 270px, 120px 120px;
+    }
+}
+
+@-moz-keyframes movement {
+    from {
+        background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+    }
+    to {
+        background-position: -550px 0, -320px 60px, -120px 270px, -150px 150px;
+    }
+}
+
+@-webkit-keyframes movement {
+    from {
+        background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+    }
+    to {
+        background-position: -550px 0, -320px 60px, -120px 270px, -150px 150px;
+    }
+}
+
+.weather {
+    text-align: center;
+    font-size: 1.4em
+}
+
+.align {
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 1440px) and (max-width: 1919px) {
+    .heyman {
+        margin-right: -115px;
+        margin-left: -115px;
+    }
+
+    .imgWrapper {
+        height: 190px;
+    }
+
+    .card img {
+        max-height: 190px;
+    }
+
+    .card {
+        height: 36vh;
+    }
+
+    .card-text {
+        font-size: 1.1em;
+    }
+
+    #projects {
+        height: 170%;
+    }
+
+    #skills {
+        height: 150%;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1440px) {
+    .heyman {
+        margin-right: -115px;
+        margin-left: -115px;
+    }
+
+    .card {
+        height: 32vh;
+    }
+
+    .imgWrapper {
+        height: 170px;
+    }
+
+    .card img {
+        max-height: 170px;
+    }
+
+    #skills {
+        height: 132%;
+    }
+
+    #projects {
+        height: 158%;
+    }
+
+    .card-text {
+        font-size: .9em;
+    }
+
+    .card-title {
+        font-size: 1em;
+    }
+
+    .cool img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .cool .tag {
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+    #projects {
+        height: 144%;
+    }
+
+    .heyman {
+        margin-right: -90px;
+        margin-left: -90px;
+    }
+
+    .card {
+        height: 28vh;
+    }
+
+    #skills {
+        height: 138%;
+    }
+
+    .card-text {
+        font-size: .8em;
+    }
+
+    .card-title {
+        font-size: 1em;
+    }
+
+    .imgWrapper {
+        height: 150px;
+    }
+
+    .card img {
+        max-height: 150px;
+    }
+
+    .cool img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .cool .tag {
+        font-size: 1.2em;
+    }
+
+    .firstLine img {
+        height: 80px;
+        width: 80px;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1024px) {
+    .heyman {
+        margin-right: -115px;
+        margin-left: -115px;
+    }
+
+    .card-title {
+        font-size: .8em;
+    }
+
+    .smaller {
+        height: 168%;
+    }
+
+    .card-text {
+        font-size: .7em;
+    }
+
+    .card {
+        height: 26vh;
+    }
+
+    #skills {
+        height: 146%;
+    }
+
+    .tag {
+        font-size: 1.4em;
+    }
+
+    #skills2 img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .dude img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .firstLine img {
+        height: 80px;
+        width: 80px;
+    }
+
+    #projects {
+        height: 136%;
+    }
+
+    .links25 {
+        font-size: .9em;
+    }
+
+    .feedBack {
+        font-size: 1.2em;
+    }
+
+    .blog {
+        font-size: 1.2em;
+    }
+
+    .pro7 {
+        font-size: .85em;
+    }
+
+    .box {
+        height: 270px;
+    }
+
+    .imgWrapper {
+        height: 150px;
+    }
+
+    .card img {
+        max-height: 150px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .dude img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .firstLine img {
+        height: 80px;
+        width: 80px;
+    }
+
+    #projects {
+        height: 156%;
+    }
+
+    #skills {
+        height: 168%;
+    }
+
+    .card-title {
+        font-size: 1em;
+    }
+
+    .text23 {
+        font-size: .7em;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .imgWrapper img {
+        height: 120px;
+    }
+
+    .card-title {
+        font-size: .9em;
+    }
+
+    #projects {
+        height: 154%;
+    }
+
+    #skills {
+        height: 166%;
+    }
+
+    #skills .cool {
+        margin-top: -24vh;
+    }
+
+    .feedBack {
+        font-size: 1em;
+    }
+
+    .blog {
+        font-size: 1em;
+    }
+
+    .tag {
+        font-size: 1.2em;
+    }
+
+    .weather {
+        font-size: 1.15em;
+    }
+
+    .smaller {
+        height: 155%;
+    }
+
+}

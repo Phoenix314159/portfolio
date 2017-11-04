@@ -1,11 +1,3 @@
-node_modules
-<<<<<<< HEAD
-.sass-cache
-=======
-bower_components
->>>>>>> master
-
 
 /node_modules
-/client
-/gulpfile.js
+/dist
