@@ -1,1 +1,1 @@
-angular.module('portfolio', []);
+angular.module('portfolio', ['angular-parallax']);

@@ -46,7 +46,7 @@ header .intro-text .skills {
 }
 
 .me {
-    background: url("../img/1.jpg");
+    background: url("../img/moon.png");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
@@ -92,7 +92,7 @@ header .intro-text .skills {
 
 #skills {
     height: 134%;
-    background: url("../img/grey-space.jpg");
+    background: url("../img/grey26.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
