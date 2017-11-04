@@ -1,5 +1,5 @@
 angular.module('portfolio').component('contactMe', {
-  template: `   <h2 class="wow animated fadeIn contactMe">Contact</h2>
+  template: `   <h2 class="wow animated fadeIn contactMe sectionFont">Contact</h2>
                 <hr/>
                 <ul class="list-inline banner-social-buttons flex socialButtons col-12">
                     <li class="wow animated slideInLeft list-inline-item">
