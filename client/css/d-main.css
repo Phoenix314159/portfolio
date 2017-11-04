@@ -376,21 +376,20 @@ fieldset[disabled] .btn-custom.active {
     background-color: black;
     margin-top: -15vh;
     height: 164%;
-    background-image: -moz-radial-gradient(circle, #FFFFFF .5px, #C0C0C0 .5px, transparent 10px),
-    -moz-radial-gradient(circle, #FFFFFF .5px, #778899 .5px, transparent 7.5px),
-    -moz-radial-gradient(ellipse, rgba(255, 255, 255, .9) .5px, #D3D3D3 .5px, transparent 10px),
-    -moz-radial-gradient(ellipse, rgba(255, 255, 255, .4), #C0C0C0 .5px, transparent 7.5px);
+    background-image: -moz-radial-gradient(circle, #FFFFFF .2px, #C0C0C0 .5px, transparent 2.5px),
+    -moz-radial-gradient(circle, #FFFFFF .5px, #778899 .5px, transparent 3.75px),
+    -moz-radial-gradient(ellipse, #778899  .5px, #D3D3D3 .5px, transparent 2.5px),
+    -moz-radial-gradient(ellipse, #FFFFFF, #C0C0C0 .5px, transparent 1.75px);
 
     /* Webkit */
-    background-image: -webkit-gradient(radial, 50% 50%, 2, 50% 50%, 5, from(white), color-stop(0.1, #C0C0C0), to(transparent)),
-    -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 3.5, from(white), color-stop(0.1, #778899), to(transparent)),
-    -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 5, from(rgba(255, 255, 255, .9)), color-stop(0.05, #D3D3D3), to(transparent)),
-    -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 3.5, from(rgba(255, 255, 255, .4)), color-stop(0.03, #C0C0C0), to(transparent));
+    background-image: -webkit-gradient(radial, 50% 50%, 2, 50% 50%, 2.5, from(white), color-stop(0.1, #C0C0C0), to(transparent)),
+    -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 1.75, from(white), color-stop(0.1, #778899), to(transparent)),
+    -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 2.5, from(#778899), color-stop(0.05, #D3D3D3), to(transparent)),
+    -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 1.75, from(rgba(255, 255, 255, .4)), color-stop(0.03, #C0C0C0), to(transparent));
 
     /* Background Attributes */
     background-size: 550px 550px, 350px 350px, 250px 270px, 220px 200px;
     background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
-
     /* Animation */
     animation-name: movement;
     animation-duration: 15s;
@@ -470,34 +469,31 @@ fieldset[disabled] .btn-custom.active {
 #about {
     height: 120%;
     margin-bottom: 0;
-    background-image: -moz-radial-gradient(circle, #FFFFFF .5px, #C0C0C0 .5px, transparent 10px),
-    -moz-radial-gradient(circle, #FFFFFF .5px, #778899 .5px, transparent 7.5px),
-    -moz-radial-gradient(ellipse, rgba(255, 255, 255, .9) .5px, #D3D3D3 .5px, transparent 10px),
-    -moz-radial-gradient(ellipse, rgba(255, 255, 255, .4), #C0C0C0 .5px, transparent 7.5px);
+    background-image: -moz-radial-gradient(circle, #FFFFFF .2px, #C0C0C0 .5px, transparent 2.5px),
+    -moz-radial-gradient(circle, #FFFFFF .5px, #778899 .5px, transparent 3.75px),
+    -moz-radial-gradient(ellipse, #778899  .5px, #D3D3D3 .5px, transparent 2.5px),
+    -moz-radial-gradient(ellipse, #FFFFFF, #C0C0C0 .5px, transparent 1.75px);
 
     /* Webkit */
-    background-image: -webkit-gradient(radial, 50% 50%, 2, 50% 50%, 5, from(white), color-stop(0.1, #C0C0C0), to(transparent)),
-    -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 3.5, from(white), color-stop(0.1, #778899), to(transparent)),
-    -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 5, from(rgba(255, 255, 255, .9)), color-stop(0.05, #D3D3D3), to(transparent)),
-    -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 3.5, from(rgba(255, 255, 255, .4)), color-stop(0.03, #C0C0C0), to(transparent));
+    background-image: -webkit-gradient(radial, 50% 50%, 2, 50% 50%, 2.5, from(white), color-stop(0.1, #C0C0C0), to(transparent)),
+    -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 1.75, from(white), color-stop(0.1, #778899), to(transparent)),
+    -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 2.5, from(#778899), color-stop(0.05, #D3D3D3), to(transparent)),
+    -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 1.75, from(rgba(255, 255, 255, .4)), color-stop(0.03, #C0C0C0), to(transparent));
 
     /* Background Attributes */
     background-size: 550px 550px, 350px 350px, 250px 270px, 220px 200px;
     background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
 
-    /* Animation */
     animation-name: movement;
     animation-duration: 25s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 
-    /* Firefox */
     -moz-animation-name: movement;
     -moz-animation-duration: 25s;
     -moz-animation-timing-function: linear;
     -moz-animation-iteration-count: infinite;
 
-    /* Webkit */
     -webkit-animation-name: movement;
     -webkit-animation-duration: 25s;
     -webkit-animation-timing-function: linear;
@@ -509,6 +505,7 @@ fieldset[disabled] .btn-custom.active {
     font-size: 1.6em;
     text-shadow: 2px 2px 5px black;
 }
+
 
 @keyframes movement {
     from {
