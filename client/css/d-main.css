@@ -91,8 +91,8 @@ header .intro-text .skills {
 }
 
 #skills {
-    height: 128%;
-    background: url("../img/gray-beach.jpeg");
+    height: 134%;
+    background: url("../img/grey-space.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
@@ -373,19 +373,22 @@ fieldset[disabled] .btn-custom.active {
 }
 
 #projects {
+    position: relative;
     background-color: black;
     margin-top: -15vh;
     height: 164%;
+    z-index: 0;
     background-image: -moz-radial-gradient(circle, #FFFFFF .2px, #C0C0C0 .5px, transparent 2.5px),
     -moz-radial-gradient(circle, #FFFFFF .5px, #778899 .5px, transparent 3.75px),
-    -moz-radial-gradient(ellipse, #778899  .5px, #D3D3D3 .5px, transparent 2.5px),
+    -moz-radial-gradient(ellipse, #778899 .5px, #D3D3D3 .5px, transparent 2.5px),
     -moz-radial-gradient(ellipse, #FFFFFF, #C0C0C0 .5px, transparent 1.75px);
 
     /* Webkit */
     background-image: -webkit-gradient(radial, 50% 50%, 2, 50% 50%, 2.5, from(white), color-stop(0.1, #C0C0C0), to(transparent)),
     -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 1.75, from(white), color-stop(0.1, #778899), to(transparent)),
     -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 2.5, from(#778899), color-stop(0.05, #D3D3D3), to(transparent)),
-    -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 1.75, from(rgba(255, 255, 255, .4)), color-stop(0.03, #C0C0C0), to(transparent));
+    -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 1.75, from(whitesmoke), color-stop(0.03, #C0C0C0), to(transparent));
+    /*-webkit-gradient(radial, 50% 50%, 1, 50% 50%, 1.75, from(opacity: 1), color-stop(0.1, #778899), to(opacity: 0);*/
 
     /* Background Attributes */
     background-size: 550px 550px, 350px 350px, 250px 270px, 220px 200px;
@@ -407,6 +410,104 @@ fieldset[disabled] .btn-custom.active {
     -webkit-animation-duration: 15s;
     -webkit-animation-timing-function: linear;
     -webkit-animation-iteration-count: infinite;
+
+}
+
+.stars, .twinkling {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+
+}
+
+.stars {
+    background: url(../imgs/stars2.png);
+    z-index: -1;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: darken;
+    background-size: cover;
+    height:215vh;
+    width: 100vw;
+
+}
+
+.twinkling {
+    width:100vw;
+    height:215vh;
+    background: url(../imgs/twinkling.png) repeat center;
+    z-index: -1;
+    -moz-animation: move-twink-back 200s linear infinite;
+    -o-animation: move-twink-back 200s linear infinite;
+    -webkit-animation: move-twink-back 200s linear infinite;
+    animation: move-twink-back 200s linear infinite;
+
+}
+.stars2 {
+    position: absolute;
+    background: url(../imgs/stars2.png);
+    z-index: -1;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: darken;
+    background-size: cover;
+    height:156vh;
+    width: 100vw;
+}
+.twinkling2 {
+    position: absolute;
+    width:100vw;
+    height:156vh;
+    background: url(../imgs/twinkling.png) repeat center;
+    z-index: -1;
+    -moz-animation: move-twink-back 200s linear infinite;
+    -o-animation: move-twink-back 200s linear infinite;
+    -webkit-animation: move-twink-back 200s linear infinite;
+    animation: move-twink-back 200s linear infinite;
+}
+
+@keyframes move-twink-back {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -10000px 5000px;
+    }
+}
+
+@-webkit-keyframes move-twink-back {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -10000px 5000px;
+    }
+}
+
+@-moz-keyframes move-twink-back {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -10000px 5000px;
+    }
+
+}
+
+@-ms-keyframes move-twink-back {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -10000px 5000px;
+    }
 }
 
 #projects > .container {
@@ -471,7 +572,7 @@ fieldset[disabled] .btn-custom.active {
     margin-bottom: 0;
     background-image: -moz-radial-gradient(circle, #FFFFFF .2px, #C0C0C0 .5px, transparent 2.5px),
     -moz-radial-gradient(circle, #FFFFFF .5px, #778899 .5px, transparent 3.75px),
-    -moz-radial-gradient(ellipse, #778899  .5px, #D3D3D3 .5px, transparent 2.5px),
+    -moz-radial-gradient(ellipse, #778899 .5px, #D3D3D3 .5px, transparent 2.5px),
     -moz-radial-gradient(ellipse, #FFFFFF, #C0C0C0 .5px, transparent 1.75px);
 
     /* Webkit */
@@ -505,7 +606,6 @@ fieldset[disabled] .btn-custom.active {
     font-size: 1.6em;
     text-shadow: 2px 2px 5px black;
 }
-
 
 @keyframes movement {
     from {
@@ -545,6 +645,12 @@ fieldset[disabled] .btn-custom.active {
 }
 
 @media (min-width: 1440px) and (max-width: 1919px) {
+    .twinkling2 {
+        height: 166vh;
+    }
+    .stars2 {
+        height: 166vh;
+    }
     .heyman {
         margin-right: -115px;
         margin-left: -115px;
@@ -571,11 +677,30 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #skills {
-        height: 150%;
+        height: 154%;
+    }
+}
+@media (min-width: 1440px) and (max-width: 1585px) {
+    .cool img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .cool .tag {
+        font-size: 1.2em;
+    }
+    #skills {
+        height: 139%;
     }
 }
 
 @media (min-width: 1200px) and (max-width: 1440px) {
+    .twinkling2 {
+        height: 158vh;
+    }
+    .stars2 {
+        height: 158vh;
+    }
     .heyman {
         margin-right: -115px;
         margin-left: -115px;
@@ -594,7 +719,7 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #skills {
-        height: 132%;
+        height: 135%;
     }
 
     #projects {
@@ -618,15 +743,38 @@ fieldset[disabled] .btn-custom.active {
         font-size: 1.2em;
     }
 }
+@media (min-width: 1200px) and (max-width: 1350px) {
+    .heyman {
+        margin-right: -40px;
+        margin-left: -40px;
+    }
+    .cool img {
+        height: 60px;
+        width: 60px;
+    }
+
+    .cool .tag {
+        font-size: 1em;
+    }
+    #skills {
+        height: 127%;
+    }
+}
 
 @media (min-width: 1024px) and (max-width: 1200px) {
+    .twinkling2 {
+        height: 144vh;
+    }
+    .stars2 {
+        height: 144vh;
+    }
     #projects {
         height: 144%;
     }
 
     .heyman {
-        margin-right: -90px;
-        margin-left: -90px;
+        margin-right: -40px;
+        margin-left: -40px;
     }
 
     .card {
@@ -634,7 +782,7 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #skills {
-        height: 138%;
+        height: 125%;
     }
 
     .card-text {
@@ -654,12 +802,12 @@ fieldset[disabled] .btn-custom.active {
     }
 
     .cool img {
-        height: 80px;
-        width: 80px;
+        height: 60px;
+        width: 60px;
     }
 
     .cool .tag {
-        font-size: 1.2em;
+        font-size: 1em;
     }
 
     .firstLine img {
@@ -670,11 +818,24 @@ fieldset[disabled] .btn-custom.active {
 }
 
 @media (min-width: 992px) and (max-width: 1024px) {
+    .twinkling2 {
+        height: 135vh;
+    }
+    .stars2 {
+        height: 135vh;
+    }
     .heyman {
-        margin-right: -115px;
-        margin-left: -115px;
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    .cool img {
+        height: 60px;
+        width: 60px;
     }
 
+    .cool .tag {
+        font-size: 1em;
+    }
     .card-title {
         font-size: .8em;
     }
@@ -692,7 +853,7 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #skills {
-        height: 146%;
+        height: 123%;
     }
 
     .tag {
@@ -700,13 +861,13 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #skills2 img {
-        height: 80px;
-        width: 80px;
+        height: 60px;
+        width: 60px;
     }
 
     .dude img {
-        height: 80px;
-        width: 80px;
+        height: 60px;
+        width: 60px;
     }
 
     .firstLine img {
@@ -748,6 +909,17 @@ fieldset[disabled] .btn-custom.active {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+    .heyman {
+        margin-right: -10px;
+        margin-left: -10px;
+    }
+    .cool img {
+        height: 50px;
+        width: 50px;
+    }
+    .cool .tag {
+        font-size: 1em;
+    }
 
     .dude img {
         height: 80px;
