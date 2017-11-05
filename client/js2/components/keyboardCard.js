@@ -32,17 +32,20 @@ angular.module('portfolio').component('keyboardCard', {
   controller: function (mainService, $interval, $timeout) {
     let vm = this
     vm.text = ''
-    vm.keyboardText = mainService.keyboardText()
     vm.show = true
-    vm.displayText = () => {
-      vm.show = false
-      vm.index = 0
-      $interval(() => {
-        $timeout(() => {
-          vm.text += vm.keyboardText[vm.index]
-          vm.index++
-        }, 270)
-      }, 40, vm.keyboardText.length)
-    }
+    mainService.keyboardText().then(res => {
+      vm.keyboardText = res.data.text[0].paragraph
+      console.log(vm.keyboardText)
+      vm.displayText = () => {
+        vm.show = false
+        vm.index = 0
+        $interval(() => {
+          $timeout(() => {
+            vm.text += vm.keyboardText[vm.index]
+            vm.index++
+          }, 70)
+        }, 20, vm.keyboardText.length)
+      }
+    })
   }
 })

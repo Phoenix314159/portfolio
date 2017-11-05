@@ -18,5 +18,9 @@ module.exports = {
   async vimeo(req, res) {
     const {dbQuery, db: {run}} = req, text = await run(`${dbQuery}'vimeoText'`);
     res.status(200).send({text})
-  }
+  },
+  async solar(req, res) {
+    const {dbQuery, db: {run}} = req, text = await run(`${dbQuery}'solarText'`);
+    res.status(200).send({text})
+  },
 }

@@ -34,16 +34,18 @@ template: ` <div class="wow animated slideInRight col-sm-4 portfolio-item card">
     let vm = this;
     vm.text = '';
     vm.show = true
-    vm.displayText = () => {
-      vm.show = false
-      vm.index = 0;
-      vm.solarText = mainService.solarText();
-      $interval(() => {
-        $timeout(() => {
-          vm.text += vm.solarText[vm.index];
-          vm.index++;
-        }, 500)
-      }, 25, vm.solarText.length);
-    }
+    mainService.solarText().then(res => {
+      vm.solarText = res.data.text[0].paragraph
+      vm.displayText = () => {
+        vm.show = false
+        vm.index = 0;
+        $interval(() => {
+          $timeout(() => {
+            vm.text += vm.solarText[vm.index];
+            vm.index++;
+          }, 70)
+        }, 20, vm.solarText.length);
+      }
+    })
   }
 })

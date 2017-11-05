@@ -25,9 +25,10 @@ angular.module('portfolio').service('mainService', function ($http) {
     })
   }
   vm.solarText = () => {
-    return `Built using AngularJS, Node, and SQL. Displays information about the
-            planets in the solar system by clicking on the planet images.
-            Data is displayed sequentially by using the $interval service.`
+    return $http({
+      method: 'GET',
+      url: '/api/solar_text'
+    })
   }
   vm.adventureText = () => {
     return `Built using AngularJS and Node.
