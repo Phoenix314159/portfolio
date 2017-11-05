@@ -1,24 +1,28 @@
-angular.module('portfolio').service('mainService', function () {
+angular.module('portfolio').service('mainService', function ($http) {
   let vm = this
   vm.aboutMeText1 = () => {
-    return `Since I was young, figuring out how things work has been one of my primary
-            interests. Later in life, I would solve problems using calculus and advanced
-            mathematics and also create works of original music.`
+    return $http({
+      method: 'GET',
+      url: '/api/about_me1'
+    })
   }
   vm.aboutMeText2 = () => {
-    return `In my constant journey of learning new concepts of which I thoroughly enjoy, I
-            have found web development to be exciting. It's awesome to create web 
-            applications that are useful and to be able to share them with the world.`
+    return $http({
+      method: 'GET',
+      url: '/api/about_me2'
+    })
   }
   vm.keyboardText = () => {
-    return `Built using AngularJS 1.5 components, Node, and SQL. This is an e-commerce 
-            site where users are able to order products with payments processed using Stripe
-            and authentication is done locally.`
+    return $http({
+      method: 'GET',
+      url: '/api/keyboard_text'
+    })
   }
   vm.vimeoText = () => {
-    return `Built using AngularJS, Node, and uses Vimeo's developer API.
-            Users are able to search for and upload videos, and post comments on videos.
-            These changes are reflected on the user's Vimeo Account.`
+    return $http({
+      method: 'GET',
+      url: '/api/vimeo_text'
+    })
   }
   vm.solarText = () => {
     return `Built using AngularJS, Node, and SQL. Displays information about the

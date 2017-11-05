@@ -7,7 +7,7 @@ const gulp = require('gulp'),
   }),
   transforms = [{
     transform: 'babelify',
-    options: {presets: ['es2015']}
+    options: {presets: ['es2015','es2017']}
   }]
 
 var banner = ['/*!\n',
@@ -40,8 +40,10 @@ gulp.task('minify1-js', function () {
 
 gulp.task('minify2-js', function () {
   return gulp.src('client/js/*.js')
+    .pipe($.sourcemaps.init())
     .pipe($.uglify())
     .pipe($.concat('bundle.js'))
+    .pipe($.sourcemaps.write('./'))
     .pipe(gulp.dest('dist/js'))
 })
 

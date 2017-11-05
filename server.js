@@ -1,11 +1,16 @@
 const express = require('express'),
-    app = express(),
-    port = process.env.PORT || 3335;
+  path = require('path'),
+  massive = require('massive'),
+  {port, dbConnection} = require('./config/dev'),
+  app = express();
 
-process.env.PWD = process.cwd();
+(async () => { app.set('db', await massive(dbConnection)) })()
+app.use('/', express.static(path.join(__dirname, '/dist')))
 
-app.use('/', express.static(process.env.PWD + '/dist'));
+require('./middleware/main')(app)
+require('./routes/textRoutes')(app)
+require('./middleware/serverError')(app)
 
 app.listen(port, () => {
-    console.log(`listening on port ${port}`);
-});
+  console.log(`listening on port ${port}`)
+})

@@ -10,9 +10,15 @@ angular.module('portfolio').component('aboutMe', {
           </div>
       </div>`,
 
-  controller: function (mainService) {
+  controller: function (mainService, $http) {
     let vm = this
     vm.aboutMeText1 = mainService.aboutMeText1()
     vm.aboutMeText2 = mainService.aboutMeText2()
+    vm.dude =  () => {
+      $http.get('https://swapi.co/api/people/1/').then(res => {
+        console.log(res)
+      })
+    }
+    vm.dude()
   }
 })
