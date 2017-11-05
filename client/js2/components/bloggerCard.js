@@ -39,7 +39,6 @@ angular.module('portfolio').component('bloggerCard', {
       vm.index = 0
       $interval(() => {
         $timeout(() => {
-          console.log(vm.text)
           vm.text += vm.bloggerText[vm.index]
           vm.index++;
         }, 20)

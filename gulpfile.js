@@ -6,10 +6,9 @@ const gulp = require('gulp'),
     camelize: true
   }),
   transforms = [{
-    transform: "babelify",
-    options: {presets: ["es2015"]}
-  }];
-
+    transform: 'babelify',
+    options: {presets: ['es2015']}
+  }]
 
 var banner = ['/*!\n',
   ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
@@ -38,6 +37,7 @@ gulp.task('minify1-js', function () {
     .pipe($.sourcemaps.write('./'))
     .pipe(gulp.dest('dist/js2'))
 })
+
 gulp.task('minify2-js', function () {
   return gulp.src('client/js/*.js')
     .pipe($.uglify())
@@ -46,33 +46,17 @@ gulp.task('minify2-js', function () {
 })
 
 gulp.task('copy', function () {
-  gulp.src([
-    'node_modules/bootstrap/dist/**/*',
-    '!**/npm.js',
-    '!**/bootstrap-theme.*',
-    '!**/*.map'
-  ])
 
-  gulp.src([
-    'node_modules/font-awesome/**',
-    '!node_modules/font-awesome/**/*.map',
-    '!node_modules/font-awesome/.npmignore',
-    '!node_modules/font-awesome/*.txt',
-    '!node_modules/font-awesome/*.md',
-    '!node_modules/font-awesome/*.json'
-  ])
-    .pipe(gulp.dest('dist/vendor/font-awesome'))
+  gulp.src(['client/fonts/**'])
+    .pipe(gulp.dest('dist/fonts'))
 
-  gulp.src(['./imgs/**'])
+  gulp.src(['client/imgs/**'])
     .pipe(gulp.dest('dist/imgs'))
 
-  gulp.src(['./icons/**'])
+  gulp.src(['client/icons/**'])
     .pipe(gulp.dest('dist/icons'))
 
-  gulp.src(['./img/**'])
-    .pipe(gulp.dest('dist/img'))
-
-  gulp.src(['./resume/**'])
+  gulp.src(['client/resume/**'])
     .pipe(gulp.dest('dist/resume'))
 })
 
@@ -85,9 +69,8 @@ gulp.task('build', ['minify-css', 'minify1-js', 'minify2-js', 'copy'], () => {
 })
 
 gulp.task('watch', () => {
-  return gulp.watch(['./client/index.html', './client/js2/**/*.js', './client/css/*.css'], ['build'])
+  return gulp.watch(['./client/index.html', './client/js2/**/*.js', './client/js/*.js', './client/css/*.css'], ['build'])
 })
-
 
 gulp.task('default', ['build', 'watch'])
 

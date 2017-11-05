@@ -46,7 +46,7 @@ header .intro-text .skills {
 }
 
 .me {
-    background: url("../img/moon.png");
+    background: url("../imgs/moon.png");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
@@ -74,9 +74,11 @@ header .intro-text .skills {
 .resumeButtons span {
     font-family: 'Rozha One', serif;
 }
+
 .sectionFont {
     font-family: 'Rozha One', serif;
 }
+
 .textButton {
     display: flex;
     justify-content: center;
@@ -94,16 +96,7 @@ header .intro-text .skills {
 
 #skills {
     height: 134%;
-    background: url("../img/grey26.jpg");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-blend-mode: darken;
-    background-size: cover;
-}
-
-.background {
-    background-image: url("../img/gray-beach.jpeg");
+    background: url("../imgs/grey26.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
@@ -223,6 +216,10 @@ hr {
     display: flex;
     justify-content: space-around;
     padding: 25px;
+}
+
+#contact {
+    height: 100%;
 }
 
 .imgWrapper {
@@ -390,12 +387,12 @@ fieldset[disabled] .btn-custom.active {
     background-image: -webkit-gradient(radial, 50% 50%, 2, 50% 50%, 2.5, from(white), color-stop(0.1, #C0C0C0), to(transparent)),
     -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 1.75, from(white), color-stop(0.1, #778899), to(transparent)),
     -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 2.5, from(#778899), color-stop(0.05, #D3D3D3), to(transparent)),
-    -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 1.75, from(whitesmoke), color-stop(0.03, #C0C0C0), to(transparent));
-    /*-webkit-gradient(radial, 50% 50%, 1, 50% 50%, 1.75, from(opacity: 1), color-stop(0.1, #778899), to(opacity: 0);*/
+    -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 1.75, from(rgba(255, 255, 255, .4)), color-stop(0.03, #C0C0C0), to(transparent));
 
     /* Background Attributes */
     background-size: 550px 550px, 350px 350px, 250px 270px, 220px 200px;
     background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
+
     /* Animation */
     animation-name: movement;
     animation-duration: 15s;
@@ -436,14 +433,14 @@ fieldset[disabled] .btn-custom.active {
     background-position: center;
     background-blend-mode: darken;
     background-size: cover;
-    height:215vh;
+    height: 215vh;
     width: 100vw;
 
 }
 
 .twinkling {
-    width:100vw;
-    height:215vh;
+    width: 100vw;
+    height: 215vh;
     background: url(../imgs/twinkling.png) repeat center;
     z-index: -1;
     -moz-animation: move-twink-back 200s linear infinite;
@@ -452,6 +449,7 @@ fieldset[disabled] .btn-custom.active {
     animation: move-twink-back 200s linear infinite;
 
 }
+
 .stars2 {
     position: absolute;
     background: url(../imgs/stars2.png);
@@ -461,13 +459,14 @@ fieldset[disabled] .btn-custom.active {
     background-position: center;
     background-blend-mode: darken;
     background-size: cover;
-    height:156vh;
+    height: 156vh;
     width: 100vw;
 }
+
 .twinkling2 {
     position: absolute;
-    width:100vw;
-    height:156vh;
+    width: 100vw;
+    height: 156vh;
     background: url(../imgs/twinkling.png) repeat center;
     z-index: -1;
     -moz-animation: move-twink-back 200s linear infinite;
@@ -514,10 +513,6 @@ fieldset[disabled] .btn-custom.active {
 }
 
 #projects > .container {
-    max-width: 78vw;
-}
-
-.cool > .container {
     max-width: 78vw;
 }
 
@@ -651,9 +646,11 @@ fieldset[disabled] .btn-custom.active {
     .twinkling2 {
         height: 166vh;
     }
+
     .stars2 {
         height: 166vh;
     }
+
     .heyman {
         margin-right: -115px;
         margin-left: -115px;
@@ -683,6 +680,7 @@ fieldset[disabled] .btn-custom.active {
         height: 154%;
     }
 }
+
 @media (min-width: 1440px) and (max-width: 1585px) {
     .cool img {
         height: 80px;
@@ -692,6 +690,7 @@ fieldset[disabled] .btn-custom.active {
     .cool .tag {
         font-size: 1.2em;
     }
+
     #skills {
         height: 139%;
     }
@@ -701,9 +700,11 @@ fieldset[disabled] .btn-custom.active {
     .twinkling2 {
         height: 158vh;
     }
+
     .stars2 {
         height: 158vh;
     }
+
     .heyman {
         margin-right: -115px;
         margin-left: -115px;
@@ -746,11 +747,13 @@ fieldset[disabled] .btn-custom.active {
         font-size: 1.2em;
     }
 }
+
 @media (min-width: 1200px) and (max-width: 1350px) {
     .heyman {
         margin-right: -40px;
         margin-left: -40px;
     }
+
     .cool img {
         height: 60px;
         width: 60px;
@@ -759,6 +762,7 @@ fieldset[disabled] .btn-custom.active {
     .cool .tag {
         font-size: 1em;
     }
+
     #skills {
         height: 127%;
     }
@@ -768,11 +772,23 @@ fieldset[disabled] .btn-custom.active {
     .twinkling2 {
         height: 144vh;
     }
+
     .stars2 {
         height: 144vh;
     }
+
     #projects {
         height: 144%;
+    }
+
+    .textButton .btn {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
+    .githubLink .btn {
+        font-size: 12px;
+        padding: 4px 6px;
     }
 
     .heyman {
@@ -789,7 +805,7 @@ fieldset[disabled] .btn-custom.active {
     }
 
     .card-text {
-        font-size: .8em;
+        font-size: .7em;
     }
 
     .card-title {
@@ -821,16 +837,27 @@ fieldset[disabled] .btn-custom.active {
 }
 
 @media (min-width: 992px) and (max-width: 1024px) {
+    #about {
+        height: 108vh;
+    }
+
+    #about p {
+        font-size: 1.2em;
+    }
+
     .twinkling2 {
         height: 135vh;
     }
+
     .stars2 {
         height: 135vh;
     }
+
     .heyman {
         margin-right: -15px;
         margin-left: -15px;
     }
+
     .cool img {
         height: 60px;
         width: 60px;
@@ -839,6 +866,7 @@ fieldset[disabled] .btn-custom.active {
     .cool .tag {
         font-size: 1em;
     }
+
     .card-title {
         font-size: .8em;
     }
@@ -909,19 +937,63 @@ fieldset[disabled] .btn-custom.active {
     .card img {
         max-height: 150px;
     }
+
+    .textButton .btn {
+        font-size: 10px;
+        padding: 2px 6px;
+    }
+
+    .githubLink .btn {
+        font-size: 10px;
+        padding: 2px 6px;
+    }
+
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+    .twinkling2 {
+        height: 135vh;
+
+    }
+
+    .textButton .btn {
+        font-size: 10px;
+        padding: 2px 4px;
+    }
+
+    .githubLink .btn {
+        font-size: 10px;
+        padding: 2px 4px;
+    }
+
+    .stars2 {
+        height: 135vh;
+    }
+
     .heyman {
         margin-right: -10px;
         margin-left: -10px;
     }
-    .cool img {
-        height: 50px;
-        width: 50px;
+
+    #skills .cool {
+        margin-top: -30vh;
     }
+
+    #about p {
+        font-size: 1.2em;
+    }
+
+    .cool img {
+        height: 60px;
+        width: 60px;
+    }
+
     .cool .tag {
-        font-size: 1em;
+        font-size: .8em;
+    }
+
+    #projects img {
+        height: 200px;
     }
 
     .dude img {
@@ -934,24 +1006,59 @@ fieldset[disabled] .btn-custom.active {
         width: 80px;
     }
 
+    .imgWrapper {
+        height: 150px;
+    }
+
+    .card img {
+        max-height: 150px;
+    }
+
+    .card {
+        height: 29vh;
+    }
+
+    .card-text {
+        font-size: .7em;
+    }
+
+    #projects .container img {
+        height: 153px;
+    }
+
     #projects {
-        height: 156%;
+        height: 146%;
     }
 
     #skills {
-        height: 168%;
+        height: 120%;
     }
 
     .card-title {
-        font-size: 1em;
+        font-size: .8em;
     }
 
     .text23 {
         font-size: .7em;
     }
+
+    #contact {
+        margin-top: -10vh;
+        height: 120%;
+    }
 }
 
 @media only screen and (max-width: 768px) {
+    .textButton .btn {
+        font-size: 10px;
+        padding: 2px 4px;
+    }
+
+    .githubLink .btn {
+        font-size: 10px;
+        padding: 2px 4px;
+    }
+
     .imgWrapper img {
         height: 120px;
     }
