@@ -32,17 +32,19 @@ angular.module('portfolio').component('weatherCard', {
   controller: function (mainService, $interval, $timeout) {
     let vm = this
     vm.text = ''
-    vm.weatherText = mainService.weatherText()
     vm.show = true
     vm.displayText = () => {
-      vm.show = false
-      vm.index = 0
-      $interval(() => {
-        $timeout(() => {
-          vm.text += vm.weatherText[vm.index]
-          vm.index++
-        }, 270)
-      }, 40, vm.weatherText.length)
+      mainService.weatherText().then(res => {
+        vm.weatherText = res.data.text[0].paragraph
+        vm.show = false
+        vm.index = 0
+        $interval(() => {
+          $timeout(() => {
+            vm.text += vm.weatherText[vm.index]
+            vm.index++
+          }, 70)
+        }, 20, vm.weatherText.length)
+      })
     }
   }
 })

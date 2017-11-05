@@ -1,5 +1,5 @@
 angular.module('portfolio').component('solarCard', {
-template: ` <div class="wow animated slideInRight col-sm-4 portfolio-item card">
+  template: ` <div class="wow animated slideInRight col-sm-4 portfolio-item card">
                 <h4 class="card-title solar">The Solar System</h4>
                 <div class="imgWrapper">
                     <img class="img-responsive center-block"
@@ -31,21 +31,21 @@ template: ` <div class="wow animated slideInRight col-sm-4 portfolio-item card">
                 </div>
             </div>`,
   controller: function (mainService, $interval, $timeout) {
-    let vm = this;
-    vm.text = '';
+    let vm = this
+    vm.text = ''
     vm.show = true
-    mainService.solarText().then(res => {
-      vm.solarText = res.data.text[0].paragraph
-      vm.displayText = () => {
+    vm.displayText = () => {
+      mainService.solarText().then(res => {
+        vm.solarText = res.data.text[0].paragraph
         vm.show = false
-        vm.index = 0;
+        vm.index = 0
         $interval(() => {
           $timeout(() => {
-            vm.text += vm.solarText[vm.index];
-            vm.index++;
+            vm.text += vm.solarText[vm.index]
+            vm.index++
           }, 70)
-        }, 20, vm.solarText.length);
-      }
-    })
+        }, 20, vm.solarText.length)
+      })
+    }
   }
 })

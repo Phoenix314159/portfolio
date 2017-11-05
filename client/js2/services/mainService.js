@@ -31,33 +31,39 @@ angular.module('portfolio').service('mainService', function ($http) {
     })
   }
   vm.adventureText = () => {
-    return `Built using AngularJS and Node.
-            Uses Axios in the backend to fetch data from
-            an API containing arrays of coordinate data. Uses the Google maps API
-            to plot the points on an interactive map.`
+    return $http({
+      method: 'GET',
+      url: '/api/adventure_text'
+    })
   }
   vm.toolboxText = () => {
-    return ` Built using AngularJS and Node. Uses a third-party API for currency
-             exchange rates. Contains useful tools: currency converter, calculator,
-             stopwatch, and a timer.`
+    return $http({
+      method: 'GET',
+      url: '/api/toolbox_text'
+    })
   }
   vm.youtubeText = () => {
-    return ` Built using ReactJS and Node. Uses a proxy so the backend can
-             communicate with the front-end. Uses Axios to make http requests
-             to the Youtube API so users can search for videos.`
+    return $http({
+      method: 'GET',
+      url: '/api/youtube_text'
+    })
   }
   vm.feedbackText = () => {
-    return ` Built using ReactJS, Redux, and Node. This is an App for start-ups to be able to
-             send out survey emails to clients for receiving feedback.
-             Authentication is done with Google using passport.js.`
+    return $http({
+      method: 'GET',
+      url: '/api/feedback_text'
+    })
   }
   vm.weatherText = () => {
-    return ` Built using ReactJS, Redux, and Node. Retrieves data from the Open Maps API to display
-             weather data from any city searched for. Uses the Google Maps API to display the map.`
+    return $http({
+      method: 'GET',
+      url: '/api/weather_text'
+    })
   }
   vm.bloggerText = () => {
-    return `Built using ReactJS, Redux, Redux-Form, and Node. Retrieves a
-            list of blog posts from a third-party API.
-            Allows users to view and delete posts once they are logged in.`
+    return $http({
+      method: 'GET',
+      url: '/api/blogger_text'
+    })
   }
 })

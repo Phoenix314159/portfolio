@@ -29,21 +29,21 @@ angular.module('portfolio').component('vimeoCard', {
                 </div>
             </div>`,
   controller: function (mainService, $interval, $timeout) {
-    let vm = this;
-    vm.text = '';
+    let vm = this
+    vm.text = ''
     vm.show = true
-    mainService.vimeoText().then(res => {
-      vm.vimeoText = res.data.text[0].paragraph
-      vm.displayText = () => {
+    vm.displayText = () => {
+      mainService.vimeoText().then(res => {
+        vm.vimeoText = res.data.text[0].paragraph
         vm.show = false
-        vm.index = 0;
+        vm.index = 0
         $interval(() => {
           $timeout(() => {
-            vm.text += vm.vimeoText[vm.index];
-            vm.index++;
+            vm.text += vm.vimeoText[vm.index]
+            vm.index++
           }, 70)
-        }, 20, vm.vimeoText.length);
-      }
-    })
+        }, 20, vm.vimeoText.length)
+      })
+    }
   }
 })

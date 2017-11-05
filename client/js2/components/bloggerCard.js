@@ -32,17 +32,19 @@ angular.module('portfolio').component('bloggerCard', {
   controller: function (mainService, $interval, $timeout) {
     let vm = this
     vm.text = ''
-    vm.bloggerText = mainService.bloggerText()
     vm.show = true
     vm.displayText = () => {
-      vm.show = false
-      vm.index = 0
-      $interval(() => {
-        $timeout(() => {
-          vm.text += vm.bloggerText[vm.index]
-          vm.index++;
-        }, 20)
-      }, 30, vm.bloggerText.length)
+      mainService.bloggerText().then(res => {
+        vm.bloggerText = res.data.text[0].paragraph
+        vm.show = false
+        vm.index = 0
+        $interval(() => {
+          $timeout(() => {
+            vm.text += vm.bloggerText[vm.index]
+            vm.index++;
+          }, 70)
+        }, 20, vm.bloggerText.length)
+      })
     }
   }
 })

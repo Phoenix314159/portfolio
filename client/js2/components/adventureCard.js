@@ -31,17 +31,19 @@ angular.module('portfolio').component('adventureCard', {
   controller: function (mainService, $interval, $timeout) {
     let vm = this
     vm.text = ''
-    vm.adventureText = mainService.adventureText()
     vm.show = true
     vm.displayText = () => {
-      vm.show = false
-      vm.index = 0
-      $interval(() => {
-        $timeout(() => {
-          vm.text += vm.adventureText[vm.index]
-          vm.index++
-        }, 270)
-      }, 20, vm.adventureText.length)
+      mainService.adventureText().then(res => {
+        vm.adventureText = res.data.text[0].paragraph
+        vm.show = false
+        vm.index = 0
+        $interval(() => {
+          $timeout(() => {
+            vm.text += vm.adventureText[vm.index]
+            vm.index++
+          }, 70)
+        }, 20, vm.adventureText.length)
+      })
     }
   }
 })

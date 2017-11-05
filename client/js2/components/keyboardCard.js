@@ -33,10 +33,9 @@ angular.module('portfolio').component('keyboardCard', {
     let vm = this
     vm.text = ''
     vm.show = true
-    mainService.keyboardText().then(res => {
-      vm.keyboardText = res.data.text[0].paragraph
-      console.log(vm.keyboardText)
-      vm.displayText = () => {
+    vm.displayText = () => {
+      mainService.keyboardText().then(res => {
+        vm.keyboardText = res.data.text[0].paragraph
         vm.show = false
         vm.index = 0
         $interval(() => {
@@ -45,7 +44,7 @@ angular.module('portfolio').component('keyboardCard', {
             vm.index++
           }, 70)
         }, 20, vm.keyboardText.length)
-      }
-    })
+      })
+    }
   }
 })

@@ -30,19 +30,21 @@ angular.module('portfolio').component('toolboxCard', {
                 </div>
             </div>`,
   controller: function (mainService, $interval, $timeout) {
-    let vm = this;
-    vm.text = '';
+    let vm = this
+    vm.text = ''
     vm.show = true
     vm.displayText = () => {
-      vm.show = false
-      vm.index = 0;
-      vm.toolboxText = mainService.toolboxText();
-      $interval(() => {
-        $timeout(() => {
-          vm.text += vm.toolboxText[vm.index];
-          vm.index++;
-        }, 500)
-      }, 25, vm.toolboxText.length);
+      mainService.toolboxText().then(res => {
+        vm.toolboxText = res.data.text[0].paragraph
+        vm.show = false
+        vm.index = 0
+        $interval(() => {
+          $timeout(() => {
+            vm.text += vm.toolboxText[vm.index]
+            vm.index++
+          }, 70)
+        }, 20, vm.toolboxText.length)
+      })
     }
   }
 })
