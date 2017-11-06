@@ -95,7 +95,7 @@ header .intro-text .skills {
 }
 
 #skills {
-    height: 134%;
+    height: 132%;
     background: url("../imgs/grey26.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -690,7 +690,7 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #skills {
-        height: 154%;
+        height: 148%;
     }
 }
 
@@ -705,7 +705,7 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #skills {
-        height: 139%;
+        height: 134%;
     }
 }
 
@@ -777,7 +777,7 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #skills {
-        height: 127%;
+        height: 120%;
     }
 }
 
@@ -814,7 +814,7 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #skills {
-        height: 125%;
+        height: 120%;
     }
 
     .card-text {
@@ -897,7 +897,7 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #skills {
-        height: 123%;
+        height: 118%;
     }
 
     .tag {
@@ -1044,7 +1044,7 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #skills {
-        height: 120%;
+        height: 110%;
     }
 
     .card-title {

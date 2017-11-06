@@ -42,7 +42,7 @@ angular.module('portfolio').component('contactMe', {
         </a>
     </li>
     <li class="wow animated slideInRight list-inline-item download2">
-        <a href="./resume/Resume.pdf" download
+        <a href="/resume/Resume.pdf" download
            class="btn btn-custom btn-lg">
             <div class="contactButtons">
                 <i class="fa fa-paper-plane fa-fw"></i>
