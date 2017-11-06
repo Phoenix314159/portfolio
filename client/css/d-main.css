@@ -157,7 +157,14 @@ header .intro-text .skills {
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background-color: black;
+    background: rgba(89, 89, 89, 1);
+    background: -moz-linear-gradient(left, rgba(89, 89, 89, 1) 0%, rgba(89, 89, 89, 1) 4%, rgba(76, 76, 76, 1) 9%, rgba(44, 44, 44, 1) 20%, rgba(17, 17, 17, 0.99) 30%, rgba(0, 0, 0, 0.99) 53%, rgba(28, 28, 28, 0.98) 72%, rgba(43, 43, 43, 0.98) 77%, rgba(95, 95, 95, 0.98) 93%, rgba(102, 102, 102, 0.98) 95%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(89, 89, 89, 1)), color-stop(4%, rgba(89, 89, 89, 1)), color-stop(9%, rgba(76, 76, 76, 1)), color-stop(20%, rgba(44, 44, 44, 1)), color-stop(30%, rgba(17, 17, 17, 0.99)), color-stop(53%, rgba(0, 0, 0, 0.99)), color-stop(72%, rgba(28, 28, 28, 0.98)), color-stop(77%, rgba(43, 43, 43, 0.98)), color-stop(93%, rgba(95, 95, 95, 0.98)), color-stop(95%, rgba(102, 102, 102, 0.98)));
+    background: -webkit-linear-gradient(left, rgba(89, 89, 89, 1) 0%, rgba(89, 89, 89, 1) 4%, rgba(76, 76, 76, 1) 9%, rgba(44, 44, 44, 1) 20%, rgba(17, 17, 17, 0.99) 30%, rgba(0, 0, 0, 0.99) 53%, rgba(28, 28, 28, 0.98) 72%, rgba(43, 43, 43, 0.98) 77%, rgba(95, 95, 95, 0.98) 93%, rgba(102, 102, 102, 0.98) 95%);
+    background: -o-linear-gradient(left, rgba(89, 89, 89, 1) 0%, rgba(89, 89, 89, 1) 4%, rgba(76, 76, 76, 1) 9%, rgba(44, 44, 44, 1) 20%, rgba(17, 17, 17, 0.99) 30%, rgba(0, 0, 0, 0.99) 53%, rgba(28, 28, 28, 0.98) 72%, rgba(43, 43, 43, 0.98) 77%, rgba(95, 95, 95, 0.98) 93%, rgba(102, 102, 102, 0.98) 95%);
+    background: -ms-linear-gradient(left, rgba(89, 89, 89, 1) 0%, rgba(89, 89, 89, 1) 4%, rgba(76, 76, 76, 1) 9%, rgba(44, 44, 44, 1) 20%, rgba(17, 17, 17, 0.99) 30%, rgba(0, 0, 0, 0.99) 53%, rgba(28, 28, 28, 0.98) 72%, rgba(43, 43, 43, 0.98) 77%, rgba(95, 95, 95, 0.98) 93%, rgba(102, 102, 102, 0.98) 95%);
+    background: linear-gradient(to right, rgba(89, 89, 89, 1) 0%, rgba(89, 89, 89, 1) 4%, rgba(76, 76, 76, 1) 9%, rgba(44, 44, 44, 1) 20%, rgba(17, 17, 17, 0.99) 30%, rgba(0, 0, 0, 0.99) 53%, rgba(28, 28, 28, 0.98) 72%, rgba(43, 43, 43, 0.98) 77%, rgba(95, 95, 95, 0.98) 93%, rgba(102, 102, 102, 0.98) 95%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#595959', endColorstr='#666666', GradientType=1);
     padding: 4%;
 }
 
@@ -331,6 +338,10 @@ fieldset[disabled] .btn-custom.active {
     0 0 3px 1.75px #778899;
 }
 
+.card:hover .overlay {
+    opacity: 1;
+}
+
 .card-body {
     padding-top: 109px;
 }
@@ -347,9 +358,10 @@ fieldset[disabled] .btn-custom.active {
     padding: 4%;
     font-size: 1.4em;
     font-family: 'Rozha One', serif;
-    color: whitesmoke;
+    color: white;
     position: absolute;
     top: 2%;
+    text-shadow: 2px 2px 2px black;
 }
 
 .projectInfo2 {
