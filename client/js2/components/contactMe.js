@@ -1,6 +1,6 @@
 angular.module('portfolio').component('contactMe', {
-  template: `<h2 class="wow animated fadeIn contactMe sectionFont">Contact</h2>
-<hr/>
+  template: `<h2 class="wow animated zoomIn contactMe sectionFont" data-wow-duration="2s">Contact</h2>
+<hr class="wow animated zoomIn" data-wow-duration="2s"/>
 <ul class="list-inline banner-social-buttons flex socialButtons col-12">
     <li class="wow animated slideInLeft list-inline-item">
         <a href="https://www.linkedin.com/in/james-langford/"
