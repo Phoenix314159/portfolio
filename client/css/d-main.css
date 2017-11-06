@@ -303,6 +303,7 @@ style-five:after {
 .btn-custom.active {
     background-color: #6f7478;
     border-color: black;
+    cursor: pointer;
 }
 
 .btn-custom.disabled:hover,
