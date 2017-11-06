@@ -7,16 +7,8 @@ const gulp = require('gulp'),
   }),
   transforms = [{
     transform: 'babelify',
-    options: {presets: ['es2015','es2017']}
+    options: {presets: ['es2015', 'es2017']}
   }]
-
-var banner = ['/*!\n',
-  ' * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n',
-  ' * Copyright 2013-' + (new Date()).getFullYear(), ' <%= pkg.author %>\n',
-  ' * Licensed under <%= pkg.license %> (https://github.com/BlackrockDigital/<%= pkg.name %>/blob/master/LICENSE)\n',
-  ' */\n',
-  ''
-].join('')
 
 gulp.task('minify-css', function () {
   return gulp.src('./client/css/*.css')
@@ -47,6 +39,14 @@ gulp.task('minify2-js', function () {
     .pipe(gulp.dest('dist/js'))
 })
 
+gulp.task('views', function () {
+  return gulp.src('client/views/**')
+    .pipe($.htmlmin({
+      collapseWhitespace: true,
+    }))
+    .pipe(gulp.dest('dist/views'))
+})
+
 gulp.task('copy', function () {
 
   gulp.src(['client/fonts/**'])
@@ -62,7 +62,7 @@ gulp.task('copy', function () {
     .pipe(gulp.dest('dist/resume'))
 })
 
-gulp.task('build', ['minify-css', 'minify1-js', 'minify2-js', 'copy'], () => {
+gulp.task('build', ['minify-css', 'minify1-js', 'minify2-js', 'views', 'copy'], () => {
   return gulp.src('./client/index.html')
     .pipe($.htmlmin({
       collapseWhitespace: true,
@@ -71,7 +71,7 @@ gulp.task('build', ['minify-css', 'minify1-js', 'minify2-js', 'copy'], () => {
 })
 
 gulp.task('watch', () => {
-  return gulp.watch(['./client/index.html', './client/js2/**/*.js', './client/js/*.js', './client/css/*.css'], ['build'])
+  return gulp.watch(['./client/index.html', './client/js2/**/*.js', './client/js/*.js', './client/views/**', './client/css/*.css'], ['build'])
 })
 
 gulp.task('default', ['build', 'watch'])
