@@ -11,7 +11,7 @@ angular.module('portfolio').component('toolboxCard', {
       vm.show = false
       vm.index = 0
       let textAnim = $interval(() => {
-        if (vm.index !== 158) {
+        if (vm.index !== 159) {
           $timeout(() => {
             vm.text += vm.toolboxText[vm.index]
             vm.index++
