@@ -33,18 +33,22 @@ angular.module('portfolio').component('feedbackCard', {
     let vm = this
     vm.text = ''
     vm.show = true
+    mainService.feedbackText().then(res => {
+      vm.feedbackText = res.data.text[0].paragraph
+    })
     vm.displayText = () => {
-      mainService.feedbackText().then(res => {
-        vm.feedbackText = res.data.text[0].paragraph
-        vm.show = false
-        vm.index = 0
-        $interval(() => {
+      vm.show = false
+      vm.index = 0
+      let textAnim = $interval(() => {
+        if (vm.index !== 189) {
           $timeout(() => {
             vm.text += vm.feedbackText[vm.index]
             vm.index++
           }, 70)
-        }, 20, vm.feedbackText.length)
-      })
+        } else {
+          $interval.cancel(textAnim)
+        }
+      }, 20)
     }
   }
 })

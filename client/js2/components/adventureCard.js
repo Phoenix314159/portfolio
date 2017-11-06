@@ -32,18 +32,22 @@ angular.module('portfolio').component('adventureCard', {
     let vm = this
     vm.text = ''
     vm.show = true
+    mainService.adventureText().then(res => {
+      vm.adventureText = res.data.text[0].paragraph
+    })
     vm.displayText = () => {
-      mainService.adventureText().then(res => {
-        vm.adventureText = res.data.text[0].paragraph
-        vm.show = false
-        vm.index = 0
-        $interval(() => {
+      vm.show = false
+      vm.index = 0
+      let textAnim = $interval(() => {
+        if (vm.index !== 185) {
           $timeout(() => {
             vm.text += vm.adventureText[vm.index]
             vm.index++
           }, 70)
-        }, 20, vm.adventureText.length)
-      })
+        } else {
+          $interval.cancel(textAnim)
+        }
+      }, 20)
     }
   }
 })

@@ -33,18 +33,22 @@ angular.module('portfolio').component('keyboardCard', {
     let vm = this
     vm.text = ''
     vm.show = true
+    mainService.keyboardText().then(res => {
+      vm.keyboardText = res.data.text[0].paragraph
+    })
     vm.displayText = () => {
-      mainService.keyboardText().then(res => {
-        vm.keyboardText = res.data.text[0].paragraph
-        vm.show = false
-        vm.index = 0
-        $interval(() => {
+      vm.show = false
+      vm.index = 0
+      let textAnim = $interval(() => {
+        if (vm.index !== 188) {
           $timeout(() => {
             vm.text += vm.keyboardText[vm.index]
             vm.index++
           }, 70)
-        }, 20, vm.keyboardText.length)
-      })
+        } else {
+          $interval.cancel(textAnim)
+        }
+      }, 20)
     }
   }
 })

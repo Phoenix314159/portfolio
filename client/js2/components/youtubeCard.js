@@ -33,18 +33,22 @@ angular.module('portfolio').component('youtubeCard', {
     let vm = this
     vm.text = ''
     vm.show = true
+    mainService.youtubeText().then(res => {
+      vm.youtubeText = res.data.text[0].paragraph
+    })
     vm.displayText = () => {
-      mainService.youtubeText().then(res => {
-        vm.youtubeText = res.data.text[0].paragraph
-        vm.show = false
-        vm.index = 0
-        $interval(() => {
+      vm.show = false
+      vm.index = 0
+      let textAnim = $interval(() => {
+        if (vm.index !== 174) {
           $timeout(() => {
             vm.text += vm.youtubeText[vm.index]
             vm.index++
           }, 70)
-        }, 20, vm.youtubeText.length)
-      })
+        } else {
+          $interval.cancel(textAnim)
+        }
+      }, 20)
     }
   }
 })

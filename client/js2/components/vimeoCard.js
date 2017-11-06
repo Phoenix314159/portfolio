@@ -32,18 +32,22 @@ angular.module('portfolio').component('vimeoCard', {
     let vm = this
     vm.text = ''
     vm.show = true
+    mainService.vimeoText().then(res => {
+      vm.vimeoText = res.data.text[0].paragraph
+    })
     vm.displayText = () => {
-      mainService.vimeoText().then(res => {
-        vm.vimeoText = res.data.text[0].paragraph
-        vm.show = false
-        vm.index = 0
-        $interval(() => {
+      vm.show = false
+      vm.index = 0
+      let textAnim = $interval(() => {
+        if (vm.index !== 191) {
           $timeout(() => {
             vm.text += vm.vimeoText[vm.index]
             vm.index++
           }, 70)
-        }, 20, vm.vimeoText.length)
-      })
+        } else {
+          $interval.cancel(textAnim)
+        }
+      }, 20)
     }
   }
 })

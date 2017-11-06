@@ -34,18 +34,22 @@ angular.module('portfolio').component('solarCard', {
     let vm = this
     vm.text = ''
     vm.show = true
+    mainService.solarText().then(res => {
+      vm.solarText = res.data.text[0].paragraph
+    })
     vm.displayText = () => {
-      mainService.solarText().then(res => {
-        vm.solarText = res.data.text[0].paragraph
-        vm.show = false
-        vm.index = 0
-        $interval(() => {
+      vm.show = false
+      vm.index = 0
+      let textAnim = $interval(() => {
+        if (vm.index !== 190) {
           $timeout(() => {
             vm.text += vm.solarText[vm.index]
             vm.index++
           }, 70)
-        }, 20, vm.solarText.length)
-      })
+        } else {
+          $interval.cancel(textAnim)
+        }
+      }, 20)
     }
   }
 })

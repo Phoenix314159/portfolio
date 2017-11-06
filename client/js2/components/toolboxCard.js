@@ -33,18 +33,22 @@ angular.module('portfolio').component('toolboxCard', {
     let vm = this
     vm.text = ''
     vm.show = true
+    mainService.toolboxText().then(res => {
+      vm.toolboxText = res.data.text[0].paragraph
+    })
     vm.displayText = () => {
-      mainService.toolboxText().then(res => {
-        vm.toolboxText = res.data.text[0].paragraph
-        vm.show = false
-        vm.index = 0
-        $interval(() => {
+      vm.show = false
+      vm.index = 0
+      let textAnim = $interval(() => {
+        if (vm.index !== 158) {
           $timeout(() => {
             vm.text += vm.toolboxText[vm.index]
             vm.index++
           }, 70)
-        }, 20, vm.toolboxText.length)
-      })
+        } else {
+          $interval.cancel(textAnim)
+        }
+      }, 20)
     }
   }
 })
