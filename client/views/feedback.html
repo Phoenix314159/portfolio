@@ -4,7 +4,7 @@
         <img src="./imgs/feedback.png" class="img-responsive" alt="" style="height: 240px">
     </div>
     <div class="card-body overlay">
-        <div ng-show="$ctrl.show" class="textButton">
+        <div ng-show="$ctrl.show" class="textButton faded2">
             <button class="btn btn-custom btn-xs" ng-click="$ctrl.displayText()">
                 <div class="text48">Show Info</div>
             </button>
@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="links26">
-            <div class="links25">
+            <div class="links25 faded" ng-show="$ctrl.showButtons">
                 <div class="githubLink">
                     <a href="https://feedback-app12.herokuapp.com"
                        class="portfolio-link btn btn-custom btn-xs">Website</a>

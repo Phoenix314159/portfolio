@@ -4,6 +4,7 @@ angular.module('portfolio').component('bloggerCard', {
     let vm = this
     vm.text = ''
     vm.show = true
+    vm.showButtons = false
     mainService.bloggerText().then(res => {
       vm.bloggerText = res.data.text[0].paragraph
     })
@@ -18,6 +19,7 @@ angular.module('portfolio').component('bloggerCard', {
           }, 70)
         } else {
           $interval.cancel(textAnim)
+          vm.showButtons = true
         }
       }, 20)
     }

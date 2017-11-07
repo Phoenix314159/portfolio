@@ -4,6 +4,7 @@ angular.module('portfolio').component('solarCard', {
     let vm = this
     vm.text = ''
     vm.show = true
+    vm.showButtons = false
     mainService.solarText().then(res => {
       vm.solarText = res.data.text[0].paragraph
     })
@@ -18,6 +19,7 @@ angular.module('portfolio').component('solarCard', {
           }, 70)
         } else {
           $interval.cancel(textAnim)
+          vm.showButtons = true
         }
       }, 20)
     }

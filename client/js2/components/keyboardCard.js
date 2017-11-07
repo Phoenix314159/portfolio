@@ -5,6 +5,7 @@ angular.module('portfolio').component('keyboardCard', {
     let vm = this
     vm.text = ''
     vm.show = true
+    vm.showButtons = false
     mainService.keyboardText().then(res => {
       vm.keyboardText = res.data.text[0].paragraph
     })
@@ -19,6 +20,7 @@ angular.module('portfolio').component('keyboardCard', {
           }, 70)
         } else {
           $interval.cancel(textAnim)
+          vm.showButtons = true
         }
       }, 20)
     }
