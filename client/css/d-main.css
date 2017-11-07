@@ -140,9 +140,17 @@ header .intro-text .skills {
 .text45 {
     font-size: 1.2em;
 }
+.myPicture {
+    border-radius: 80%;
+    border: 1px solid #c0c0c0;
+    box-shadow: 0 0 1px .75px whitesmoke,
+    0 0 2.5px 1.5px #808080,
+    0 0 3px 1.75px #778899;
+
+}
 
 #skills {
-    height: 132%;
+    height: 122.5%;
     background: url("../imgs/grey26.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
