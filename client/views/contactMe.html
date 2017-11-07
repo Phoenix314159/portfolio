@@ -1,54 +1,43 @@
-<h2 class="contactMe">Contact</h2>
-<hr/>
-<ul class="list-inline banner-social-buttons flex socialButtons col-12">
-    <li class="list-inline-item">
+<div class="wow animated fadeIn socialButtons flexContact" data-wow-duration="2s">
+    <div class="flexItem">
         <a href="https://www.linkedin.com/in/james-langford/"
            class="btn btn-custom btn-lg">
-            <div class="contactButtons">
-                <i class="fa fa-linkedin-square fa-fw"></i>
-                <span class="network-name">Linkedin</span>
-            </div>
+            <i class="fa fa-linkedin-square fa-fw"></i>
+            <span>Linkedin</span>
         </a>
-    </li>
-    <li class="list-inline-item">
-        <button class="btn btn-custom btn-lg dude2"
-                ng-click="toggle=!toggle">
-            <div class="contactButtons">
-                <i class="fa fa-envelope fa-fw"></i>
-                <span class="network-name" ng-hide="toggle">Gmail</span>
-                <span class="network-name" ng-show="toggle">derivative7117@gmail.com</span
-            </div>
+    </div>
+    <div class="flexItem">
+        <button class="btn btn-custom btn-lg dude2 faded4" ng-click="toggle=!toggle" ng-hide="toggle">
+            <i class="fa fa-envelope fa-fw"></i>
+            <span>Gmail</span>
         </button>
-    </li>
-    <li class="list-inline-item">
-        <button class="btn btn-custom btn-lg dude"
-                ng-click="toggle2=!toggle2">
-            <div class="contactButtons">
-                <i class="fa fa-envelope fa-fw"></i>
-                <span class="network-name" ng-hide="toggle2">MSN</span>
-                <span class="network-name" ng-show="toggle2">derivative7117@live.com</span
-            </div>
+        <button class="btn btn-custom btn-lg dude2 faded4" ng-click="toggle=!toggle" ng-show="toggle">
+            <i class="fa fa-envelope fa-fw"></i>
+            <span>derivative7117@gmail.com</span>
         </button>
-    </li>
-</ul>
-<div style="height:5vh"></div>
-<ul class="list-inline banner-social-buttons resumeButtons">
-    <li class="list-inline-item sheet">
+    </div>
+    <div class="flexItem">
+        <button class="btn btn-custom btn-lg dude2 faded4" ng-click="toggle2=!toggle2" ng-hide="toggle2">
+            <i class="fa fa-envelope fa-fw"></i>
+            <span>MSN</span>
+        </button>
+        <button class="btn btn-custom btn-lg dude2 faded4" ng-click="toggle2=!toggle2" ng-show="toggle2">
+            <i class="fa fa-envelope fa-fw"></i>
+            <span>derivative7117@live.com</span>
+        </button>
+    </div>
+    <div class="flexItem sheet">
         <a href="/resume/Resume.pdf"
            class="btn btn-custom btn-lg">
-            <div class="contactButtons">
-                <i class="fa fa-paper-plane fa-fw"></i>
-                <span class="network-name">Resume</span>
-            </div>
+            <i class="fa fa-paper-plane fa-fw"></i>
+            <span>Resume</span>
         </a>
-    </li>
-    <li class="list-inline-item download2">
+    </div>
+    <div class="flexItem download2">
         <a href="/resume/Resume.pdf" download
            class="btn btn-custom btn-lg">
-            <div class="contactButtons">
-                <i class="fa fa-paper-plane fa-fw"></i>
-                <span class="network-name">Resume (Download)</span>
-            </div>
+            <i class="fa fa-paper-plane fa-fw"></i>
+            <span>Resume (Download)</span>
         </a>
-    </li>
-</ul>
+    </div>
+</div>

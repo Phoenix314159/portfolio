@@ -54,35 +54,69 @@ header .intro-text .skills {
     background-size: cover;
 }
 
-.contactButtons span {
+.flexItem span {
     font-family: 'Rozha One', serif;
+    color: white;
+}
+
+.flexItem i {
+    color: whitesmoke;
+}
+
+.faded.ng-hide {
+    opacity: 0;
 }
 
 .faded.ng-hide-add,
 .faded.ng-hide-remove {
-    -webkit-transition : 1s ease-in-out opacity;
-    -moz-transition    : 1s ease-in-out opacity;
-    -ms-transition     : 1s ease-in-out opacity;
-    -o-transition      : 1s ease-in-out opacity;
-    transition         : 1s ease-in-out opacity;
-    opacity            : 1;
-}
-
-.faded.ng-hide {
-    opacity : 0;
-}
-.faded2.ng-hide-add,
-.faded2.ng-hide-remove {
-    -webkit-transition : .5s ease-in-out opacity;
-    -moz-transition    : .5s ease-in-out opacity;
-    -ms-transition     : .5s ease-in-out opacity;
-    -o-transition      : .5s ease-in-out opacity;
-    transition         : .5s ease-in-out opacity;
-    opacity            : 1;
+    -webkit-transition: 1s ease-in-out opacity;
+    -moz-transition: 1s ease-in-out opacity;
+    -ms-transition: 1s ease-in-out opacity;
+    -o-transition: 1s ease-in-out opacity;
+    transition: 1s ease-in-out opacity;
+    opacity: 1;
 }
 
 .faded2.ng-hide {
-    opacity : 0;
+    opacity: 1;
+}
+
+.faded2.ng-hide-add,
+.faded2.ng-hide-remove {
+    -webkit-transition: .5s ease-in-out opacity;
+    -moz-transition: .5s ease-in-out opacity;
+    -ms-transition: .5s ease-in-out opacity;
+    -o-transition: .5s ease-in-out opacity;
+    transition: .5s ease-in-out opacity;
+    opacity: 0;
+}
+
+.faded3.ng-hide {
+    opacity: 1;
+}
+
+.faded3.ng-hide-add,
+.faded3.ng-hide-remove {
+    -webkit-transition: .2s ease-in-out opacity;
+    -moz-transition: .2s ease-in-out opacity;
+    -ms-transition: .2s ease-in-out opacity;
+    -o-transition: .2s ease-in-out opacity;
+    transition: .2s ease-in-out opacity;
+    opacity: 0;
+}
+
+.faded4.ng-hide {
+    opacity: 1;
+}
+
+.faded4.ng-hide-add,
+.faded4.ng-hide-remove {
+    -webkit-transition: .2s ease-in-out opacity;
+    -moz-transition: .2s ease-in-out opacity;
+    -ms-transition: .2s ease-in-out opacity;
+    -o-transition: .2s ease-in-out opacity;
+    transition: .2s ease-in-out opacity;
+    opacity: 0;
 }
 
 .resumeButtons {
@@ -96,10 +130,6 @@ header .intro-text .skills {
 
 .resumeButtons .download2 {
     margin-left: 14.5px;
-}
-
-.resumeButtons span {
-    font-family: 'Rozha One', serif;
 }
 
 .sectionFont {
@@ -357,6 +387,16 @@ fieldset[disabled] .btn-custom.active {
     border-color: #7b8185;
 }
 
+.flexContact {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flexItem {
+    margin-bottom: 4vh;
+}
+
 .card {
     background-color: #E8E8E8;
     height: 35vh;
@@ -568,10 +608,6 @@ fieldset[disabled] .btn-custom.active {
 .heyman {
     margin-right: -240px;
     margin-left: -240px;
-}
-
-.projectsLine {
-    width: 50%;
 }
 
 .textItem {
