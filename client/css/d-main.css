@@ -752,7 +752,7 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #skills {
-        height: 148%;
+        height: 141%;
     }
 }
 
@@ -767,11 +767,11 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #skills {
-        height: 134%;
+        height: 125%;
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1440px) {
+@media (min-width: 1350px) and (max-width: 1440px) {
     .twinkling2 {
         height: 158vh;
     }
@@ -798,7 +798,7 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #skills {
-        height: 135%;
+        height: 125%;
     }
 
     #projects {
@@ -839,7 +839,7 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #skills {
-        height: 120%;
+        height: 112%;
     }
 }
 
@@ -876,7 +876,7 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #skills {
-        height: 120%;
+        height: 110%;
     }
 
     .card-text {
@@ -959,7 +959,7 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #skills {
-        height: 118%;
+        height: 109%;
     }
 
     .tag {
@@ -1106,7 +1106,7 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #skills {
-        height: 110%;
+        height: 102%;
     }
 
     .card-title {
