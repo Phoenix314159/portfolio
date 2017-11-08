@@ -1,10 +1,12 @@
 header .intro-text .skills {
     font-size: 3.75em;
 }
-.navbar-brand span{
+
+.navbar-brand span {
     font-size: 16px;
     font-family: 'Rozha One', serif;
 }
+
 .cool h2 {
     color: #ffffff;
     font-weight: 400;
@@ -144,6 +146,7 @@ header .intro-text .skills {
 .text45 {
     font-size: 1.2em;
 }
+
 .myPicture {
     /*border-radius: 50%;*/
     box-shadow: 0 0 .2px .2px black,
@@ -215,7 +218,7 @@ header .intro-text .skills {
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-   background-color: black;
+    background-color: black;
     padding: 4%;
 }
 
@@ -388,7 +391,14 @@ fieldset[disabled] .btn-custom.active {
 }
 
 .flexItem {
-    margin-bottom: 4vh;
+    margin-bottom: 10vh;
+}
+
+.copied {
+    text-shadow: 2px 2px 2px black;
+    margin-top: 30px;
+    font-size: 20px;
+    margin-bottom: -60px;
 }
 
 .card {
