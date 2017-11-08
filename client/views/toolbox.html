@@ -1,15 +1,11 @@
-<div class="wow animated fadeIn col-sm-4 portfolio-item card" id="hover" data-wow-duration="1.5s" data-wow-delay="1s">
+<div class="wow animated fadeIn col-sm-4 portfolio-item card" id="hover"
+     ng-mouseenter="$ctrl.index === 162 ? null : $ctrl.displayText()" ng-mouseleave="$ctrl.stopText()">
     <h4 class="card-title">The Toolbox</h4>
     <div class="imgWrapper">
         <img src="./imgs/toolbox.png"
              class="img-responsive" alt="" style="height: 240px">
     </div>
     <div class="card-body overlay">
-        <div ng-show="$ctrl.show" class="textButton faded2">
-            <button class="btn btn-custom btn-xs" ng-click="$ctrl.displayText()">
-                <div class="text48">Show Info</div>
-            </button>
-        </div>
         <div class="card-text">
             <div class="text23">
                 {{$ctrl.text}}

@@ -2,7 +2,6 @@ angular.module('portfolio').component('solarCard', {
   templateUrl: '/views/solar.html',
   controller: function (mainService, $interval, $timeout) {
     let vm = this
-    vm.text = ''
     vm.show = true
     vm.showButtons = false
     mainService.solarText().then(res => {
@@ -11,7 +10,11 @@ angular.module('portfolio').component('solarCard', {
     vm.displayText = () => {
       vm.show = false
       vm.index = 0
+      vm.text = ''
       let textAnim = $interval(() => {
+        vm.stopText = () => {
+          $interval.cancel(textAnim)
+        }
         if (vm.index !== 190) {
           $timeout(() => {
             vm.text += vm.solarText[vm.index]

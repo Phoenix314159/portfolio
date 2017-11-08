@@ -3,7 +3,6 @@ angular.module('portfolio').component('keyboardCard', {
 
   controller: function (mainService, $interval, $timeout) {
     let vm = this
-    vm.text = ''
     vm.show = true
     vm.showButtons = false
     mainService.keyboardText().then(res => {
@@ -12,7 +11,11 @@ angular.module('portfolio').component('keyboardCard', {
     vm.displayText = () => {
       vm.show = false
       vm.index = 0
+      vm.text = ''
       let textAnim = $interval(() => {
+        vm.stopText = () => {
+          $interval.cancel(textAnim)
+        }
         if (vm.index !== 188) {
           $timeout(() => {
             vm.text += vm.keyboardText[vm.index]

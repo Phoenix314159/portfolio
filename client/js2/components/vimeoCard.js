@@ -2,7 +2,6 @@ angular.module('portfolio').component('vimeoCard', {
   templateUrl: '/views/vimeo.html',
   controller: function (mainService, $interval, $timeout) {
     let vm = this
-    vm.text = ''
     vm.show = true
     vm.showButtons = false
     mainService.vimeoText().then(res => {
@@ -11,7 +10,11 @@ angular.module('portfolio').component('vimeoCard', {
     vm.displayText = () => {
       vm.show = false
       vm.index = 0
+      vm.text = ''
       let textAnim = $interval(() => {
+        vm.stopText = () => {
+          $interval.cancel(textAnim)
+        }
         if (vm.index !== 191) {
           $timeout(() => {
             vm.text += vm.vimeoText[vm.index]
@@ -25,3 +28,4 @@ angular.module('portfolio').component('vimeoCard', {
     }
   }
 })
+

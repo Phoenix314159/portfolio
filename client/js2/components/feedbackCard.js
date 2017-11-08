@@ -2,7 +2,6 @@ angular.module('portfolio').component('feedbackCard', {
   templateUrl: '/views/feedback.html',
   controller: function (mainService, $interval, $timeout) {
     let vm = this
-    vm.text = ''
     vm.show = true
     vm.showButtons = false
     mainService.feedbackText().then(res => {
@@ -11,7 +10,11 @@ angular.module('portfolio').component('feedbackCard', {
     vm.displayText = () => {
       vm.show = false
       vm.index = 0
+      vm.text = ''
       let textAnim = $interval(() => {
+        vm.stopText = () => {
+          $interval.cancel(textAnim)
+        }
         if (vm.index !== 189) {
           $timeout(() => {
             vm.text += vm.feedbackText[vm.index]
