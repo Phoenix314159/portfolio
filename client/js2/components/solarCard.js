@@ -1,30 +1,38 @@
 angular.module('portfolio').component('solarCard', {
   templateUrl: '/views/solar.html',
-  controller: function (mainService, $interval, $timeout) {
-    let vm = this
+  controller: function (mainService, $interval, $timeout, $window) {
+    const vm = this
     vm.show = true
     vm.showButtons = false
-    mainService.solarText().then(res => {
-      vm.solarText = res.data.text[0].paragraph
-    })
+    vm.stop = false
+    $timeout(() => {
+      mainService.solarText().then(res => {
+        const {data: {text}} = res
+        vm.solarText = text[0].paragraph
+      })
+    }, 600)
     vm.displayText = () => {
       vm.show = false
       vm.index = 0
       vm.text = ''
-      let textAnim = $interval(() => {
-        vm.stopText = () => {
-          $interval.cancel(textAnim)
-        }
-        if (vm.index !== 190) {
-          $timeout(() => {
-            vm.text += vm.solarText[vm.index]
-            vm.index++
-          }, 70)
-        } else {
-          $interval.cancel(textAnim)
+      vm.textAnim = $interval(() => {
+        if (vm.text.length === 193) {
+          vm.stopText()
           vm.showButtons = true
+        } else {
+          vm.text += vm.solarText[vm.index]
+          vm.index++
         }
-      }, 20)
+      }, 15)
+    }
+    vm.stopText = () => {
+      const {document} = $window
+      $interval.cancel(vm.textAnim)
+      if (vm.text.length === 193) {
+        document.getElementById('cardPicture3').className = 'showPicture'
+        document.getElementById('cardBody3').className = 'showCard'
+        vm.stop = true
+      }
     }
   }
 })

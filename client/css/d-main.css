@@ -412,6 +412,24 @@ fieldset[disabled] .btn-custom.active {
     0 0 3px 1.75px #778899;
 }
 
+.showPicture {
+    opacity: 0;
+}
+
+.showCard {
+    opacity: 1;
+}
+
+.cardBack {
+    background-color: black;
+    box-shadow: 0 0 1px .75px whitesmoke,
+    0 0 2.5px 1.5px #808080,
+    0 0 3px 1.75px #778899;
+    animation-name: boxswitch;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
 .card:hover .overlay {
     opacity: 1;
 }

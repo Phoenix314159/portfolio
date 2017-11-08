@@ -1,12 +1,14 @@
-<div class="wow animated fadeIn col-sm-4 portfolio-item card"
-     ng-mouseenter="$ctrl.index === 193 ? null : $ctrl.displayText()" ng-mouseleave="$ctrl.stopText()">
-    <h4 class="card-title solar">The Solar System</h4>
-    <div class="imgWrapper">
-        <img class="img-responsive center-block"
-             src="./imgs/solar-system.png"
-             style="height: 240px"/>
+<div ng-class="$ctrl.stop ? 'cardBack' : null" class="wow animated fadeIn col-sm-4 portfolio-item card"
+     ng-mouseenter="$ctrl.text.length === 193 ? null : $ctrl.displayText()" ng-mouseleave="$ctrl.stopText()">
+    <div id="cardPicture3">
+        <h4 class="card-title solar">The Solar System</h4>
+        <div class="imgWrapper">
+            <img class="img-responsive center-block"
+                 src="./imgs/solar-system.png"
+                 style="height: 240px"/>
+        </div>
     </div>
-    <div class="card-body overlay">
+    <div id="cardBody3" class="card-body overlay">
         <div class="card-text">
             <div class="text23">
                 {{$ctrl.text}}
