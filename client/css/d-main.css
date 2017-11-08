@@ -130,6 +130,8 @@ header .intro-text .skills {
 
 .sectionFont {
     font-family: 'Rozha One', serif;
+    font-weight: 400;
+    text-shadow: 2px 2px 5px black;
 }
 
 .textButton {
@@ -148,7 +150,7 @@ header .intro-text .skills {
 }
 
 .myPicture {
-    /*border-radius: 50%;*/
+    opacity: .9;
     box-shadow: 0 0 .2px .2px black,
     0 0 .2px .2px black,
     0 0 .2px .2px black;
@@ -386,7 +388,7 @@ fieldset[disabled] .btn-custom.active {
 
 .flexContact {
     display: flex;
-    align-items: center;
+    justify-content: space-evenly;
     flex-direction: column;
 }
 
@@ -601,14 +603,6 @@ fieldset[disabled] .btn-custom.active {
     max-width: 78vw;
 }
 
-.cool > h2 {
-    text-shadow: 2px 2px 5px black;
-}
-
-.contactMe > h2 {
-    text-shadow: 2px 2px 5px black;
-}
-
 .heyman {
     margin-right: -240px;
     margin-left: -240px;
@@ -812,7 +806,7 @@ fieldset[disabled] .btn-custom.active {
     }
 
     .card-text {
-        font-size: .9em;
+        font-size: 1em;
     }
 
     .card-title {
@@ -846,6 +840,26 @@ fieldset[disabled] .btn-custom.active {
 
     #skills {
         height: 112%;
+    }
+
+    .imgWrapper {
+        height: 180px;
+    }
+
+    .card img {
+        max-height: 180px;
+    }
+
+    .card {
+        height: 32vh;
+    }
+
+    .card-title {
+        font-size: 1em;
+    }
+
+    .card-text {
+        font-size: .9em;
     }
 }
 
@@ -886,7 +900,7 @@ fieldset[disabled] .btn-custom.active {
     }
 
     .card-text {
-        font-size: .7em;
+        font-size: .8em;
     }
 
     .card-title {

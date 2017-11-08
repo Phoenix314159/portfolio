@@ -7,7 +7,6 @@ angular.module('portfolio').component('contactMe', {
     vm.show3 = false
     vm.success1 = () => {
       vm.show = false
-      console.log(vm.show)
     };
     vm.fail1 = err => {
       console.error('Error!', err);
