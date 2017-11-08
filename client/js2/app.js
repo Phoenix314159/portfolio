@@ -1,1 +1,1 @@
-angular.module('portfolio', ['angular-parallax', 'ngAnimate']);
+angular.module('portfolio', ['angular-parallax', 'ngAnimate', 'ngclipboard']);

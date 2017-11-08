@@ -1,29 +1,28 @@
 <div class="wow animated fadeIn socialButtons flexContact" data-wow-duration="2s">
     <div class="flexItem">
-        <a href="https://www.linkedin.com/in/james-langford/"
-           class="btn btn-custom btn-lg">
-            <i class="fa fa-linkedin-square fa-fw"></i>
-            <span>Linkedin</span>
-        </a>
-    </div>
-    <div class="flexItem">
         <button class="btn btn-custom btn-lg dude2 faded4" ng-click="toggle=!toggle" ng-hide="toggle">
             <i class="fa fa-envelope fa-fw"></i>
-            <span>Gmail</span>
+            <span ng-show="$ctrl.show">MSN</span>
+            <span ng-hide="$ctrl.show">Copied to Clipboard</span>
         </button>
-        <button class="btn btn-custom btn-lg dude2 faded4" ng-click="toggle=!toggle" ng-show="toggle">
+        <button ngclipboard ngclipboard-success="$ctrl.success1()" data-clipboard-text="derivative7117@live.com"
+                class="btn btn-custom btn-lg dude2 faded4" ng-click="toggle=!toggle" ng-show="toggle">
             <i class="fa fa-envelope fa-fw"></i>
-            <span>derivative7117@gmail.com</span>
+            <span ng-show="$ctrl.show">derivative7117@live.com</span>
         </button>
+        <!--<span ng-show="$ctrl.show">Click Again To Copy</span>-->
     </div>
     <div class="flexItem">
         <button class="btn btn-custom btn-lg dude2 faded4" ng-click="toggle2=!toggle2" ng-hide="toggle2">
             <i class="fa fa-envelope fa-fw"></i>
-            <span>MSN</span>
+            <span ng-show="$ctrl.show2">Gmail</span>
+            <span ng-hide="$ctrl.show2">Copied to Clipboard</span>
         </button>
-        <button class="btn btn-custom btn-lg dude2 faded4" ng-click="toggle2=!toggle2" ng-show="toggle2">
+        <button ngclipboard ngclipboard-success="$ctrl.success2()" data-clipboard-text="derivative7117@gmail.com"
+                on-copied="$ctrl.success2()" on-error="$ctrl.fail2(err)"
+                class="btn btn-custom btn-lg dude2 faded4" ng-click="toggle2=!toggle2" ng-show="toggle2">
             <i class="fa fa-envelope fa-fw"></i>
-            <span>derivative7117@live.com</span>
+            <span ng-show="$ctrl.show2">derivative7117@gmail.com</span>
         </button>
     </div>
     <div class="flexItem sheet">
@@ -41,3 +40,4 @@
         </a>
     </div>
 </div>
+

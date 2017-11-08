@@ -1,9 +1,13 @@
 header .intro-text .skills {
     font-size: 3.75em;
 }
-
+.navbar-brand span{
+    font-size: 16px;
+    font-family: 'Rozha One', serif;
+}
 .cool h2 {
     color: #ffffff;
+    font-weight: 400;
 }
 
 .skillsLine {
