@@ -6,11 +6,11 @@ angular.module('portfolio').component('aboutMe', {
       mainService.aboutMeText1().then(res => {
         vm.aboutMeText1 = res.data.text[0].paragraph
       })
-    }, 45)
+    }, 5)
     $timeout(() => {
       mainService.aboutMeText2().then(res => {
         vm.aboutMeText2 = res.data.text[0].paragraph
       })
-    }, 50)
+    }, 10)
   }
 })
