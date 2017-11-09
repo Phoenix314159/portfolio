@@ -903,6 +903,7 @@ fieldset[disabled] .btn-custom.active {
         font-size: 12px;
         padding: 2px 2px;
     }
+
     .links25 {
         justify-content: center;
         margin-right: 4%;
@@ -972,6 +973,7 @@ fieldset[disabled] .btn-custom.active {
         font-size: 12px;
         padding: 2px 2px;
     }
+
     .links25 {
         justify-content: center;
         margin-right: 4%;
@@ -1081,10 +1083,12 @@ fieldset[disabled] .btn-custom.active {
         height: 135vh;
 
     }
+
     .githubLink .btn {
         font-size: 10px;
         padding: 2px 2px;
     }
+
     .links25 {
         justify-content: center;
         margin-right: 5%;
@@ -1177,13 +1181,32 @@ fieldset[disabled] .btn-custom.active {
 }
 
 @media (min-width: 768px) and (max-width: 900px) {
-
+    .card-text {
+        font-size: 1em;
+    }
 }
 
-@media only screen and (max-width: 768px) {
+@media (min-width: 425px) and (max-width: 768px) {
     .textButton .btn {
         font-size: 10px;
         padding: 2px 4px;
+    }
+    #skills {
+        height: 94%;
+    }
+    .twinkling2 {
+        height: 130vh;
+    }
+
+    .stars2 {
+        height: 130vh;
+    }
+
+    #about p {
+        font-size: 1em;
+    }
+    #projects {
+        height: 131%;
     }
 
     .githubLink .btn {
@@ -1200,15 +1223,46 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #projects {
-        height: 154%;
+        height: 148%;
     }
 
     #skills {
-        height: 166%;
+        height: 110%;
     }
 
     #skills .cool {
         margin-top: -24vh;
+    }
+
+    .card {
+        height: 24vh;
+        max-width: 22.15vw
+    }
+
+    .card img {
+        max-height: 135px;
+    }
+
+    .card-text {
+        font-size: .7em;
+    }
+
+    .card-title {
+        font-size: .7em;
+    }
+
+    .heyman {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .cool img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .cool .tag {
+        font-size: .7em;
     }
 
     .feedBack {
@@ -1231,4 +1285,101 @@ fieldset[disabled] .btn-custom.active {
         height: 155%;
     }
 
+}
+
+@media (min-width: 320px) and (max-width: 375px) {
+    #skills {
+        height: 75%;
+    }
+
+    #skills .cool {
+        margin-top: -32vh;
+    }
+
+    #projects {
+        height: 306%;
+    }
+
+    .card {
+        height: 25vh;
+        max-width: 66.15vw;
+        margin-bottom: 25px;
+    }
+
+    .card img {
+        max-height: 129px;
+    }
+
+    .card-text {
+        font-size: .7em;
+    }
+
+    #cardPicture .imgWrapper img {
+        height: 129px;
+    }
+
+    .heyman {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .text-center h2 {
+        font-size: 1.5em;
+    }
+
+    .cool hr {
+        width: 23vw;
+    }
+
+    .james {
+        margin-top: 20px;
+    }
+
+    .myPicture {
+        height: 28%;
+        width: 50%;
+    }
+
+    .brand-heading {
+        font-size: 41px;
+        line-height: 14px;
+    }
+
+    .stack {
+        font-size: 87%;
+    }
+
+    .btn-circle {
+        height: 80%;
+        width: 80%;
+    }
+
+    .sectionFont {
+        font-size: 10px;
+    }
+
+    #about p {
+        font-size: 13px;
+    }
+
+    .cool img {
+        height: 30px;
+        width: 30px;
+    }
+
+    .cool .tag {
+        font-size: .5em;
+    }
+
+    #contact {
+        height: 113%;
+    }
+
+    .rowContact {
+        margin-top: -28vh
+    }
+
+    #contact .container .row .col-lg-18 {
+        margin-top: -17vh;
+    }
 }
