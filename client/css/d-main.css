@@ -1144,6 +1144,7 @@ fieldset[disabled] .btn-custom.active {
 
     .card img {
         max-height: 150px;
+        /*max-width: 140px;*/
     }
 
     .card {
@@ -1186,7 +1187,7 @@ fieldset[disabled] .btn-custom.active {
     }
 }
 
-@media (min-width: 425px) and (max-width: 768px) {
+@media (min-width: 535px) and (max-width: 768px) {
     .textButton .btn {
         font-size: 10px;
         padding: 2px 4px;
@@ -1285,6 +1286,108 @@ fieldset[disabled] .btn-custom.active {
         height: 155%;
     }
 
+}
+@media (min-width: 425px) and (max-width: 535px) {
+    .textButton .btn {
+        font-size: 10px;
+        padding: 2px 4px;
+    }
+    #skills {
+        height: 94%;
+    }
+    .twinkling2 {
+        height: 130vh;
+    }
+
+    .stars2 {
+        height: 130vh;
+    }
+
+    #about p {
+        font-size: 1em;
+    }
+    #projects {
+        height: 131%;
+    }
+
+    .githubLink .btn {
+        font-size: 10px;
+        padding: 2px 4px;
+    }
+
+    .imgWrapper img {
+        height: 120px;
+    }
+
+    .card-title {
+        font-size: .9em;
+    }
+
+    #projects {
+        height: 148%;
+    }
+
+    #skills {
+        height: 110%;
+    }
+
+    #skills .cool {
+        margin-top: -24vh;
+    }
+
+    .card {
+        height: 24vh;
+        max-width: 22.15vw
+    }
+    .card-title {
+        font-size: .7em;
+    }
+
+    .card img {
+        max-height: 135px;
+    }
+
+    .card-text {
+        font-size: .7em;
+    }
+
+    .card-title {
+        font-size: .7em;
+    }
+
+    .heyman {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .cool img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .cool .tag {
+        font-size: .7em;
+    }
+
+    .feedBack {
+        font-size: 1em;
+    }
+
+    .blog {
+        font-size: 1em;
+    }
+
+    .tag {
+        font-size: 1.2em;
+    }
+
+    .weather {
+        font-size: 1.15em;
+    }
+
+    .smaller {
+        height: 155%;
+    }
 }
 
 @media (min-width: 320px) and (max-width: 375px) {
