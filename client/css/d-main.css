@@ -901,7 +901,15 @@ fieldset[disabled] .btn-custom.active {
 
     .githubLink .btn {
         font-size: 12px;
-        padding: 4px 6px;
+        padding: 2px 2px;
+    }
+    .links25 {
+        justify-content: center;
+        margin-right: 4%;
+    }
+
+    .links25 span a {
+        width: 55px;
     }
 
     .heyman {
@@ -919,6 +927,8 @@ fieldset[disabled] .btn-custom.active {
 
     .card-text {
         font-size: .8em;
+        margin-left: 1%;
+        margin-top: 3%;
     }
 
     .card-title {
@@ -958,6 +968,19 @@ fieldset[disabled] .btn-custom.active {
         font-size: 1.2em;
     }
 
+    .githubLink .btn {
+        font-size: 12px;
+        padding: 2px 2px;
+    }
+    .links25 {
+        justify-content: center;
+        margin-right: 4%;
+    }
+
+    .links25 span a {
+        width: 55px;
+    }
+
     .twinkling2 {
         height: 135vh;
     }
@@ -989,7 +1012,7 @@ fieldset[disabled] .btn-custom.active {
     }
 
     .card-text {
-        font-size: .7em;
+        font-size: .75em;
     }
 
     .card {
@@ -1051,16 +1074,6 @@ fieldset[disabled] .btn-custom.active {
         max-height: 150px;
     }
 
-    .textButton .btn {
-        font-size: 10px;
-        padding: 2px 6px;
-    }
-
-    .githubLink .btn {
-        font-size: 10px;
-        padding: 2px 6px;
-    }
-
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1068,15 +1081,17 @@ fieldset[disabled] .btn-custom.active {
         height: 135vh;
 
     }
-
-    .textButton .btn {
-        font-size: 10px;
-        padding: 2px 4px;
-    }
-
     .githubLink .btn {
         font-size: 10px;
-        padding: 2px 4px;
+        padding: 2px 2px;
+    }
+    .links25 {
+        justify-content: center;
+        margin-right: 5%;
+    }
+
+    .links25 span a {
+        width: 55px;
     }
 
     .stars2 {
@@ -1132,7 +1147,7 @@ fieldset[disabled] .btn-custom.active {
     }
 
     .card-text {
-        font-size: .7em;
+        font-size: 1.15em;
     }
 
     #projects .container img {
@@ -1159,6 +1174,10 @@ fieldset[disabled] .btn-custom.active {
         margin-top: -10vh;
         height: 120%;
     }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+
 }
 
 @media only screen and (max-width: 768px) {
