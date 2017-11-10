@@ -1,12 +1,13 @@
-<div ng-class="$ctrl.stop ? 'cardBack' : null" class="col-sm-4 portfolio-item card"
-     ng-mouseenter="$ctrl.index === 192 ? null : $ctrl.displayText()" ng-mouseleave="$ctrl.stopText()">
+<div class="col-sm-4 portfolio-item card"
+     ng-mouseenter="$ctrl.text.length === 192 ? null : $ctrl.displayText(); $ctrl.showText()"
+     ng-mouseleave="$ctrl.text.length === 192 ? null : $ctrl.stopText(); $ctrl.showPicture()">
     <div id="cardPicture7">
         <h4 class="card-title">Feedback App</h4>
         <div class="imgWrapper">
             <img src="/imgs/feedback.png" class="img-responsive" style="height: 240px">
         </div>
     </div>
-    <div id="cardBody7" class="card-body overlay">
+    <div id="cardBody7" class="card-body">
         <div class="card-text">
             <div class="text23">
                 {{$ctrl.text}}

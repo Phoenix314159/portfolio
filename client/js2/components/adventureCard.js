@@ -3,17 +3,16 @@ angular.module('portfolio').component('adventureCard', {
   controller: function (mainService, $interval, $timeout, $window) {
     const vm = this, {document} = $window,
       cardBody4 = document.getElementById('cardBody4'),
-      cardPicture4 = document.getElementById('cardPicture4')
-    vm.show = true
-    vm.showButtons = false
-    const getData = $timeout(() => {
+      cardPicture4 = document.getElementById('cardPicture4'),
+      getData = $timeout(() => {
       mainService.adventureText().then(res => {
         const {data: {text}} = res
         vm.adventureText = text[0].paragraph.trim()
         $timeout.cancel(getData)
       })
     }, 650)
-
+    vm.show = true
+    vm.showButtons = false
     vm.displayText = () => {
       vm.show = false
       vm.index = 0
@@ -28,9 +27,8 @@ angular.module('portfolio').component('adventureCard', {
             vm.index++
           }
         }, 15)
-      }, 150)
+      }, 300)
     }
-
     vm.stopText = () => {
       $timeout.cancel(vm.display)
       $interval.cancel(vm.textAnim)
@@ -50,7 +48,6 @@ angular.module('portfolio').component('adventureCard', {
         cardBody4.classList.remove('overlay2')
       }
     }
-
     vm.showText = () => {
       $timeout.cancel(vm.pictureShow)
       vm.textShow = $timeout(() => {
@@ -58,7 +55,6 @@ angular.module('portfolio').component('adventureCard', {
         cardBody4.className += ' overlay'
       }, 100)
     }
-
     vm.showPicture = () => {
       $timeout.cancel(vm.textShow)
       if (vm.text.length === 188) {
