@@ -218,8 +218,8 @@ header .intro-text .skills {
     right: 0;
     height: 100%;
     width: 100%;
-    opacity: 0;
-    transition: .5s ease;
+    opacity: 1;
+    transition: .5s ease-in-out;
     background-color: black;
     padding: 4%;
 }
@@ -228,6 +228,17 @@ header .intro-text .skills {
     animation-name: boxswitch;
     animation-duration: 7s;
     animation-iteration-count: infinite;
+}
+
+.overlay2 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    transition: 2s ease-in-out;
 }
 
 @keyframes boxswitch {
@@ -412,12 +423,8 @@ fieldset[disabled] .btn-custom.active {
     0 0 3px 1.75px #778899;
 }
 
-.showPicture {
+.showPictureNot {
     opacity: 0;
-}
-
-.showCard {
-    opacity: 1;
 }
 
 .cardBack {
@@ -428,10 +435,6 @@ fieldset[disabled] .btn-custom.active {
     animation-name: boxswitch;
     animation-duration: 7s;
     animation-iteration-count: infinite;
-}
-
-.card:hover .overlay {
-    opacity: 1;
 }
 
 .card-body {
@@ -665,27 +668,20 @@ fieldset[disabled] .btn-custom.active {
     -moz-radial-gradient(circle, #FFFFFF .5px, #778899 .5px, transparent 3.75px),
     -moz-radial-gradient(ellipse, #778899 .5px, #D3D3D3 .5px, transparent 2.5px),
     -moz-radial-gradient(ellipse, #FFFFFF, #C0C0C0 .5px, transparent 1.75px);
-
-    /* Webkit */
     background-image: -webkit-gradient(radial, 50% 50%, 2, 50% 50%, 2.5, from(white), color-stop(0.1, #C0C0C0), to(transparent)),
     -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 1.75, from(white), color-stop(0.1, #778899), to(transparent)),
     -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 2.5, from(#778899), color-stop(0.05, #D3D3D3), to(transparent)),
     -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 1.75, from(rgba(255, 255, 255, .4)), color-stop(0.03, #C0C0C0), to(transparent));
-
-    /* Background Attributes */
     background-size: 550px 550px, 350px 350px, 250px 270px, 220px 200px;
     background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
-
     animation-name: movement;
     animation-duration: 25s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-
     -moz-animation-name: movement;
     -moz-animation-duration: 25s;
     -moz-animation-timing-function: linear;
     -moz-animation-iteration-count: infinite;
-
     -webkit-animation-name: movement;
     -webkit-animation-duration: 25s;
     -webkit-animation-timing-function: linear;
@@ -1192,9 +1188,11 @@ fieldset[disabled] .btn-custom.active {
         font-size: 10px;
         padding: 2px 4px;
     }
+
     #skills {
         height: 94%;
     }
+
     .twinkling2 {
         height: 130vh;
     }
@@ -1206,6 +1204,7 @@ fieldset[disabled] .btn-custom.active {
     #about p {
         font-size: 1em;
     }
+
     #projects {
         height: 131%;
     }
@@ -1287,14 +1286,17 @@ fieldset[disabled] .btn-custom.active {
     }
 
 }
+
 @media (min-width: 425px) and (max-width: 535px) {
     .textButton .btn {
         font-size: 10px;
         padding: 2px 4px;
     }
+
     #skills {
         height: 94%;
     }
+
     .twinkling2 {
         height: 130vh;
     }
@@ -1306,6 +1308,7 @@ fieldset[disabled] .btn-custom.active {
     #about p {
         font-size: 1em;
     }
+
     #projects {
         height: 131%;
     }
@@ -1339,6 +1342,7 @@ fieldset[disabled] .btn-custom.active {
         height: 24vh;
         max-width: 22.15vw
     }
+
     .card-title {
         font-size: .7em;
     }

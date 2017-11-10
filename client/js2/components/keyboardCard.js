@@ -1,15 +1,22 @@
 angular.module('portfolio').component('keyboardCard', {
   templateUrl: '/views/keyboard.html',
-
   controller: function (mainService, $interval, $timeout, $window) {
-    const vm = this
+    const vm = this, {document} = $window,
+      cardBody = document.getElementById('cardBody'),
+      cardPicture = document.getElementById('cardPicture'),
+      cancelTextForward = () => {
+        $interval.cancel(vm.textAnim)
+      },
+      cancelTextBackward = () => {
+        $interval.cancel(vm.backText)
+      }
     vm.show = true
     vm.showButtons = false
-    vm.stop = false
-    $timeout(() => {
+    const getData = $timeout(() => {
       mainService.keyboardText().then(res => {
         const {data: {text}} = res
         vm.keyboardText = text[0].paragraph.trim()
+        $timeout.cancel(getData)
       })
     }, 500)
 
@@ -17,24 +24,56 @@ angular.module('portfolio').component('keyboardCard', {
       vm.show = false
       vm.index = 0
       vm.text = ''
-      vm.textAnim = $interval(() => {
-        if (vm.text.length === 191) {
-          vm.stopText()
-          vm.showButtons = true
-        } else {
-          vm.text += vm.keyboardText[vm.index]
-          vm.index++
-        }
-      }, 15)
+      vm.display = $timeout(() => {
+        vm.textAnim = $interval(() => {
+          if (vm.text.length === 191) {
+            vm.stopText()
+            vm.showButtons = true
+          } else {
+            vm.text += vm.keyboardText[vm.index]
+            vm.index++
+          }
+        }, 15)
+      }, 150)
     }
+
     vm.stopText = () => {
-      const {document} = $window
-      $interval.cancel(vm.textAnim)
-      if (vm.text.length === 191) {
-        document.getElementById('cardPicture').className = 'showPicture'
-        document.getElementById('cardBody').className = 'showCard'
-        vm.stop = true
+      $interval.cancel(vm.display)
+      const arr = vm.text.split('')
+      cancelTextForward()
+      if (vm.text.length !== 191) {
+        vm.backText = $interval(() => {
+          if(vm.text.length === 0) {
+            cancelTextBackward()
+            return
+          }
+          arr.pop()
+          vm.text = arr.join('')
+        }, 2)
       }
+      else {
+        cardPicture.className = 'showPictureNot'
+        cardBody.classList.remove('overlay2')
+      }
+    }
+
+    vm.showText = () => {
+      $timeout.cancel(vm.pictureShow)
+      vm.textShow = $timeout(() => {
+        cardBody.classList.remove('overlay2')
+        cardBody.className += ' overlay'
+      }, 100)
+    }
+
+    vm.showPicture = () => {
+      $timeout.cancel(vm.textShow)
+      if (vm.text.length === 191) {
+        return
+      }
+      vm.pictureShow = $timeout(() => {
+        cardBody.classList.remove('overlay')
+        cardBody.className += ' overlay2'
+      }, 700)
     }
   }
 })
