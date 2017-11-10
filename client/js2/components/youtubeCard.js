@@ -4,12 +4,10 @@ angular.module('portfolio').component('youtubeCard', {
     const vm = this, {document} = $window,
       cardBody6 = document.getElementById('cardBody6'),
       cardPicture6 = document.getElementById('cardPicture6'),
-      getData = $timeout(() => {
-        mainService.youtubeText().then(res => {
-          const {data: {text}} = res
-          vm.youtubeText = text[0].paragraph.trim()
-          $timeout.cancel(getData)
-        })
+      getData = $timeout(async () => {
+        const res = await mainService.youtubeText();
+        vm.youtubeText = res.data.text[0].paragraph
+        $timeout.cancel(getData)
       }, 750)
     vm.show = true
     vm.showButtons = false

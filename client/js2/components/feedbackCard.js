@@ -4,12 +4,10 @@ angular.module('portfolio').component('feedbackCard', {
     const vm = this, {document} = $window,
       cardBody7 = document.getElementById('cardBody7'),
       cardPicture7 = document.getElementById('cardPicture7'),
-      getData = $timeout(() => {
-        mainService.feedbackText().then(res => {
-          const {data: {text}} = res
-          vm.feedbackText = text[0].paragraph.trim()
-          $timeout.cancel(getData)
-        })
+      getData = $timeout(async () => {
+        const res = await  mainService.feedbackText();
+        vm.feedbackText = res.data.text[0].paragraph
+        $timeout.cancel(getData)
       }, 800)
     vm.show = true
     vm.showButtons = false

@@ -5,8 +5,8 @@ angular.module('portfolio').component('adventureCard', {
       cardBody4 = document.getElementById('cardBody4'),
       cardPicture4 = document.getElementById('cardPicture4'),
       getData = $timeout(async () => {
-        const res = await mainService.adventureText(), {data: {text}} = res
-        vm.adventureText = text[0].paragraph.trim()
+        const res = await mainService.adventureText();
+        vm.adventureText = res.data.text[0].paragraph
         $timeout.cancel(getData)
       }, 650)
     vm.show = true

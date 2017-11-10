@@ -4,12 +4,10 @@ angular.module('portfolio').component('weatherCard', {
     const vm = this, {document} = $window,
       cardBody8 = document.getElementById('cardBody8'),
       cardPicture8 = document.getElementById('cardPicture8'),
-      getData = $timeout(() => {
-        mainService.weatherText().then(res => {
-          const {data: {text}} = res
-          vm.weatherText = text[0].paragraph.trim()
-          $timeout.cancel(getData)
-        })
+      getData = $timeout(async () => {
+        const res = await mainService.weatherText();
+        vm.weatherText = res.data.text[0].paragraph
+        $timeout.cancel(getData)
       }, 850)
     vm.show = true
     vm.showButtons = false

@@ -1,5 +1,5 @@
 angular.module('portfolio').service('mainService', function ($http) {
-  let vm = this
+  const vm = this
   vm.aboutMeText1 = () => {
     return $http({
       method: 'GET',

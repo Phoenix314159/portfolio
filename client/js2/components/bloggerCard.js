@@ -4,12 +4,10 @@ angular.module('portfolio').component('bloggerCard', {
     const vm = this, {document} = $window,
       cardBody9 = document.getElementById('cardBody9'),
       cardPicture9 = document.getElementById('cardPicture9'),
-      getData = $timeout(() => {
-        mainService.bloggerText().then(res => {
-          const {data: {text}} = res
-          vm.bloggerText = text[0].paragraph.trim()
-          $timeout.cancel(getData)
-        })
+      getData = $timeout(async () => {
+        const res = await mainService.bloggerText();
+        vm.bloggerText = res.data.text[0].paragraph
+        $timeout.cancel(getData)
       }, 900)
     vm.show = true
     vm.showButtons = false
@@ -44,8 +42,8 @@ angular.module('portfolio').component('bloggerCard', {
     }
     vm.showText = () => {
       $timeout.cancel(vm.pictureShow)
-      if(vm.text.length === 167) {
-       return
+      if (vm.text.length === 167) {
+        return
       }
       vm.textShow = $timeout(() => {
         cardBody9.classList.remove('overlay2')
@@ -54,8 +52,8 @@ angular.module('portfolio').component('bloggerCard', {
     }
     vm.showPicture = () => {
       $timeout.cancel(vm.textShow)
-      if(vm.text.length === 167) {
-      return
+      if (vm.text.length === 167) {
+        return
       }
       vm.pictureShow = $timeout(() => {
         cardBody9.classList.remove('overlay')

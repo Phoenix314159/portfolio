@@ -1,16 +1,16 @@
 angular.module('portfolio').component('aboutMe', {
   templateUrl: '/views/aboutMe.html',
   controller: function (mainService, $timeout) {
-    const vm = this
-    $timeout(() => {
-      mainService.aboutMeText1().then(res => {
+    const vm = this,
+      aboutMeText1 = $timeout(async () => {
+        const res = await mainService.aboutMeText1();
         vm.aboutMeText1 = res.data.text[0].paragraph
-      })
-    }, 5)
-    $timeout(() => {
-      mainService.aboutMeText2().then(res => {
+        $timeout(aboutMeText1)
+      }, 5),
+      aboutMeText2 = $timeout(async () => {
+        const res = await mainService.aboutMeText2();
         vm.aboutMeText2 = res.data.text[0].paragraph
-      })
-    }, 10)
+        $timeout(aboutMeText2)
+      }, 10)
   }
 })

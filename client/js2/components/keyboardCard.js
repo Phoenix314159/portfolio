@@ -4,12 +4,10 @@ angular.module('portfolio').component('keyboardCard', {
     const vm = this, {document} = $window,
       cardBody = document.getElementById('cardBody'),
       cardPicture = document.getElementById('cardPicture'),
-      getData = $timeout(() => {
-        mainService.keyboardText().then(res => {
-          const {data: {text}} = res
-          vm.keyboardText = text[0].paragraph.trim()
-          $timeout.cancel(getData)
-        })
+      getData = $timeout(async () => {
+        const res = await mainService.keyboardText();
+        vm.keyboardText = res.data.text[0].paragraph
+        $timeout.cancel(getData)
       }, 500)
     vm.show = true
     vm.showButtons = false

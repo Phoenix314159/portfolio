@@ -4,12 +4,10 @@ angular.module('portfolio').component('vimeoCard', {
     const vm = this, {document} = $window,
       cardBody2 = document.getElementById('cardBody2'),
       cardPicture2 = document.getElementById('cardPicture2'),
-      getData = $timeout(() => {
-        mainService.vimeoText().then(res => {
-          const {data: {text}} = res
-          vm.vimeoText = text[0].paragraph.trim()
-          $timeout.cancel(getData)
-        })
+      getData = $timeout(async () => {
+        const res = await mainService.vimeoText();
+        vm.vimeoText = res.data.text[0].paragraph
+        $timeout.cancel(getData)
       }, 550)
     vm.show = true
     vm.showButtons = false
