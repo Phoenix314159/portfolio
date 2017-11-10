@@ -241,6 +241,10 @@ header .intro-text .skills {
     transition: 2s ease-in-out;
 }
 
+.hideCardBody {
+    visibility: hidden;
+}
+
 @keyframes boxswitch {
     0% {
         box-shadow: inset 0 0 7px 7px #3f5767;
@@ -423,10 +427,6 @@ fieldset[disabled] .btn-custom.active {
     0 0 3px 1.75px #778899;
 }
 
-.showPictureNot {
-    opacity: 0;
-}
-
 .cardBack {
     background-color: black;
     box-shadow: 0 0 1px .75px whitesmoke,
@@ -439,6 +439,9 @@ fieldset[disabled] .btn-custom.active {
 
 .card-body {
     padding-top: 109px;
+}
+.cardBody2 {
+    visibility: hidden;
 }
 
 .card-title {

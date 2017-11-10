@@ -32,24 +32,21 @@ angular.module('portfolio').component('solarCard', {
     vm.stopText = () => {
       $timeout.cancel(vm.display)
       $interval.cancel(vm.textAnim)
-      const arr = vm.text.split('')
       if (vm.text.length !== 193) {
         vm.backText = $interval(() => {
           if (vm.text.length === 0) {
             $interval.cancel(vm.backText)
             return
           }
-          arr.pop()
-          vm.text = arr.join('')
+          vm.text = vm.text.replace(/.$/, '')
         }, 2)
-      }
-      else {
-        cardPicture3.className = 'showPictureNot'
-        cardBody3.classList.remove('overlay2')
       }
     }
     vm.showText = () => {
       $timeout.cancel(vm.pictureShow)
+      if (vm.text.length === 193) {
+        return
+      }
       vm.textShow = $timeout(() => {
         cardBody3.classList.remove('overlay2')
         cardBody3.className += ' overlay'

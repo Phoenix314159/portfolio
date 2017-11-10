@@ -32,24 +32,21 @@ angular.module('portfolio').component('toolboxCard', {
     vm.stopText = () => {
       $timeout.cancel(vm.display)
       $interval.cancel(vm.textAnim)
-      const arr = vm.text.split('')
       if (vm.text.length !== 162) {
         vm.backText = $interval(() => {
           if (vm.text.length === 0) {
             $interval.cancel(vm.backText)
             return
           }
-          arr.pop()
-          vm.text = arr.join('')
+          vm.text = vm.text.replace(/.$/, '')
         }, 2)
-      }
-      else {
-        cardPicture5.className = 'showPictureNot'
-        cardBody5.classList.remove('overlay2')
       }
     }
     vm.showText = () => {
       $timeout.cancel(vm.pictureShow)
+      if (vm.text.length === 162) {
+        return
+      }
       vm.textShow = $timeout(() => {
         cardBody5.classList.remove('overlay2')
         cardBody5.className += ' overlay'

@@ -32,24 +32,21 @@ angular.module('portfolio').component('feedbackCard', {
     vm.stopText = () => {
       $timeout.cancel(vm.display)
       $interval.cancel(vm.textAnim)
-      const arr = vm.text.split('')
       if (vm.text.length !== 192) {
         vm.backText = $interval(() => {
           if (vm.text.length === 0) {
             $interval.cancel(vm.backText)
             return
           }
-          arr.pop()
-          vm.text = arr.join('')
+          vm.text = vm.text.replace(/.$/, '')
         }, 2)
-      }
-      else {
-        cardPicture7.className = 'showPictureNot'
-        cardBody7.classList.remove('overlay2')
       }
     }
     vm.showText = () => {
       $timeout.cancel(vm.pictureShow)
+      if (vm.text.length === 192) {
+        return
+      }
       vm.textShow = $timeout(() => {
         cardBody7.classList.remove('overlay2')
         cardBody7.className += ' overlay'

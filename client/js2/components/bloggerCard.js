@@ -32,24 +32,21 @@ angular.module('portfolio').component('bloggerCard', {
     vm.stopText = () => {
       $timeout.cancel(vm.display)
       $interval.cancel(vm.textAnim)
-      const arr = vm.text.split('')
       if (vm.text.length !== 167) {
         vm.backText = $interval(() => {
           if (vm.text.length === 0) {
             $interval.cancel(vm.backText)
             return
           }
-          arr.pop()
-          vm.text = arr.join('')
+          vm.text = vm.text.replace(/.$/, '')
         }, 2)
-      }
-      else {
-        cardPicture9.className = 'showPictureNot'
-        cardBody9.classList.remove('overlay2')
       }
     }
     vm.showText = () => {
       $timeout.cancel(vm.pictureShow)
+      if(vm.text.length === 167) {
+       return
+      }
       vm.textShow = $timeout(() => {
         cardBody9.classList.remove('overlay2')
         cardBody9.className += ' overlay'
@@ -57,8 +54,8 @@ angular.module('portfolio').component('bloggerCard', {
     }
     vm.showPicture = () => {
       $timeout.cancel(vm.textShow)
-      if (vm.text.length === 167) {
-        return
+      if(vm.text.length === 167) {
+      return
       }
       vm.pictureShow = $timeout(() => {
         cardBody9.classList.remove('overlay')

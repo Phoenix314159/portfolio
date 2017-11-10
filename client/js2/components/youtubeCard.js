@@ -4,13 +4,13 @@ angular.module('portfolio').component('youtubeCard', {
     const vm = this, {document} = $window,
       cardBody6 = document.getElementById('cardBody6'),
       cardPicture6 = document.getElementById('cardPicture6'),
-    getData = $timeout(() => {
-      mainService.youtubeText().then(res => {
-        const {data: {text}} = res
-        vm.youtubeText = text[0].paragraph.trim()
-        $timeout.cancel(getData)
-      })
-    }, 750)
+      getData = $timeout(() => {
+        mainService.youtubeText().then(res => {
+          const {data: {text}} = res
+          vm.youtubeText = text[0].paragraph.trim()
+          $timeout.cancel(getData)
+        })
+      }, 750)
     vm.show = true
     vm.showButtons = false
     vm.displayText = () => {
@@ -32,24 +32,21 @@ angular.module('portfolio').component('youtubeCard', {
     vm.stopText = () => {
       $timeout.cancel(vm.display)
       $interval.cancel(vm.textAnim)
-      const arr = vm.text.split('')
       if (vm.text.length !== 177) {
         vm.backText = $interval(() => {
           if (vm.text.length === 0) {
             $interval.cancel(vm.backText)
             return
           }
-          arr.pop()
-          vm.text = arr.join('')
+          vm.text = vm.text.replace(/.$/, '')
         }, 2)
-      }
-      else {
-        cardPicture6.className = 'showPictureNot'
-        cardBody6.classList.remove('overlay2')
       }
     }
     vm.showText = () => {
       $timeout.cancel(vm.pictureShow)
+      if (vm.text.length === 177) {
+        return
+      }
       vm.textShow = $timeout(() => {
         cardBody6.classList.remove('overlay2')
         cardBody6.className += ' overlay'

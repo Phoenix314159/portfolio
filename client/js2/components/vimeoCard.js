@@ -32,24 +32,21 @@ angular.module('portfolio').component('vimeoCard', {
     vm.stopText = () => {
       $timeout.cancel(vm.display)
       $interval.cancel(vm.textAnim)
-      const arr = vm.text.split('')
       if (vm.text.length !== 194) {
         vm.backText = $interval(() => {
           if (vm.text.length === 0) {
             $interval.cancel(vm.backText)
             return
           }
-          arr.pop()
-          vm.text = arr.join('')
+          vm.text = vm.text.replace(/.$/, '')
         }, 2)
-      }
-      else {
-        cardPicture2.className = 'showPictureNot'
-        cardBody2.classList.remove('overlay2')
       }
     }
     vm.showText = () => {
       $timeout.cancel(vm.pictureShow)
+      if (vm.text.length === 194) {
+        return
+      }
       vm.textShow = $timeout(() => {
         cardBody2.classList.remove('overlay2')
         cardBody2.className += ' overlay'

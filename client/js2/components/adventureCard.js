@@ -32,24 +32,21 @@ angular.module('portfolio').component('adventureCard', {
     vm.stopText = () => {
       $timeout.cancel(vm.display)
       $interval.cancel(vm.textAnim)
-      const arr = vm.text.split('')
       if (vm.text.length !== 188) {
         vm.backText = $interval(() => {
           if(vm.text.length === 0) {
             $interval.cancel(vm.backText)
             return
           }
-          arr.pop()
-          vm.text = arr.join('')
+          vm.text = vm.text.replace(/.$/, '')
         }, 2)
-      }
-      else {
-        cardPicture4.className = 'showPictureNot'
-        cardBody4.classList.remove('overlay2')
       }
     }
     vm.showText = () => {
       $timeout.cancel(vm.pictureShow)
+      if(vm.text.length === 188) {
+        return
+      }
       vm.textShow = $timeout(() => {
         cardBody4.classList.remove('overlay2')
         cardBody4.className += ' overlay'
