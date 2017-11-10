@@ -4,13 +4,11 @@ angular.module('portfolio').component('adventureCard', {
     const vm = this, {document} = $window,
       cardBody4 = document.getElementById('cardBody4'),
       cardPicture4 = document.getElementById('cardPicture4'),
-      getData = $timeout(() => {
-      mainService.adventureText().then(res => {
-        const {data: {text}} = res
+      getData = $timeout(async () => {
+        const res = await mainService.adventureText(), {data: {text}} = res
         vm.adventureText = text[0].paragraph.trim()
         $timeout.cancel(getData)
-      })
-    }, 650)
+      }, 650)
     vm.show = true
     vm.showButtons = false
     vm.displayText = () => {
@@ -34,7 +32,7 @@ angular.module('portfolio').component('adventureCard', {
       $interval.cancel(vm.textAnim)
       if (vm.text.length !== 188) {
         vm.backText = $interval(() => {
-          if(vm.text.length === 0) {
+          if (vm.text.length === 0) {
             $interval.cancel(vm.backText)
             return
           }
@@ -44,7 +42,7 @@ angular.module('portfolio').component('adventureCard', {
     }
     vm.showText = () => {
       $timeout.cancel(vm.pictureShow)
-      if(vm.text.length === 188) {
+      if (vm.text.length === 188) {
         return
       }
       vm.textShow = $timeout(() => {

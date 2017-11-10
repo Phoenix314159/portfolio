@@ -4,13 +4,16 @@ const gulp = require('gulp'),
     replaceString: /\bgulp[\-.]/,
     lazy: true,
     camelize: true
-  }),
+  })
   transforms = [{
-    transform: 'babelify',
-    options: {presets: ['es2015', 'es2017']}
+    transform: 'babelify'
   }]
+  babelConfig = {
+    presets: ['es2015', 'es2017'],
+    plugins: ['transform-runtime']
+  }
 
-gulp.task('minify-css', function () {
+gulp.task('minify-css', () => {
   return gulp.src('./client/css/*.css')
     .pipe($.concat('main.css'))
     .pipe($.cleanCss({
@@ -19,9 +22,10 @@ gulp.task('minify-css', function () {
     .pipe(gulp.dest('dist/css'))
 })
 
-gulp.task('minify1-js', function () {
+gulp.task('minify1-js', () => {
   return gulp.src('client/js2/**/*.js')
     .pipe($.sourcemaps.init())
+    .pipe($.babel(babelConfig))
     .pipe($.browser.browserify(transforms))
     .pipe($.concat('bundle.js'))
     .pipe($.ngAnnotate())
@@ -30,7 +34,7 @@ gulp.task('minify1-js', function () {
     .pipe(gulp.dest('dist/js2'))
 })
 
-gulp.task('minify2-js', function () {
+gulp.task('minify2-js', () => {
   return gulp.src('client/js/*.js')
     .pipe($.sourcemaps.init())
     .pipe($.uglify())
@@ -39,7 +43,7 @@ gulp.task('minify2-js', function () {
     .pipe(gulp.dest('dist/js'))
 })
 
-gulp.task('views', function () {
+gulp.task('views', () => {
   return gulp.src('client/views/**')
     .pipe($.htmlmin({
       collapseWhitespace: true,
@@ -47,7 +51,7 @@ gulp.task('views', function () {
     .pipe(gulp.dest('dist/views'))
 })
 
-gulp.task('copy', function () {
+gulp.task('copy', () => {
 
   gulp.src(['client/fonts/**'])
     .pipe(gulp.dest('dist/fonts'))
