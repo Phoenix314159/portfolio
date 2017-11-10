@@ -53,11 +53,11 @@ gulp.task('copy', function () {
     .pipe(gulp.dest('dist/fonts'))
 
   gulp.src(['client/imgs/**'])
-    // .pipe($.imagemin())
+    .pipe($.imagemin())
     .pipe(gulp.dest('dist/imgs'))
 
   gulp.src(['client/icons/**'])
-    // .pipe($.imagemin())
+    .pipe($.imagemin())
     .pipe(gulp.dest('dist/icons'))
 
   gulp.src(['client/resume/**'])
