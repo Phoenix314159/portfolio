@@ -3,13 +3,7 @@ angular.module('portfolio').component('keyboardCard', {
   controller: function (mainService, $interval, $timeout, $window) {
     const vm = this, {document} = $window,
       cardBody = document.getElementById('cardBody'),
-      cardPicture = document.getElementById('cardPicture'),
-      cancelTextForward = () => {
-        $interval.cancel(vm.textAnim)
-      },
-      cancelTextBackward = () => {
-        $interval.cancel(vm.backText)
-      }
+      cardPicture = document.getElementById('cardPicture')
     vm.show = true
     vm.showButtons = false
     const getData = $timeout(() => {
@@ -22,6 +16,7 @@ angular.module('portfolio').component('keyboardCard', {
 
     vm.displayText = () => {
       vm.show = false
+      vm.start = false
       vm.index = 0
       vm.text = ''
       vm.display = $timeout(() => {
@@ -38,13 +33,14 @@ angular.module('portfolio').component('keyboardCard', {
     }
 
     vm.stopText = () => {
-      $interval.cancel(vm.display)
+      $timeout.cancel(vm.display)
+      $interval.cancel(vm.textAnim)
       const arr = vm.text.split('')
-      cancelTextForward()
       if (vm.text.length !== 191) {
         vm.backText = $interval(() => {
           if(vm.text.length === 0) {
-            cancelTextBackward()
+            $interval.cancel(vm.backText)
+            vm.text = ''
             return
           }
           arr.pop()

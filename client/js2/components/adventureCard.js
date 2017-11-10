@@ -3,13 +3,7 @@ angular.module('portfolio').component('adventureCard', {
   controller: function (mainService, $interval, $timeout, $window) {
     const vm = this, {document} = $window,
       cardBody4 = document.getElementById('cardBody4'),
-      cardPicture4 = document.getElementById('cardPicture4'),
-      cancelTextForward = () => {
-        $interval.cancel(vm.textAnim)
-      },
-      cancelTextBackward = () => {
-        $interval.cancel(vm.backText)
-      }
+      cardPicture4 = document.getElementById('cardPicture4')
     vm.show = true
     vm.showButtons = false
     const getData = $timeout(() => {
@@ -32,25 +26,23 @@ angular.module('portfolio').component('adventureCard', {
           } else {
             vm.text += vm.adventureText[vm.index]
             vm.index++
-            console.log('textAnim')
           }
         }, 15)
       }, 150)
     }
 
     vm.stopText = () => {
-      $interval.cancel(vm.display)
+      $timeout.cancel(vm.display)
+      $interval.cancel(vm.textAnim)
       const arr = vm.text.split('')
-      cancelTextForward()
       if (vm.text.length !== 188) {
         vm.backText = $interval(() => {
           if(vm.text.length === 0) {
-            cancelTextBackward()
+            $interval.cancel(vm.backText)
             return
           }
           arr.pop()
           vm.text = arr.join('')
-          console.log('backText')
         }, 2)
       }
       else {
