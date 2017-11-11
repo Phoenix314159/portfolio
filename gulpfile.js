@@ -23,7 +23,7 @@ gulp.task('minify-css', () => {
 })
 
 gulp.task('minify1-js', () => {
-  return gulp.src('client/js2/**/*.js')
+  return gulp.src('client/js/**/*.js')
     .pipe($.sourcemaps.init())
     .pipe($.babel(babelConfig))
     .pipe($.browser.browserify(transforms))
@@ -31,14 +31,14 @@ gulp.task('minify1-js', () => {
     .pipe($.ngAnnotate())
     .pipe($.uglify())
     .pipe($.sourcemaps.write('./'))
-    .pipe(gulp.dest('dist/js2'))
+    .pipe(gulp.dest('dist/js'))
 })
 
 gulp.task('minify2-js', () => {
-  return gulp.src('client/js/*.js')
+  return gulp.src('client/grayscale/*.js')
     .pipe($.sourcemaps.init())
     .pipe($.uglify())
-    .pipe($.concat('bundle.js'))
+    .pipe($.concat('bundle2.js'))
     .pipe($.sourcemaps.write('./'))
     .pipe(gulp.dest('dist/js'))
 })
@@ -57,11 +57,11 @@ gulp.task('copy', () => {
     .pipe(gulp.dest('dist/fonts'))
 
   gulp.src(['client/imgs/**'])
-    // .pipe($.imagemin())
+    .pipe($.imagemin())
     .pipe(gulp.dest('dist/imgs'))
 
   gulp.src(['client/icons/**'])
-    // .pipe($.imagemin())
+    .pipe($.imagemin())
     .pipe(gulp.dest('dist/icons'))
 
   gulp.src(['client/resume/**'])
