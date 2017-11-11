@@ -5,13 +5,13 @@ const gulp = require('gulp'),
     lazy: true,
     camelize: true
   })
-  transforms = [{
-    transform: 'babelify'
-  }]
-  babelConfig = {
-    presets: ['es2015', 'es2017'],
-    plugins: ['transform-runtime']
-  }
+transforms = [{
+  transform: 'babelify'
+}]
+babelConfig = {
+  presets: ['es2015', 'es2017'],
+  plugins: ['transform-runtime']
+}
 
 gulp.task('minify-css', () => {
   return gulp.src('./client/css/*.css')
@@ -53,6 +53,9 @@ gulp.task('views', () => {
 
 gulp.task('copy', () => {
 
+  gulp.src(['client/particles.json'])
+    .pipe(gulp.dest('dist'))
+
   gulp.src(['client/fonts/**'])
     .pipe(gulp.dest('dist/fonts'))
 
@@ -69,7 +72,7 @@ gulp.task('copy', () => {
 })
 
 gulp.task('build', ['minify-css', 'minify1-js', 'minify2-js', 'views', 'copy'], () => {
-  return gulp.src('./client/index.html')
+  return gulp.src('client/index.html')
     .pipe($.htmlmin({
       collapseWhitespace: true,
     }))
@@ -77,7 +80,8 @@ gulp.task('build', ['minify-css', 'minify1-js', 'minify2-js', 'views', 'copy'], 
 })
 
 gulp.task('watch', () => {
-  return gulp.watch(['./client/index.html', './client/js2/**/*.js', './client/js/*.js', './client/views/**', './client/css/*.css'], ['build'])
+  return gulp.watch(['client/index.html', 'client/particles.json', 'client/js2/**/*.js', 'client/js/*.js',
+    'client/views/**', 'client/css/*.css'], ['build'])
 })
 
 gulp.task('default', ['build', 'watch'])

@@ -1,0 +1,69 @@
+{
+  "particles": {
+    "number": {
+      "value": 10
+    },
+    "color": {
+      "value": "#c0c0c0"
+    },
+    "shape": {
+      "type": "image",
+      "image": {
+        "src": "./icons/comet.png"
+      },
+      "stroke": {
+        "width": 5,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      }
+    },
+    "opacity": {
+      "value": 0.8,
+      "random": true,
+      "anim": {
+        "enable": true,
+        "speed": 3
+      }
+    },
+    "size": {
+      "value": 5,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 60
+      }
+    },
+    "line_linked": {
+      "enable": false,
+      "opacity": 0,
+      "color": "#000000"
+    },
+    "move": {
+      "enable": true,
+      "speed": 15,
+      "direction": "bottom-right",
+      "straight": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 800,
+        "line_linked": {
+          "opacity": 0
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": false
+          },
+          "onclick": {
+            "enable": false
+          }
+        }
+      }
+    }
+  }
+}

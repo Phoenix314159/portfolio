@@ -442,44 +442,41 @@ fieldset[disabled] .btn-custom.active {
     background-color: black;
     margin-top: -15vh;
     height: 164%;
-    z-index: 0;
+    z-index: 3;
     background-image: -moz-radial-gradient(circle, #FFFFFF .2px, #C0C0C0 .5px, transparent 2.5px),
     -moz-radial-gradient(circle, #FFFFFF .5px, #778899 .5px, transparent 3.75px),
     -moz-radial-gradient(ellipse, #778899 .5px, #D3D3D3 .5px, transparent 2.5px),
     -moz-radial-gradient(ellipse, #FFFFFF, #C0C0C0 .5px, transparent 1.75px);
-
-    /* Webkit */
     background-image: -webkit-gradient(radial, 50% 50%, 2, 50% 50%, 2.5, from(white), color-stop(0.1, #C0C0C0), to(transparent)),
     -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 1.75, from(white), color-stop(0.1, #778899), to(transparent)),
     -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 2.5, from(#778899), color-stop(0.05, #D3D3D3), to(transparent)),
     -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 1.75, from(rgba(255, 255, 255, .4)), color-stop(0.03, #C0C0C0), to(transparent));
-
-    /* Background Attributes */
     background-size: 550px 550px, 350px 350px, 250px 270px, 220px 200px;
     background-position: 0 0, 30px 60px, 130px 270px, 70px 150px;
-
-    /* Animation */
     animation-name: movement;
     animation-duration: 15s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-
-    /* Firefox */
     -moz-animation-name: movement;
     -moz-animation-duration: 15s;
     -moz-animation-timing-function: linear;
     -moz-animation-iteration-count: infinite;
-
-    /* Webkit */
     -webkit-animation-name: movement;
     -webkit-animation-duration: 15s;
     -webkit-animation-timing-function: linear;
     -webkit-animation-iteration-count: infinite;
+}
 
+#particles-js {
+    position: absolute;
+    height: 97%;
+    width: 100%;
+    z-index: -1;
 }
 
 .stars, .twinkling {
     position: absolute;
+    z-index: -3;
     top: 0;
     left: 0;
     right: 0;
@@ -518,7 +515,7 @@ fieldset[disabled] .btn-custom.active {
 .stars2 {
     position: absolute;
     background: url(../imgs/stars2.png);
-    z-index: -1;
+    z-index: -3;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
@@ -532,8 +529,8 @@ fieldset[disabled] .btn-custom.active {
     position: absolute;
     width: 100vw;
     height: 156vh;
+    z-index: -3;
     background: url(../imgs/twinkling.png) repeat center;
-    z-index: -1;
     -moz-animation: move-twink-back 200s linear infinite;
     -o-animation: move-twink-back 200s linear infinite;
     -webkit-animation: move-twink-back 200s linear infinite;
