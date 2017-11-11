@@ -167,19 +167,6 @@ header .intro-text .skills {
     background-size: cover;
 }
 
-.box {
-    border-radius: 7pt;
-    width: 390px;
-    height: 350px;
-    padding: 2.5%;
-    border: 2px solid whitesmoke;
-}
-
-.box:hover {
-    background-color: black;
-    box-shadow: inset 0 0 0 15px #3A5161;
-}
-
 .box29 {
     text-align: center;
 }
@@ -316,40 +303,6 @@ hr {
     font-size: 1.9em;
 }
 
-.centerWebpack {
-    position: relative;
-    right: .5vw;
-}
-
-.centerWebpack p {
-    position: relative;
-    right: .5vw;
-}
-
-style-five {
-    border: 0;
-    height: 0;
-    box-shadow: 0 0 10px 1px black;
-}
-
-style-five:after {
-    content: "\00a0";
-}
-
-.feedBack {
-    text-align: center;
-    font-size: 1.4em
-}
-
-.blog {
-    text-align: center;
-    font-size: 1.4em
-}
-
-.hover :hover {
-    color: whitesmoke;
-}
-
 .main {
     width: 40vw;
     opacity: .95;
@@ -440,6 +393,7 @@ fieldset[disabled] .btn-custom.active {
 .card-body {
     padding-top: 109px;
 }
+
 .cardBody2 {
     visibility: hidden;
 }
@@ -650,18 +604,6 @@ fieldset[disabled] .btn-custom.active {
 
 .row21 {
     width: 90vh;
-}
-
-#back {
-    padding: 2%;
-    width: 100%;
-    height: 60vh;
-    background-image: url('../img/brushed-metal-background.jpg');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-blend-mode: darken;
-    background-size: cover;
 }
 
 #about {
