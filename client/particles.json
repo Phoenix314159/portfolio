@@ -1,7 +1,7 @@
 {
   "particles": {
     "number": {
-      "value": 10
+      "value": 3
     },
     "color": {
       "value": "#c0c0c0"
@@ -12,7 +12,7 @@
         "src": "./icons/comet.png"
       },
       "stroke": {
-        "width": 5,
+        "width": 100,
         "color": "#000000"
       },
       "polygon": {
@@ -28,7 +28,7 @@
       }
     },
     "size": {
-      "value": 5,
+      "value": 12,
       "random": true,
       "anim": {
         "enable": false,
@@ -42,7 +42,7 @@
     },
     "move": {
       "enable": true,
-      "speed": 15,
+      "speed": 20,
       "direction": "bottom-right",
       "straight": true
     },
