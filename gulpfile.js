@@ -60,11 +60,11 @@ gulp.task('copy', () => {
     .pipe(gulp.dest('dist/fonts'))
 
   gulp.src(['client/imgs/**'])
-    .pipe($.imagemin())
+    // .pipe($.imagemin())
     .pipe(gulp.dest('dist/imgs'))
 
   gulp.src(['client/icons/**'])
-    .pipe($.imagemin())
+    // .pipe($.imagemin())
     .pipe(gulp.dest('dist/icons'))
 
   gulp.src(['client/resume/**'])
@@ -80,7 +80,7 @@ gulp.task('build', ['minify-css', 'minify1-js', 'minify2-js', 'views', 'copy'], 
 })
 
 gulp.task('watch', () => {
-  return gulp.watch(['client/index.html', 'client/particles.json', 'client/js2/**/*.js', 'client/js/*.js',
+  return gulp.watch(['client/index.html', 'client/particles.json', 'client/js/**/*.js',
     'client/views/**', 'client/css/*.css'], ['build'])
 })
 

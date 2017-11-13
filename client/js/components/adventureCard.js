@@ -11,6 +11,15 @@ angular.module('portfolio').component('adventureCard', {
       }, 650)
     vm.show = true
     vm.showButtons = false
+    vm.getImages = async () => {
+      const {data} = await mainService.getImages()
+      vm.adventureImage = data[0]
+    }
+    const getImages = $timeout(() => {
+      vm.getImages()
+      $timeout.cancel(getImages)
+    }, 50)
+
     vm.displayText = () => {
       vm.show = false
       vm.index = 0

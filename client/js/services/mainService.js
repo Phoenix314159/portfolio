@@ -66,4 +66,10 @@ angular.module('portfolio').service('mainService', function ($http) {
       url: '/api/blogger_text'
     })
   }
+  vm.getImages = () => {
+    return $http({
+      method: 'GET',
+      url: '/api/get_images'
+    })
+  }
 })
