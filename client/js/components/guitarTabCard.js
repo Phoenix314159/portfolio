@@ -1,13 +1,13 @@
-angular.module('portfolio').component('weatherCard', {
-  templateUrl: '/views/weather.html',
+angular.module('portfolio').component('guitarTabCard', {
+  templateUrl: '/views/guitarTab.html',
   controller: function (mainService, $interval, $timeout, $window) {
     const vm = this, {document} = $window,
-      cardBody8 = document.getElementById('cardBody8'),
+      cardBody = document.getElementById('cardBody10'),
       getData = $timeout(async () => {
-        const {weatherText} = mainService, {data} = await weatherText();
-        vm.weatherText = data.text[0].paragraph
+        const {guitarText} = mainService, {data} = await guitarText();
+        vm.guitarText = data.text[0].paragraph
         $timeout.cancel(getData)
-      }, 850)
+      }, 950)
     vm.show = true
     vm.showButtons = false
     vm.displayText = () => {
@@ -16,11 +16,11 @@ angular.module('portfolio').component('weatherCard', {
       vm.text = ''
       vm.display = $timeout(() => {
         vm.textAnim = $interval(() => {
-          if (vm.text.length === 172) {
+          if (vm.text.length === 175) {
             vm.stopText()
             vm.showButtons = true
           } else {
-            vm.text += vm.weatherText[vm.index]
+            vm.text += vm.guitarText[vm.index]
             vm.index++
           }
         }, 15)
@@ -29,7 +29,7 @@ angular.module('portfolio').component('weatherCard', {
     vm.stopText = () => {
       $timeout.cancel(vm.display)
       $interval.cancel(vm.textAnim)
-      if (vm.text.length !== 172) {
+      if (vm.text.length !== 175) {
         vm.backText = $interval(() => {
           if (vm.text.length === 0) {
             $interval.cancel(vm.backText)
@@ -41,23 +41,24 @@ angular.module('portfolio').component('weatherCard', {
     }
     vm.showText = () => {
       $timeout.cancel(vm.pictureShow)
-      if (vm.text.length === 172) {
+      if (vm.text.length === 175) {
         return
       }
       vm.textShow = $timeout(() => {
-        cardBody8.classList.remove('overlay2')
-        cardBody8.className += ' overlay'
+        cardBody.classList.remove('overlay2')
+        cardBody.className += ' overlay'
       }, 100)
     }
     vm.showPicture = () => {
       $timeout.cancel(vm.textShow)
-      if (vm.text.length === 172) {
+      if (vm.text.length === 175) {
         return
       }
       vm.pictureShow = $timeout(() => {
-        cardBody8.classList.remove('overlay')
-        cardBody8.className += ' overlay2'
+        cardBody.classList.remove('overlay')
+        cardBody.className += ' overlay2'
       }, 700)
     }
   }
 })
+

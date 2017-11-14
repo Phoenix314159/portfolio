@@ -3,10 +3,9 @@ angular.module('portfolio').component('keyboardCard', {
   controller: function (mainService, $interval, $timeout, $window) {
     const vm = this, {document} = $window,
       cardBody = document.getElementById('cardBody'),
-      cardPicture = document.getElementById('cardPicture'),
       getData = $timeout(async () => {
-        const res = await mainService.keyboardText();
-        vm.keyboardText = res.data.text[0].paragraph
+        const {keyboardText} = mainService, {data} = await keyboardText();
+        vm.keyboardText = data.text[0].paragraph
         $timeout.cancel(getData)
       }, 500)
     vm.show = true

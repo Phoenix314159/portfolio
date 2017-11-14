@@ -3,10 +3,9 @@ angular.module('portfolio').component('bloggerCard', {
   controller: function (mainService, $interval, $timeout, $window) {
     const vm = this, {document} = $window,
       cardBody9 = document.getElementById('cardBody9'),
-      cardPicture9 = document.getElementById('cardPicture9'),
       getData = $timeout(async () => {
-        const res = await mainService.bloggerText();
-        vm.bloggerText = res.data.text[0].paragraph
+        const {bloggerText} = mainService, {data} = await bloggerText();
+        vm.bloggerText = data.text[0].paragraph
         $timeout.cancel(getData)
       }, 900)
     vm.show = true

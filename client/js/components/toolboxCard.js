@@ -3,10 +3,9 @@ angular.module('portfolio').component('toolboxCard', {
   controller: function (mainService, $interval, $timeout, $window) {
     const vm = this, {document} = $window,
       cardBody5 = document.getElementById('cardBody5'),
-      cardPicture5 = document.getElementById('cardPicture5'),
       getData = $timeout(async () => {
-        const res = await mainService.toolboxText();
-        vm.toolboxText = res.data.text[0].paragraph
+        const {toolboxText} = mainService, {data} = await toolboxText();
+        vm.toolboxText = data.text[0].paragraph
         $timeout.cancel(getData)
       }, 700)
     vm.show = true

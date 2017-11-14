@@ -53,5 +53,10 @@ module.exports = {
   async blogger(req, res) {
     const {dbQuery, db: {run}} = req, text = await run(`${dbQuery}'bloggerText'`);
     res.status(200).send({text})
+  },
+
+  async guitar(req, res) {
+    const {dbQuery, db: {run}} = req, text = await run(`${dbQuery}'guitarTabText'`);
+    res.status(200).send({text})
   }
 }

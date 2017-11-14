@@ -3,10 +3,9 @@ angular.module('portfolio').component('solarCard', {
   controller: function (mainService, $interval, $timeout, $window) {
     const vm = this, {document} = $window,
       cardBody3 = document.getElementById('cardBody3'),
-      cardPicture3 = document.getElementById('cardPicture3'),
       getData = $timeout(async () => {
-        const res = await mainService.solarText();
-        vm.solarText = res.data.text[0].paragraph
+        const {solarText} = mainService, {data} = await solarText();
+        vm.solarText = data.text[0].paragraph
         $timeout.cancel(getData)
       }, 600)
     vm.show = true

@@ -3,23 +3,13 @@ angular.module('portfolio').component('adventureCard', {
   controller: function (mainService, $interval, $timeout, $window) {
     const vm = this, {document} = $window,
       cardBody4 = document.getElementById('cardBody4'),
-      cardPicture4 = document.getElementById('cardPicture4'),
       getData = $timeout(async () => {
-        const res = await mainService.adventureText();
-        vm.adventureText = res.data.text[0].paragraph
+        const {adventureText} = mainService, {data} = await adventureText()
+        vm.adventureText = data.text[0].paragraph
         $timeout.cancel(getData)
       }, 650)
     vm.show = true
     vm.showButtons = false
-    vm.getImages = async () => {
-      const {data} = await mainService.getImages()
-      vm.adventureImage = data[0]
-    }
-    const getImages = $timeout(() => {
-      vm.getImages()
-      $timeout.cancel(getImages)
-    }, 50)
-
     vm.displayText = () => {
       vm.show = false
       vm.index = 0

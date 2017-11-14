@@ -2,7 +2,7 @@ const asyncError = require('../middleware/catchErrors'),
   {aboutMe1, aboutMe2, keyboards,
     vimeo, solar, adventure,
     toolbox, youtube, feedback,
-    weather, blogger} = require('../controllers/mainCtrl');
+    weather, blogger, guitar} = require('../controllers/mainCtrl');
 
 module.exports = app => {
 
@@ -17,6 +17,7 @@ module.exports = app => {
   app.get('/api/feedback_text', asyncError(feedback))
   app.get('/api/weather_text', asyncError(weather))
   app.get('/api/blogger_text', asyncError(blogger))
+  app.get('/api/guitar_text', asyncError(guitar))
 
 }
 
