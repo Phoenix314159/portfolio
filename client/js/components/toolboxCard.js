@@ -1,5 +1,8 @@
 angular.module('portfolio').component('toolboxCard', {
   templateUrl: '/views/toolbox.html',
+  require: {
+    parent: '^^cardPictures'
+  },
   controller: function (mainService, $interval, $timeout, $window) {
     const vm = this, {document} = $window,
       cardBody5 = document.getElementById('cardBody5'),
@@ -8,6 +11,11 @@ angular.module('portfolio').component('toolboxCard', {
         vm.toolboxText = data.text[0].paragraph
         $timeout.cancel(getData)
       }, 700)
+
+    vm.$onChanges = async () => {
+      const images = await vm.parent.getImages()
+      vm.toolboxImage = images[5]
+    }
     vm.show = true
     vm.showButtons = false
     vm.displayText = () => {

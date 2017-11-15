@@ -1,5 +1,8 @@
 angular.module('portfolio').component('feedbackCard', {
   templateUrl: '/views/feedback.html',
+  require: {
+    parent: '^^cardPictures'
+  },
   controller: function (mainService, $interval, $timeout, $window) {
     const vm = this, {document} = $window,
       cardBody7 = document.getElementById('cardBody7'),
@@ -8,6 +11,10 @@ angular.module('portfolio').component('feedbackCard', {
         vm.feedbackText = data.text[0].paragraph
         $timeout.cancel(getData)
       }, 800)
+    vm.$onChanges = async () => {
+      const images = await vm.parent.getImages()
+      vm.feedbackImage = images[2]
+    }
     vm.show = true
     vm.showButtons = false
     vm.displayText = () => {

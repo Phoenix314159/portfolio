@@ -1,5 +1,8 @@
 angular.module('portfolio').component('weatherCard', {
   templateUrl: '/views/weather.html',
+  require: {
+    parent: '^^cardPictures'
+  },
   controller: function (mainService, $interval, $timeout, $window) {
     const vm = this, {document} = $window,
       cardBody8 = document.getElementById('cardBody8'),
@@ -8,6 +11,11 @@ angular.module('portfolio').component('weatherCard', {
         vm.weatherText = data.text[0].paragraph
         $timeout.cancel(getData)
       }, 850)
+
+    vm.$onChanges = async () => {
+      const images = await vm.parent.getImages()
+      vm.weatherImage = images[7]
+    }
     vm.show = true
     vm.showButtons = false
     vm.displayText = () => {

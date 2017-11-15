@@ -1,5 +1,8 @@
 angular.module('portfolio').component('keyboardCard', {
   templateUrl: '/views/keyboard.html',
+  require: {
+    parent: '^^cardPictures'
+  },
   controller: function (mainService, $interval, $timeout, $window) {
     const vm = this, {document} = $window,
       cardBody = document.getElementById('cardBody'),
@@ -8,6 +11,11 @@ angular.module('portfolio').component('keyboardCard', {
         vm.keyboardText = data.text[0].paragraph
         $timeout.cancel(getData)
       }, 500)
+
+    vm.$onChanges = async () => {
+      const images = await vm.parent.getImages()
+      vm.keyboardImage = images[3]
+    }
     vm.show = true
     vm.showButtons = false
     vm.displayText = () => {

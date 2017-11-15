@@ -1,5 +1,8 @@
 angular.module('portfolio').component('solarCard', {
   templateUrl: '/views/solar.html',
+  require: {
+    parent: '^^cardPictures'
+  },
   controller: function (mainService, $interval, $timeout, $window) {
     const vm = this, {document} = $window,
       cardBody3 = document.getElementById('cardBody3'),
@@ -8,6 +11,11 @@ angular.module('portfolio').component('solarCard', {
         vm.solarText = data.text[0].paragraph
         $timeout.cancel(getData)
       }, 600)
+
+    vm.$onInit = async () => {
+      const images = await vm.parent.getImages()
+      vm.solarImage = images[4]
+    }
     vm.show = true
     vm.showButtons = false
     vm.displayText = () => {

@@ -1,5 +1,8 @@
 angular.module('portfolio').component('youtubeCard', {
   templateUrl: '/views/youtube.html',
+  require: {
+    parent: '^^cardPictures'
+  },
   controller: function (mainService, $interval, $timeout, $window) {
     const vm = this, {document} = $window,
       cardBody6 = document.getElementById('cardBody6'),
@@ -8,6 +11,11 @@ angular.module('portfolio').component('youtubeCard', {
         vm.youtubeText = data.text[0].paragraph
         $timeout.cancel(getData)
       }, 750)
+
+    vm.$onChanges = async () => {
+      const images = await vm.parent.getImages()
+      vm.youtubeImage = images[8]
+    }
     vm.show = true
     vm.showButtons = false
     vm.displayText = () => {

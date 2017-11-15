@@ -1,5 +1,8 @@
 angular.module('portfolio').component('adventureCard', {
   templateUrl: '/views/adventure.html',
+  require: {
+    parent: '^^cardPictures'
+  },
   controller: function (mainService, $interval, $timeout, $window) {
     const vm = this, {document} = $window,
       cardBody4 = document.getElementById('cardBody4'),
@@ -8,6 +11,11 @@ angular.module('portfolio').component('adventureCard', {
         vm.adventureText = data.text[0].paragraph
         $timeout.cancel(getData)
       }, 650)
+
+    vm.$onChanges = async () => {
+      const images = await vm.parent.getImages()
+      vm.adventureImage = images[0]
+    }
     vm.show = true
     vm.showButtons = false
     vm.displayText = () => {

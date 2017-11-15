@@ -1,5 +1,8 @@
 angular.module('portfolio').component('vimeoCard', {
   templateUrl: '/views/vimeo.html',
+  require: {
+    parent: '^^cardPictures'
+  },
   controller: function (mainService, $interval, $timeout, $window) {
     const vm = this, {document} = $window,
       cardBody2 = document.getElementById('cardBody2'),
@@ -8,6 +11,11 @@ angular.module('portfolio').component('vimeoCard', {
         vm.vimeoText = data.text[0].paragraph
         $timeout.cancel(getData)
       }, 550)
+
+    vm.$onChanges = async () => {
+      const images = await vm.parent.getImages()
+      vm.vimeoImage = images[6]
+    }
     vm.show = true
     vm.showButtons = false
     vm.displayText = () => {

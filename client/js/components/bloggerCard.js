@@ -1,5 +1,8 @@
 angular.module('portfolio').component('bloggerCard', {
   templateUrl: '/views/blogger.html',
+  require: {
+    parent: '^^cardPictures'
+  },
   controller: function (mainService, $interval, $timeout, $window) {
     const vm = this, {document} = $window,
       cardBody9 = document.getElementById('cardBody9'),
@@ -8,6 +11,11 @@ angular.module('portfolio').component('bloggerCard', {
         vm.bloggerText = data.text[0].paragraph
         $timeout.cancel(getData)
       }, 900)
+
+    vm.$onChanges = async () => {
+      const images = await vm.parent.getImages()
+      vm.bloggerImage = images[1]
+    }
     vm.show = true
     vm.showButtons = false
     vm.displayText = () => {

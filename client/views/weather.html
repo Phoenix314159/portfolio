@@ -3,7 +3,7 @@
      ng-mouseleave="$ctrl.text.length === 172 ? null : $ctrl.stopText(); $ctrl.showPicture()">
     <h4 class="card-title">Weather App</h4>
     <div class="imgWrapper">
-        <img src="./imgs/weather-app.png" class="img-responsive" style="height: 240px">
+        <img ng-src="{{$ctrl.weatherImage}}" class="img-responsive" style="height: 240px">
     </div>
     <div id="cardBody8" class="card-body">
         <div class="card-text">

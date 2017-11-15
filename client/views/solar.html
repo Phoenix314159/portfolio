@@ -3,7 +3,7 @@
      ng-mouseleave="$ctrl.text.length === 193 ? null : $ctrl.stopText(); $ctrl.showPicture()">
     <h4 class="card-title solar">The Solar System</h4>
     <div class="imgWrapper">
-        <img src="/imgs/solar-system.png" class="img-responsive center-block" style="height: 240px"/>
+        <img ng-src="{{$ctrl.solarImage}}" class="img-responsive center-block" style="height: 240px"/>
     </div>
     <div id="cardBody3" class="card-body">
         <div class="card-text">
