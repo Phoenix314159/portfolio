@@ -12,9 +12,8 @@ angular.module('portfolio').component('bloggerCard', {
         $timeout.cancel(getData)
       }, 900)
 
-    vm.$onChanges = async () => {
-      const images = await vm.parent.getImages()
-      vm.bloggerImage = images[1]
+    vm.$onInit = async () => {
+      vm.cloudfrontUrl = await vm.parent.getImageUrl()
     }
     vm.show = true
     vm.showButtons = false

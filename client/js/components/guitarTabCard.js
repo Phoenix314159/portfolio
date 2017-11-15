@@ -8,6 +8,10 @@ angular.module('portfolio').component('guitarTabCard', {
         vm.guitarText = data.text[0].paragraph
         $timeout.cancel(getData)
       }, 950)
+
+    vm.$onInit = async () => {
+      vm.cloudfrontUrl = await vm.parent.getImageUrl()
+    }
     vm.show = true
     vm.showButtons = false
     vm.displayText = () => {

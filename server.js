@@ -9,7 +9,7 @@ app.use('/', express.static(path.join(__dirname, '/dist')))
 
 require('./middleware/main')(app)
 require('./routes/textRoutes')(app)
-require('./routes/imagesRoute')(app)
+require('./routes/imageUrlRoute')(app)
 require('./middleware/serverError')(app)
 
 app.listen(port, () => {

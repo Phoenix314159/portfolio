@@ -371,6 +371,10 @@ fieldset[disabled] .btn-custom.active {
     margin-bottom: -60px;
 }
 
+.black {
+    background-color: black;
+}
+
 .card {
     background-color: #E8E8E8;
     height: 35vh;
@@ -378,6 +382,10 @@ fieldset[disabled] .btn-custom.active {
     box-shadow: 0 0 1px .75px whitesmoke,
     0 0 2.5px 1.5px #808080,
     0 0 3px 1.75px #778899;
+}
+
+.card:hover {
+    cursor: pointer
 }
 
 .cardBack {
@@ -441,7 +449,7 @@ fieldset[disabled] .btn-custom.active {
     position: relative;
     background-color: black;
     margin-top: -15vh;
-    height: 208%;
+    height: 164%;
     z-index: 3;
     background-image: -moz-radial-gradient(circle, #FFFFFF .2px, #C0C0C0 .5px, transparent 2.5px),
     -moz-radial-gradient(circle, #FFFFFF .5px, #778899 .5px, transparent 3.75px),
@@ -521,14 +529,14 @@ fieldset[disabled] .btn-custom.active {
     background-position: center;
     background-blend-mode: darken;
     background-size: cover;
-    height: 204vh;
+    height: 161vh;
     width: 100vw;
 }
 
 .twinkling2 {
     position: absolute;
     width: 100vw;
-    height: 204vh;
+    height: 161vh;
     z-index: -3;
     background: url(../imgs/twinkling.png) repeat center;
     -moz-animation: move-twink-back 200s linear infinite;
@@ -673,13 +681,13 @@ fieldset[disabled] .btn-custom.active {
     align-items: center;
 }
 
-@media (min-width: 1440px) and (max-width: 1919px) {
+@media (min-width: 1585px) and (max-width: 1919px) {
     .twinkling2 {
-        height: 217vh;
+        height: 172vh;
     }
 
     .stars2 {
-        height: 217vh;
+        height: 172vh;
     }
 
     .heyman {
@@ -704,7 +712,7 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #projects {
-        height: 218%;
+        height: 173%;
     }
 
     #skills {
@@ -713,9 +721,25 @@ fieldset[disabled] .btn-custom.active {
 }
 
 @media (min-width: 1440px) and (max-width: 1585px) {
+    .twinkling2 {
+        height: 166vh;
+    }
+
+    .stars2 {
+        height: 166vh;
+    }
+
     .cool img {
         height: 80px;
         width: 80px;
+    }
+
+    .card img {
+        max-height: 190px;
+    }
+
+    .card-text {
+        font-size: 1.1em;
     }
 
     .cool .tag {
@@ -725,18 +749,23 @@ fieldset[disabled] .btn-custom.active {
     #skills {
         height: 125%;
     }
+
     .card-title {
         font-size: 1.2em;
+    }
+
+    #projects {
+        height: 168%;
     }
 }
 
 @media (min-width: 1350px) and (max-width: 1440px) {
     .twinkling2 {
-        height: 199vh;
+        height: 160vh;
     }
 
     .stars2 {
-        height: 199vh;
+        height: 160vh;
     }
 
     .heyman {
@@ -761,7 +790,7 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #projects {
-        height: 200%;
+        height: 160%;
     }
 
     .card-text {
@@ -820,29 +849,31 @@ fieldset[disabled] .btn-custom.active {
     .card-text {
         font-size: .9em;
     }
+
     #projects {
-        height: 200%;
+        height: 161%;
     }
+
     .twinkling2 {
-        height: 199vh;
+        height: 161vh;
     }
 
     .stars2 {
-        height: 199vh;
+        height: 161vh;
     }
 }
 
 @media (min-width: 1024px) and (max-width: 1200px) {
     .twinkling2 {
-        height: 184vh;
+        height: 145vh;
     }
 
     .stars2 {
-        height: 184vh;
+        height: 145vh;
     }
 
     #projects {
-        height: 185%;
+        height: 146%;
     }
 
     .textButton .btn {
@@ -935,11 +966,11 @@ fieldset[disabled] .btn-custom.active {
     }
 
     .twinkling2 {
-        height: 173vh;
+        height: 138vh;
     }
 
     .stars2 {
-        height: 173vh;
+        height: 138vh;
     }
 
     .heyman {
@@ -996,7 +1027,7 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #projects {
-        height: 175%;
+        height: 138%;
     }
 
     .links25 {
@@ -1031,7 +1062,7 @@ fieldset[disabled] .btn-custom.active {
 
 @media (min-width: 768px) and (max-width: 991px) {
     .twinkling2 {
-        height: 187vh;
+        height: 147vh;
 
     }
 
@@ -1050,7 +1081,7 @@ fieldset[disabled] .btn-custom.active {
     }
 
     .stars2 {
-        height: 187vh;
+        height: 147vh;
     }
 
     .heyman {
@@ -1110,7 +1141,7 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #projects {
-        height: 188%;
+        height: 147%;
     }
 
     #skills {
@@ -1128,12 +1159,6 @@ fieldset[disabled] .btn-custom.active {
     #contact {
         margin-top: -10vh;
         height: 120%;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 900px) {
-    .card-text {
-        font-size: 1em;
     }
 }
 
@@ -1177,11 +1202,7 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #projects {
-        height: 148%;
-    }
-
-    #skills {
-        height: 110%;
+        height: 130%;
     }
 
     #skills .cool {

@@ -7,14 +7,13 @@ angular.module('portfolio').component('adventureCard', {
     const vm = this, {document} = $window,
       cardBody4 = document.getElementById('cardBody4'),
       getData = $timeout(async () => {
-        const {adventureText} = mainService, {data} = await adventureText()
+        const {adventureText} = mainService, {data} = await adventureText();
         vm.adventureText = data.text[0].paragraph
         $timeout.cancel(getData)
       }, 650)
 
-    vm.$onChanges = async () => {
-      const images = await vm.parent.getImages()
-      vm.adventureImage = images[0]
+    vm.$onInit = async () => {
+      vm.cloudfrontUrl = await vm.parent.getImageUrl()
     }
     vm.show = true
     vm.showButtons = false

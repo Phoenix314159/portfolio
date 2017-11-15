@@ -13,8 +13,7 @@ angular.module('portfolio').component('solarCard', {
       }, 600)
 
     vm.$onInit = async () => {
-      const images = await vm.parent.getImages()
-      vm.solarImage = images[4]
+      vm.cloudfrontUrl = await vm.parent.getImageUrl()
     }
     vm.show = true
     vm.showButtons = false

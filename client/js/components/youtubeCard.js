@@ -12,9 +12,8 @@ angular.module('portfolio').component('youtubeCard', {
         $timeout.cancel(getData)
       }, 750)
 
-    vm.$onChanges = async () => {
-      const images = await vm.parent.getImages()
-      vm.youtubeImage = images[8]
+    vm.$onInit = async () => {
+      vm.cloudfrontUrl = await vm.parent.getImageUrl()
     }
     vm.show = true
     vm.showButtons = false

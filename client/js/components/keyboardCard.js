@@ -7,15 +7,15 @@ angular.module('portfolio').component('keyboardCard', {
     const vm = this, {document} = $window,
       cardBody = document.getElementById('cardBody'),
       getData = $timeout(async () => {
-        const {keyboardText} = mainService, {data} = await keyboardText();
+        const {keyboardText} = mainService, {data} = await keyboardText()
         vm.keyboardText = data.text[0].paragraph
         $timeout.cancel(getData)
       }, 500)
 
-    vm.$onChanges = async () => {
-      const images = await vm.parent.getImages()
-      vm.keyboardImage = images[3]
+    vm.$onInit = async () => {
+      vm.cloudfrontUrl = await vm.parent.getImageUrl()
     }
+
     vm.show = true
     vm.showButtons = false
     vm.displayText = () => {
