@@ -7,9 +7,31 @@ header .intro-text .skills {
     font-family: 'Rozha One', serif;
 }
 
+.navLinks {
+    margin-left: 1.5vw
+}
+
+.spacer {
+    height: 5vh
+}
+
+.spacer2 {
+    position: relative;
+    top: 14px;
+}
+
+.title2 {
+    line-height: 53px
+}
+
 .cool h2 {
     color: #ffffff;
     font-weight: 400;
+    margin-bottom: -1vh
+}
+
+.cool hr {
+    margin-top: 5vh;
 }
 
 .skillsLine {
@@ -49,15 +71,6 @@ header .intro-text .skills {
 
 .flex p {
     text-align: center;
-}
-
-.me {
-    background: url("https://www.scientificamerican.com/sciam/assets/Image/image8.jpg");
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-blend-mode: darken;
-    background-size: cover;
 }
 
 .flexItem span {
@@ -154,12 +167,13 @@ header .intro-text .skills {
     box-shadow: 0 0 .2px .2px black,
     0 0 .2px .2px black,
     0 0 .2px .2px black;
-
+    height: 210px;
+    width: 270px;
 }
 
 #skills {
     height: 124%;
-    background: url("http://papers.co/wallpaper/papers.co-mf21-summer-black-night-revisited-star-space-sky-36-3840x2400-4k-wallpaper.jpg");
+    background: url('../imgs/space2.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
@@ -269,6 +283,7 @@ hr {
     margin-right: auto;
     border-style: inset;
     border-width: 1px;
+    width: 80vh;
 }
 
 .flex {
@@ -284,7 +299,18 @@ hr {
 }
 
 #contact {
-    height: 100%;
+    background: url('../imgs/pluto.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: darken;
+    background-size: cover;
+    /*height: 100%;*/
+    font-family: 'Rozha One', serif;
+}
+
+.rowContact {
+    margin-top: -12vh;
 }
 
 .imgWrapper {
@@ -721,6 +747,9 @@ fieldset[disabled] .btn-custom.active {
 }
 
 @media (min-width: 1440px) and (max-width: 1585px) {
+    body {
+        width: 105%;
+    }
     .twinkling2 {
         height: 166vh;
     }
