@@ -1,7 +1,7 @@
 angular.module('portfolio').component('solarCard', {
   templateUrl: '/views/solar.html',
   require: {
-    parent: '^^cardPictures'
+    parent: '^^pictures'
   },
   controller: function (mainService, $interval, $timeout, $window) {
     const vm = this, {document} = $window,

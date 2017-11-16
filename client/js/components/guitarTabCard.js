@@ -1,5 +1,8 @@
 angular.module('portfolio').component('guitarTabCard', {
   templateUrl: '/views/guitarTab.html',
+  require: {
+    parent: '^^pictures'
+  },
   controller: function (mainService, $interval, $timeout, $window) {
     const vm = this, {document} = $window,
       cardBody = document.getElementById('cardBody10'),
