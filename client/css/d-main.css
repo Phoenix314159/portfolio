@@ -55,10 +55,6 @@ header .intro-text .skills {
     color: whitesmoke;
 }
 
-#skills .cool {
-    margin-top: -12vh;
-}
-
 .brand-heading {
     text-shadow: 2px 2px 5px black;
 }
@@ -172,7 +168,7 @@ header .intro-text .skills {
 }
 
 #skills {
-    height: 124%;
+    height: 145%;
     background: url('../imgs/space2.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -299,18 +295,22 @@ hr {
 }
 
 #contact {
+    position: relative;
+    display: flex;
+    justify-content: center;
     background: url('../imgs/pluto.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
     background-blend-mode: darken;
     background-size: cover;
-    /*height: 100%;*/
+    height: 125%;
     font-family: 'Rozha One', serif;
 }
 
-.rowContact {
-    margin-top: -12vh;
+.contactSection {
+    position: absolute;
+    top: -8vh;
 }
 
 .imgWrapper {
@@ -475,7 +475,7 @@ fieldset[disabled] .btn-custom.active {
     position: relative;
     background-color: black;
     margin-top: -15vh;
-    height: 164%;
+    height: 188%;
     z-index: 3;
     background-image: -moz-radial-gradient(circle, #FFFFFF .2px, #C0C0C0 .5px, transparent 2.5px),
     -moz-radial-gradient(circle, #FFFFFF .5px, #778899 .5px, transparent 3.75px),
@@ -508,61 +508,23 @@ fieldset[disabled] .btn-custom.active {
     z-index: -1;
 }
 
-.stars, .twinkling {
-    position: absolute;
-    z-index: -3;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-
-}
-
 .stars {
+    position: absolute;
     background: url(../imgs/stars2.png);
-    z-index: -1;
+    z-index: -3;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
     background-blend-mode: darken;
     background-size: cover;
-    height: 215vh;
+    height: 100%;
     width: 100vw;
-
 }
 
 .twinkling {
-    width: 100vw;
-    height: 215vh;
-    background: url(../imgs/twinkling.png) repeat center;
-    z-index: -1;
-    -moz-animation: move-twink-back 200s linear infinite;
-    -o-animation: move-twink-back 200s linear infinite;
-    -webkit-animation: move-twink-back 200s linear infinite;
-    animation: move-twink-back 200s linear infinite;
-
-}
-
-.stars2 {
-    position: absolute;
-    background: url(../imgs/stars2.png);
-    z-index: -3;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-blend-mode: darken;
-    background-size: cover;
-    height: 161vh;
-    width: 100vw;
-}
-
-.twinkling2 {
     position: absolute;
     width: 100vw;
-    height: 161vh;
+    height: 100%;
     z-index: -3;
     background: url(../imgs/twinkling.png) repeat center;
     -moz-animation: move-twink-back 200s linear infinite;
@@ -608,7 +570,7 @@ fieldset[disabled] .btn-custom.active {
     }
 }
 
-#projects > .container {
+#projects .container {
     max-width: 78vw;
 }
 
@@ -638,6 +600,8 @@ fieldset[disabled] .btn-custom.active {
 }
 
 #about {
+    position: relative;
+    z-index: 1;
     height: 120%;
     margin-bottom: 0;
     background-image: -moz-radial-gradient(circle, #FFFFFF .2px, #C0C0C0 .5px, transparent 2.5px),
@@ -708,14 +672,6 @@ fieldset[disabled] .btn-custom.active {
 }
 
 @media (min-width: 1585px) and (max-width: 1919px) {
-    .twinkling2 {
-        height: 172vh;
-    }
-
-    .stars2 {
-        height: 172vh;
-    }
-
     .heyman {
         margin-right: -115px;
         margin-left: -115px;
@@ -738,29 +694,22 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #projects {
-        height: 173%;
+        height: 199%;
     }
 
     #skills {
-        height: 138%;
+        height: 167%;
+    }
+
+    #contact {
+        height: 130%;
     }
 }
 
 @media (min-width: 1440px) and (max-width: 1585px) {
-    body {
-        width: 105%;
-    }
-    .twinkling2 {
-        height: 166vh;
-    }
-
-    .stars2 {
-        height: 166vh;
-    }
-
-    .cool img {
-        height: 80px;
-        width: 80px;
+    .heyman {
+        margin-right: -115px;
+        margin-left: -115px;
     }
 
     .card img {
@@ -771,12 +720,17 @@ fieldset[disabled] .btn-custom.active {
         font-size: 1.1em;
     }
 
-    .cool .tag {
+    #skills .tag {
         font-size: 1.2em;
     }
 
+    #skills img {
+        height: 90px;
+        width: 90px;
+    }
+
     #skills {
-        height: 124%;
+        height: 156%;
     }
 
     .card-title {
@@ -784,18 +738,15 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #projects {
-        height: 168%;
+        height: 196%;
+    }
+
+    #contact {
+        height: 130%;
     }
 }
 
 @media (min-width: 1350px) and (max-width: 1440px) {
-    .twinkling2 {
-        height: 160vh;
-    }
-
-    .stars2 {
-        height: 160vh;
-    }
 
     .heyman {
         margin-right: -115px;
@@ -815,11 +766,11 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #skills {
-        height: 125%;
+        height: 152%;
     }
 
     #projects {
-        height: 160%;
+        height: 188%;
     }
 
     .card-text {
@@ -830,13 +781,17 @@ fieldset[disabled] .btn-custom.active {
         font-size: 1em;
     }
 
-    .cool img {
+    #skills img {
         height: 80px;
         width: 80px;
     }
 
-    .cool .tag {
+    #skills .tag {
         font-size: 1.2em;
+    }
+
+    #contact {
+        height: 131%;
     }
 }
 
@@ -846,17 +801,17 @@ fieldset[disabled] .btn-custom.active {
         margin-left: -40px;
     }
 
-    .cool img {
+    #skills img {
         height: 60px;
         width: 60px;
     }
 
-    .cool .tag {
+    #skills .tag {
         font-size: 1em;
     }
 
     #skills {
-        height: 112%;
+        height: 138%;
     }
 
     .imgWrapper {
@@ -880,29 +835,19 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #projects {
-        height: 161%;
+        height: 188%;
     }
 
-    .twinkling2 {
-        height: 161vh;
+    #contact {
+        height: 131%;
     }
 
-    .stars2 {
-        height: 161vh;
-    }
 }
 
 @media (min-width: 1024px) and (max-width: 1200px) {
-    .twinkling2 {
-        height: 145vh;
-    }
-
-    .stars2 {
-        height: 145vh;
-    }
 
     #projects {
-        height: 146%;
+        height: 175%;
     }
 
     .textButton .btn {
@@ -934,7 +879,7 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #skills {
-        height: 112%;
+        height: 138%;
     }
 
     .card-text {
@@ -955,18 +900,22 @@ fieldset[disabled] .btn-custom.active {
         max-height: 150px;
     }
 
-    .cool img {
+    #skills img {
         height: 60px;
         width: 60px;
     }
 
-    .cool .tag {
+    #skills .tag {
         font-size: 1em;
     }
 
     .firstLine img {
         height: 80px;
         width: 80px;
+    }
+
+    #contact {
+        height: 131%;
     }
 
 }
@@ -994,25 +943,17 @@ fieldset[disabled] .btn-custom.active {
         width: 55px;
     }
 
-    .twinkling2 {
-        height: 138vh;
-    }
-
-    .stars2 {
-        height: 138vh;
-    }
-
     .heyman {
         margin-right: -15px;
         margin-left: -15px;
     }
 
-    .cool img {
+    #skills img {
         height: 60px;
         width: 60px;
     }
 
-    .cool .tag {
+    #skills .tag {
         font-size: 1em;
     }
 
@@ -1033,7 +974,7 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #skills {
-        height: 111.5%;
+        height: 138.5%;
     }
 
     .tag {
@@ -1056,7 +997,11 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #projects {
-        height: 138%;
+        height: 169%;
+    }
+
+    #contact {
+        height: 130%;
     }
 
     .links25 {
@@ -1090,10 +1035,6 @@ fieldset[disabled] .btn-custom.active {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-    .twinkling2 {
-        height: 147vh;
-
-    }
 
     .githubLink .btn {
         font-size: 10px;
@@ -1109,29 +1050,21 @@ fieldset[disabled] .btn-custom.active {
         width: 55px;
     }
 
-    .stars2 {
-        height: 147vh;
-    }
-
     .heyman {
         margin-right: -10px;
         margin-left: -10px;
-    }
-
-    #skills .cool {
-        margin-top: -30vh;
     }
 
     #about p {
         font-size: 1.2em;
     }
 
-    .cool img {
+    #skills img {
         height: 60px;
         width: 60px;
     }
 
-    .cool .tag {
+    #skills .tag {
         font-size: .8em;
     }
 
@@ -1170,11 +1103,11 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #projects {
-        height: 147%;
+        height: 191%;
     }
 
     #skills {
-        height: 97%;
+        height: 148%;
     }
 
     .card-title {
@@ -1186,8 +1119,7 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #contact {
-        margin-top: -10vh;
-        height: 120%;
+        height: 155%;
     }
 }
 
@@ -1198,15 +1130,7 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #skills {
-        height: 94%;
-    }
-
-    .twinkling2 {
-        height: 130vh;
-    }
-
-    .stars2 {
-        height: 130vh;
+        height: 148%;
     }
 
     #about p {
@@ -1214,7 +1138,7 @@ fieldset[disabled] .btn-custom.active {
     }
 
     #projects {
-        height: 131%;
+        height: 177%;
     }
 
     .githubLink .btn {
@@ -1228,14 +1152,6 @@ fieldset[disabled] .btn-custom.active {
 
     .card-title {
         font-size: .9em;
-    }
-
-    #projects {
-        height: 130%;
-    }
-
-    #skills .cool {
-        margin-top: -24vh;
     }
 
     .card {
@@ -1299,14 +1215,6 @@ fieldset[disabled] .btn-custom.active {
 
     #skills {
         height: 94%;
-    }
-
-    .twinkling2 {
-        height: 130vh;
-    }
-
-    .stars2 {
-        height: 130vh;
     }
 
     #about p {

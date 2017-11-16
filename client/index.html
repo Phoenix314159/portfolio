@@ -45,7 +45,7 @@
                     <img class="myPicture img-responsive" src="/imgs/me.png"/>
                     <div class="spacer"></div>
                     <h1 class="brand-heading sectionFont james">James</h1>
-                    <h1 class="brand-heading sectionFont title2" >Langford</h1>
+                    <h1 class="brand-heading sectionFont title2">Langford</h1>
                     <h4 class="stack">Full Stack Web Developer</h4>
                     <a href="#about" class="btn btn-circle js-scroll-trigger">
                         <i class="fa fa-angle-double-down"></i>
@@ -55,71 +55,70 @@
         </div>
     </div>
 </header>
-<section id="about" class="content-section text-center">
-    <about-me></about-me>
+<section id="about">
     <div class="stars"></div>
     <div class="twinkling"></div>
+    <div class="content-section">
+        <about-me></about-me>
+    </div>
 </section>
-<section id="skills" class="download-section content-section text-center smaller">
-    <div class="cool">
+<section id="skills" class="text-center content-section">
+    <div class="content">
         <h2 class="sectionFont">Skills</h2>
         <hr>
-        <div class="spacer2">
-            <div class="container">
-                <first-icon-row></first-icon-row>
-                <second-icon-row></second-icon-row>
-                <third-icon-row></third-icon-row>
-                <fourth-icon-row></fourth-icon-row>
-            </div>
+        <div class="container">
+            <first-icon-row></first-icon-row>
+            <second-icon-row></second-icon-row>
+            <third-icon-row></third-icon-row>
+            <fourth-icon-row></fourth-icon-row>
         </div>
     </div>
 </section>
 <pictures>
     <section id="projects">
         <div id="particles-js"></div>
-        <div class="stars2"></div>
-        <div class="twinkling2"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center" style="margin-top: 10vh">
-                    <h2 class="projects sectionFont">Projects</h2>
-                    <hr>
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="content-section">
+            <div class="text-center">
+                <h2 class="projects sectionFont">Projects</h2>
+                <hr>
+            </div>
+            <div class="container">
+                <div class="row flex">
+                    <keyboard-card></keyboard-card>
+                    <vimeo-card></vimeo-card>
+                    <solar-card></solar-card>
                 </div>
+                <div class="spacer"></div>
+                <div class="row flex">
+                    <adventure-card></adventure-card>
+                    <toolbox-card></toolbox-card>
+                    <youtube-card></youtube-card>
+                </div>
+                <div class="spacer"></div>
+                <div class="row flex">
+                    <feedback-card></feedback-card>
+                    <weather-card></weather-card>
+                    <blogger-card></blogger-card>
+                </div>
+                <!--<div class="spacer"></div>-->
+                <!--<div class="row flex">-->
+                <!--<guitar-tab-card></guitar-tab-card>-->
+                <!--</div>-->
             </div>
-            <div class="row flex">
-                <keyboard-card></keyboard-card>
-                <vimeo-card></vimeo-card>
-                <solar-card></solar-card>
-            </div>
-            <div class="spacer"></div>
-            <div class="row flex">
-                <adventure-card></adventure-card>
-                <toolbox-card></toolbox-card>
-                <youtube-card></youtube-card>
-            </div>
-            <div class="spacer"></div>
-            <div class="row flex">
-                <feedback-card></feedback-card>
-                <weather-card></weather-card>
-                <blogger-card></blogger-card>
-            </div>
-            <!--<div class="spacer"></div>-->
-            <!--<div class="row flex">-->
-            <!--<guitar-tab-card></guitar-tab-card>-->
-            <!--</div>-->
         </div>
     </section>
 </pictures>
-<section id="contact" class="content-section text-center">
-    <div class="container">
-        <div class="row rowContact">
-            <div class="col-lg-8 mx-auto">
-                <h2 class="sectionFont">Contact</h2>
-                <hr/>
-            </div>
+<section id="contact">
+    <div class="contactSection">
+        <div class="content-section text-center">
+            <h2 class="sectionFont">Contact</h2>
+            <hr/>
+            <div class="spacer"></div>
+            <contact-me></contact-me>
         </div>
     </div>
-    <contact-me></contact-me>
 </section>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-animate.js"></script>
