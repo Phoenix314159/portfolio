@@ -1,39 +1,39 @@
 const gulp = require('gulp'),
-  {
-    concat, cleanCss, sourcemaps, babel, browser: {browserify},
-    ngAnnotate, uglify, htmlmin, imagemin
-  } = require('gulp-load-plugins')({
+  {concat, cleanCss, sourcemaps: {init, write}, babel, browser: {browserify},
+    ngAnnotate, uglify, htmlmin, imagemin} = require('gulp-load-plugins')({
     pattern: ['gulp-*'],
     replaceString: /\bgulp[\-.]/,
     lazy: true,
     camelize: true
-  })
-transforms = [{
-  transform: 'babelify'
-}]
-babelConfig = {
-  presets: ['es2015', 'es2017'],
-  plugins: ['transform-runtime']
-}
+  }),
+  transforms = [{
+    transform: 'babelify'
+  }],
+  babelConfig = {
+    presets: ['es2015', 'es2017'],
+    plugins: ['transform-runtime']
+  }
 
-gulp.task('minify-css', () => {
+gulp.task('css', () => {
   return gulp.src('./client/css/*.css')
+    .pipe(init())
     .pipe(concat('main.css'))
     .pipe(cleanCss({
       compatibility: 'ie8'
     }))
+    .pipe(write('./'))
     .pipe(gulp.dest('dist/css'))
 })
 
-gulp.task('minify-js', () => {
+gulp.task('js', () => {
   return gulp.src(['client/js/**/*.js', 'client/grayscale/*.js'])
-    .pipe(sourcemaps.init())
+    .pipe(init())
     .pipe(babel(babelConfig))
     .pipe(browserify(transforms))
     .pipe(concat('bundle.js'))
     .pipe(ngAnnotate())
     .pipe(uglify())
-    .pipe(sourcemaps.write('./'))
+    .pipe(write('./'))
     .pipe(gulp.dest('dist/js'))
 })
 
@@ -65,7 +65,7 @@ gulp.task('copy', () => {
     .pipe(gulp.dest('dist/resume'))
 })
 
-gulp.task('build', ['minify-css', 'minify-js', 'views', 'copy'], () => {
+gulp.task('build', ['css', 'js', 'views', 'copy'], () => {
   return gulp.src('client/index.html')
     .pipe(htmlmin({
       collapseWhitespace: true,
