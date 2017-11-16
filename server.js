@@ -7,6 +7,7 @@ const express = require('express'),
 (async () => { app.set('db', await massive(dbConnection)) })()
 app.use('/', express.static(path.join(__dirname, '/dist')))
 
+
 require('./middleware/main')(app)
 require('./routes/textRoutes')(app)
 require('./routes/imageUrlRoute')(app)
