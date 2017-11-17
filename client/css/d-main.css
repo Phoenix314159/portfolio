@@ -142,11 +142,12 @@ header .intro-text .skills {
 
 .myPicture {
     opacity: .9;
-    box-shadow: 0 0 .2px .2px black,
-    0 0 .2px .2px black,
-    0 0 .2px .2px black;
+    box-shadow: 0 0 .5px .5px black,
+    0 0 .5px .5px black,
+    0 0 .5px .5px black;
     height: 210px;
     width: 270px;
+    border-radius: 5pt;
 }
 
 #skills {
