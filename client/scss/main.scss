@@ -1,6 +1,49 @@
 $fontFamily: 'Rozha One', serif;
 $transition: .2s ease-in-out opacity;
 $blackShadow: 0 0 .5px .5px black;
+$tShadow: 2px 2px 5px black;
+$color: whitesmoke;
+$radius: 2pt;
+#mainNav {
+  font-family: $fontFamily;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  ul {
+    li {
+      -webkit-transition: background 0.3s ease-in-out;
+      -moz-transition: background 0.3s ease-in-out;
+      transition: background 0.3s ease-in-out;
+      &:hover {
+        .nav-link {
+          color: black;
+        }
+        outline: none;
+        background-color: $color;
+        border-radius: $radius;
+      }
+      &:active, &:focus {
+        outline: none;
+        background-color: $color;
+      }
+    }
+  }
+  .navbar-toggler {
+    font-size: 14px;
+    padding: 11px;
+    color: white;
+    border: 1px solid white;
+  }
+  .navbar-brand {
+    font-weight: 700;
+  }
+  a {
+    color: white;
+  }
+}
 
 header {
   .intro-text {
@@ -15,10 +58,6 @@ header {
     font-size: 16px;
     font-family: $fontFamily;
   }
-}
-
-.navLinks {
-  margin-left: 1.5vw
 }
 
 .spacer {
@@ -36,25 +75,25 @@ header {
 
 .tag {
   text-align: center;
-  font-family: 'Rozha One', serif;
+  font-family: $fontFamily;
   font-weight: bold;
   font-size: 1.6em;
   color: #ffffff;
-  text-shadow: 2px 2px 5px black;
+  text-shadow: $tShadow;
 }
 
 .buttonColor {
-  color: whitesmoke;
+  color: $color;
 }
 
 .brand-heading {
-  text-shadow: 2px 2px 5px black;
+  text-shadow: $tShadow;
 }
 
 .stack {
   font-size: 2.1em;
-  font-family: 'Rozha One', serif;
-  text-shadow: 2px 2px 5px black;
+  font-family: $fontFamily;
+  text-shadow: $tShadow;
 }
 
 .flex {
@@ -65,7 +104,7 @@ header {
 
 .flexItem {
   i {
-    color: whitesmoke;
+    color: $color;
   }
   span {
     font-family: $fontFamily;
@@ -142,7 +181,7 @@ header {
   align-items: center;
   .text48 {
     font-family: $fontFamily;
-    color: whitesmoke;
+    color: $color;
   }
 }
 
@@ -174,7 +213,7 @@ header {
 }
 
 .text23 {
-  color: whitesmoke;
+  color: $color;
 }
 
 .links26 {
@@ -232,7 +271,7 @@ header {
     box-shadow: inset 0 0 7px 7px #3f5767;
   }
   20% {
-    box-shadow: inset 0 0 7px 7px whitesmoke;
+    box-shadow: inset 0 0 7px 7px $color;
   }
   40% {
     box-shadow: inset 0 0 7px 7px #3a5161;
@@ -258,7 +297,7 @@ header {
 
 hr {
   display: block;
-  color: whitesmoke;
+  color: $color;
   margin-top: 0.5em;
   margin-bottom: 3em;
   margin-left: auto;
@@ -324,13 +363,13 @@ hr {
 }
 
 .contactButtons {
-  color: whitesmoke;
+  color: $color;
 }
 
 .btn-custom {
   background-color: #7b8185;
   border-color: #7b8185;
-  box-shadow: 0 0 .25px .25px whitesmoke,
+  box-shadow: 0 0 .25px .25px $color,
   0 0 .5px .5px #808080,
   0 0 .75px .35px #6f7478;
   font-family: $fontFamily;
@@ -381,7 +420,7 @@ hr {
   background-color: #E8E8E8;
   height: 35vh;
   max-width: 19.15vw;
-  box-shadow: 0 0 1px .75px whitesmoke,
+  box-shadow: 0 0 1px .75px $color,
   0 0 2.5px 1.5px #808080,
   0 0 3px 1.75px #778899;
   &:hover {
@@ -401,14 +440,14 @@ hr {
   text-align: center;
   margin-top: 2vh;
   color: #707070;
-  font-family: 'Rozha One', serif;
+  font-family: $fontFamily;
   text-shadow: 1px 1px 1px black;
 }
 
 .card-text {
   padding: 4%;
   font-size: 1.4em;
-  font-family: 'Rozha One', serif;
+  font-family: $fontFamily;
   color: white;
   position: absolute;
   top: 2%;
@@ -425,7 +464,7 @@ hr {
   text-align: center;
   margin-top: auto;
   a {
-    color: whitesmoke;
+    color: $color;
     font-family: $fontFamily;
     &:hover {
       color: lightgrey;

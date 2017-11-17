@@ -67,11 +67,11 @@ gulp.task('copy', () => {
     .pipe(gulp.dest('dist/fonts'))
 
   gulp.src(['client/imgs/**'])
-    .pipe(imagemin())
+    // .pipe(imagemin())
     .pipe(gulp.dest('dist/imgs'))
 
   gulp.src(['client/icons/**'])
-    .pipe(imagemin())
+    // .pipe(imagemin())
     .pipe(gulp.dest('dist/icons'))
 
   gulp.src(['client/resume/**'])
@@ -88,7 +88,7 @@ gulp.task('build', ['css', 'scss', 'js', 'views', 'copy'], () => {
 
 gulp.task('watch', () => {
   return gulp.watch(['client/index.html', 'client/particles.json', 'client/js/**/*.js',
-    'client/views/**', 'client/css/*.css'], ['build'])
+    'client/views/**', 'client/css/*.css', 'client/scss/*.scss'], ['build'])
 })
 
 gulp.task('default', ['build', 'watch'])

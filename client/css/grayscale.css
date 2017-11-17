@@ -94,43 +94,7 @@ p {
       line-height: 1.6;
       margin: 0 0 35px; } }
 
-a {
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  color: #42DCA3; }
-  a:focus, a:hover {
-    text-decoration: none;
-    color: #1d9b6c; }
-
-#mainNav {
-  font-family: 'Rozha One', serif;;
-  margin-bottom: 0;
-  text-transform: uppercase;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  background-color: black; }
-  #mainNav .navbar-toggler {
-    font-size: 14px;
-    padding: 11px;
-    color: white;
-    border: 1px solid white; }
-  #mainNav .navbar-brand {
-    font-weight: 700; }
-  #mainNav a {
-    color: white; }
-  #mainNav .navbar-nav .nav-item {
-    -webkit-transition: background 0.3s ease-in-out;
-    -moz-transition: background 0.3s ease-in-out;
-    transition: background 0.3s ease-in-out; }
-    #mainNav .navbar-nav .nav-item:hover {
-      color: fade(white, 80%);
-      outline: none;
-      background-color: transparent; }
-    #mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
-      outline: none;
-      background-color: transparent; }
-
-  @media (min-width: 912px) {
+@media (min-width: 912px) {
     #mainNav {
       padding-top: 20px;
       padding-bottom: 20px;
@@ -202,15 +166,6 @@ a {
   padding-top: 300px;
   padding-bottom: 300px; }
 
-.download-section {
-  color: white;
-  background: url("../img/abstract-wallpaper-cool-desktop-images-art-colors-colorful-backgrounds-high-resolution-paints-background-images-2262x1476.jpg") no-repeat center center scroll;
-  background-color: black;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-
 #map {
   width: 100%;
   height: 300px; }
@@ -221,15 +176,6 @@ a {
     padding-bottom: 200px; }
   #map {
     height: 350px; } }
-
-.btn {
-  font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  text-transform: uppercase;
-  border-radius: 0; }
 
 .btn-default {
   color: #42DCA3;
