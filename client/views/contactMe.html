@@ -1,6 +1,6 @@
 <div class="flexContact">
     <div class="flexItem">
-        <button class="btn btn-custom btn-lg dude2 faded4" ng-model="buttonHide"
+        <button class="btn btn-custom btn-lg buttonColor faded4" ng-model="buttonHide"
                 ng-disabled="buttonHide" ng-hide="toggle"
                 ng-click="toggle=!toggle; toggle3=!toggle3">
             <i ng-show="$ctrl.show" class="fa fa-envelope fa-fw"></i>
@@ -8,7 +8,7 @@
             <span ng-hide="$ctrl.show" class="copied">Copied to Clipboard</span>
         </button>
         <button ngclipboard ngclipboard-success="$ctrl.success1()" data-clipboard-text="derivative7117@live.com"
-                class="btn btn-custom btn-lg dude2 faded4"
+                class="btn btn-custom btn-lg buttonColor faded4"
                 ng-click="toggle=!toggle; toggle3 = false; buttonHide = true"
                 ng-show="toggle">
             <i ng-hide="$ctrl.show" class="fa fa-envelope fa-fw"></i>
@@ -17,7 +17,7 @@
         <div class="copied faded4" ng-show="toggle3">Click Again To Copy</div>
     </div>
     <div class="flexItem">
-        <button class="btn btn-custom btn-lg dude2 faded4" ng-model="buttonHide2"
+        <button class="btn btn-custom btn-lg buttonColor faded4" ng-model="buttonHide2"
                 ng-disabled="buttonHide2" ng-hide="toggle2"
                 ng-click="toggle2=!toggle2; toggle4=!toggle4">
             <i ng-show="$ctrl.show2" class="fa fa-envelope fa-fw"></i>
@@ -27,7 +27,7 @@
         <button ngclipboard ngclipboard-success="$ctrl.success2()"
                 data-clipboard-text="derivative7117@gmail.com"
                 on-copied="$ctrl.success2()" on-error="$ctrl.fail2(err)"
-                class="btn btn-custom btn-lg dude2 faded4"
+                class="btn btn-custom btn-lg buttonColor faded4"
                 ng-click="toggle2=!toggle2; toggle4 = false; buttonHide2 = true"
                 ng-show="toggle2">
             <i ng-hide="$ctrl.show2" class="fa fa-envelope fa-fw"></i>

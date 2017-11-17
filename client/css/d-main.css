@@ -24,20 +24,6 @@ header .intro-text .skills {
     line-height: 53px
 }
 
-.cool h2 {
-    color: #ffffff;
-    font-weight: 400;
-    margin-bottom: -1vh
-}
-
-.cool hr {
-    margin-top: 5vh;
-}
-
-.skillsLine {
-    color: black;
-}
-
 .tag {
     text-align: center;
     font-family: 'Rozha One', serif;
@@ -47,11 +33,7 @@ header .intro-text .skills {
     text-shadow: 2px 2px 5px black;
 }
 
-.dude {
-    color: whitesmoke;
-}
-
-.dude2 {
+.buttonColor {
     color: whitesmoke;
 }
 
@@ -175,10 +157,6 @@ header .intro-text .skills {
     background-position: center;
     background-blend-mode: darken;
     background-size: cover;
-}
-
-.box29 {
-    text-align: center;
 }
 
 .imageLinks {
@@ -574,7 +552,7 @@ fieldset[disabled] .btn-custom.active {
     max-width: 78vw;
 }
 
-.heyman {
+.iconRow {
     margin-right: -240px;
     margin-left: -240px;
 }
@@ -672,7 +650,7 @@ fieldset[disabled] .btn-custom.active {
 }
 
 @media (min-width: 1585px) and (max-width: 1919px) {
-    .heyman {
+    .iconRow {
         margin-right: -115px;
         margin-left: -115px;
     }
@@ -707,7 +685,7 @@ fieldset[disabled] .btn-custom.active {
 }
 
 @media (min-width: 1440px) and (max-width: 1585px) {
-    .heyman {
+    .iconRow {
         margin-right: -115px;
         margin-left: -115px;
     }
@@ -748,7 +726,7 @@ fieldset[disabled] .btn-custom.active {
 
 @media (min-width: 1350px) and (max-width: 1440px) {
 
-    .heyman {
+    .iconRow {
         margin-right: -115px;
         margin-left: -115px;
     }
@@ -796,7 +774,7 @@ fieldset[disabled] .btn-custom.active {
 }
 
 @media (min-width: 1200px) and (max-width: 1350px) {
-    .heyman {
+    .iconRow {
         margin-right: -40px;
         margin-left: -40px;
     }
@@ -869,7 +847,7 @@ fieldset[disabled] .btn-custom.active {
         width: 55px;
     }
 
-    .heyman {
+    .iconRow {
         margin-right: -40px;
         margin-left: -40px;
     }
@@ -909,11 +887,6 @@ fieldset[disabled] .btn-custom.active {
         font-size: 1em;
     }
 
-    .firstLine img {
-        height: 80px;
-        width: 80px;
-    }
-
     #contact {
         height: 131%;
     }
@@ -943,7 +916,7 @@ fieldset[disabled] .btn-custom.active {
         width: 55px;
     }
 
-    .heyman {
+    .iconRow {
         margin-right: -15px;
         margin-left: -15px;
     }
@@ -959,10 +932,6 @@ fieldset[disabled] .btn-custom.active {
 
     .card-title {
         font-size: .8em;
-    }
-
-    .smaller {
-        height: 168%;
     }
 
     .card-text {
@@ -986,16 +955,6 @@ fieldset[disabled] .btn-custom.active {
         width: 60px;
     }
 
-    .dude img {
-        height: 60px;
-        width: 60px;
-    }
-
-    .firstLine img {
-        height: 80px;
-        width: 80px;
-    }
-
     #projects {
         height: 169%;
     }
@@ -1006,22 +965,6 @@ fieldset[disabled] .btn-custom.active {
 
     .links25 {
         font-size: .9em;
-    }
-
-    .feedBack {
-        font-size: 1.2em;
-    }
-
-    .blog {
-        font-size: 1.2em;
-    }
-
-    .pro7 {
-        font-size: .85em;
-    }
-
-    .box {
-        height: 270px;
     }
 
     .imgWrapper {
@@ -1050,7 +993,7 @@ fieldset[disabled] .btn-custom.active {
         width: 55px;
     }
 
-    .heyman {
+    .iconRow {
         margin-right: -10px;
         margin-left: -10px;
     }
@@ -1070,16 +1013,6 @@ fieldset[disabled] .btn-custom.active {
 
     #projects img {
         height: 200px;
-    }
-
-    .dude img {
-        height: 80px;
-        width: 80px;
-    }
-
-    .firstLine img {
-        height: 80px;
-        width: 80px;
     }
 
     .imgWrapper {
@@ -1171,38 +1104,18 @@ fieldset[disabled] .btn-custom.active {
         font-size: .7em;
     }
 
-    .heyman {
+    .iconRow {
         margin-right: 0;
         margin-left: 0;
     }
 
-    .cool img {
+    #skills img {
         height: 40px;
         width: 40px;
     }
 
-    .cool .tag {
+    #skills .tag {
         font-size: .7em;
-    }
-
-    .feedBack {
-        font-size: 1em;
-    }
-
-    .blog {
-        font-size: 1em;
-    }
-
-    .tag {
-        font-size: 1.2em;
-    }
-
-    .weather {
-        font-size: 1.15em;
-    }
-
-    .smaller {
-        height: 155%;
     }
 
 }
@@ -1246,10 +1159,6 @@ fieldset[disabled] .btn-custom.active {
         height: 110%;
     }
 
-    #skills .cool {
-        margin-top: -24vh;
-    }
-
     .card {
         height: 24vh;
         max-width: 22.15vw
@@ -1271,48 +1180,24 @@ fieldset[disabled] .btn-custom.active {
         font-size: .7em;
     }
 
-    .heyman {
+    .iconRow {
         margin-right: 0;
         margin-left: 0;
     }
 
-    .cool img {
+    #skills img {
         height: 40px;
         width: 40px;
     }
 
-    .cool .tag {
+    #skills .tag {
         font-size: .7em;
-    }
-
-    .feedBack {
-        font-size: 1em;
-    }
-
-    .blog {
-        font-size: 1em;
-    }
-
-    .tag {
-        font-size: 1.2em;
-    }
-
-    .weather {
-        font-size: 1.15em;
-    }
-
-    .smaller {
-        height: 155%;
     }
 }
 
 @media (min-width: 320px) and (max-width: 375px) {
     #skills {
         height: 75%;
-    }
-
-    #skills .cool {
-        margin-top: -32vh;
     }
 
     #projects {
@@ -1337,7 +1222,7 @@ fieldset[disabled] .btn-custom.active {
         height: 129px;
     }
 
-    .heyman {
+    .iconRow {
         margin-right: 0;
         margin-left: 0;
     }
@@ -1346,7 +1231,7 @@ fieldset[disabled] .btn-custom.active {
         font-size: 1.5em;
     }
 
-    .cool hr {
+    hr {
         width: 23vw;
     }
 
@@ -1381,12 +1266,12 @@ fieldset[disabled] .btn-custom.active {
         font-size: 13px;
     }
 
-    .cool img {
+    #skills img {
         height: 30px;
         width: 30px;
     }
 
-    .cool .tag {
+    #skills .tag {
         font-size: .5em;
     }
 
