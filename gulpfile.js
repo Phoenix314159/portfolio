@@ -1,5 +1,6 @@
 const gulp = require('gulp'),
-  {concat, cleanCss, sourcemaps: {init, write}, babel, browser: {browserify},
+  {concat, cleanCss, sourcemaps: {init, write},
+    babel, browser: {browserify}, sass,
     ngAnnotate, uglify, htmlmin, imagemin} = require('gulp-load-plugins')({
     pattern: ['gulp-*'],
     replaceString: /\bgulp[\-.]/,
@@ -15,8 +16,20 @@ const gulp = require('gulp'),
   }
 
 gulp.task('css', () => {
-  return gulp.src('./client/css/*.css')
+  return gulp.src('client/css/*.css')
     .pipe(init())
+    .pipe(concat('vendor.css'))
+    .pipe(cleanCss({
+      compatibility: 'ie8'
+    }))
+    .pipe(write('./'))
+    .pipe(gulp.dest('dist/css'))
+})
+
+gulp.task('scss', () => {
+  return gulp.src('client/scss/*.scss')
+    .pipe(init())
+    .pipe(sass()).on('error', sass.logError)
     .pipe(concat('main.css'))
     .pipe(cleanCss({
       compatibility: 'ie8'
@@ -65,7 +78,7 @@ gulp.task('copy', () => {
     .pipe(gulp.dest('dist/resume'))
 })
 
-gulp.task('build', ['css', 'js', 'views', 'copy'], () => {
+gulp.task('build', ['css', 'scss', 'js', 'views', 'copy'], () => {
   return gulp.src('client/index.html')
     .pipe(htmlmin({
       collapseWhitespace: true,
