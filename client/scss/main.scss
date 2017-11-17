@@ -122,14 +122,12 @@ header {
 .resumeButtons {
   display: flex;
   justify-content: space-around;
-}
-
-.resumeButtons .sheet {
-  margin-right: 14.5px;
-}
-
-.resumeButtons .download2 {
-  margin-left: 14.5px;
+  .sheet {
+    margin-right: 14.5px;
+  }
+  .download2 {
+    margin-left: 14.5px;
+  }
 }
 
 .sectionFont {
