@@ -590,8 +590,6 @@ hr {
 #about {
   position: relative;
   z-index: 1;
-  height: 120%;
-  margin-bottom: 0;
   background-image: -moz-radial-gradient(circle, #FFFFFF .2px, #C0C0C0 .5px, transparent 2.5px),
   -moz-radial-gradient(circle, #FFFFFF .5px, #778899 .5px, transparent 3.75px),
   -moz-radial-gradient(ellipse, #778899 .5px, #D3D3D3 .5px, transparent 2.5px),
@@ -862,7 +860,6 @@ hr {
 
 @media (min-width: 992px) and (max-width: 1024px) {
   #about {
-    height: 108vh;
     p {
       font-size: 1.2em;
     }
