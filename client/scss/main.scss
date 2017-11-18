@@ -1,22 +1,24 @@
 $fontFamily: 'Rozha One', serif;
 $transition: .2s ease-in-out opacity;
+$navTransition: background 0.3s ease-in-out;
 $blackShadow: 0 0 .5px .5px black;
 $tShadow: 2px 2px 5px black;
 $color: whitesmoke;
 $radius: 2pt;
+
 #mainNav {
   font-family: $fontFamily;
   margin-bottom: 0;
-  text-transform: uppercase;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  background-color: black;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: none;
+  background-color: #101010;
+  box-shadow: 0 0 .3px 0 black;
   ul {
     li {
-      -webkit-transition: background 0.3s ease-in-out;
-      -moz-transition: background 0.3s ease-in-out;
-      transition: background 0.3s ease-in-out;
+      -webkit-transition: $navTransition;
+      -moz-transition: $navTransition;
+      transition: $navTransition;
       &:hover {
         .nav-link {
           color: black;
@@ -43,6 +45,10 @@ $radius: 2pt;
   a {
     color: white;
   }
+}
+
+.show {
+  display: block;
 }
 
 header {
@@ -198,13 +204,16 @@ header {
 }
 
 #skills {
-  height: 145%;
   background: url('../imgs/space2.jpg');
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
   background-blend-mode: darken;
   background-size: cover;
+  img {
+    margin: auto;
+    display: block;
+  }
 }
 
 .imageLinks {
@@ -296,15 +305,14 @@ header {
 }
 
 hr {
-  display: block;
   color: $color;
   margin-top: 0.5em;
-  margin-bottom: 3em;
+  margin-bottom: 9vh;
   margin-left: auto;
   margin-right: auto;
   border-style: inset;
   border-width: 1px;
-  width: 80vh;
+  width: 67vh;
 }
 
 .flex {
@@ -335,7 +343,7 @@ hr {
 
 .contactSection {
   position: absolute;
-  top: -8vh;
+  top: -3vh;
 }
 
 .imgWrapper {
@@ -475,8 +483,6 @@ hr {
 #projects {
   position: relative;
   background-color: black;
-  margin-top: -15vh;
-  height: 188%;
   z-index: 3;
   background-image: -moz-radial-gradient(circle, #FFFFFF .2px, #C0C0C0 .5px, transparent 2.5px),
   -moz-radial-gradient(circle, #FFFFFF .5px, #778899 .5px, transparent 3.75px),
@@ -666,14 +672,6 @@ hr {
     font-size: 1.1em;
   }
 
-  #projects {
-    height: 199%;
-  }
-
-  #skills {
-    height: 167%;
-  }
-
   #contact {
     height: 130%;
   }
@@ -696,7 +694,6 @@ hr {
   }
 
   #skills {
-    height: 156%;
     .tag {
       font-size: 1.2em;
     }
@@ -708,10 +705,6 @@ hr {
 
   .card-title {
     font-size: 1.2em;
-  }
-
-  #projects {
-    height: 196%;
   }
 
   #contact {
@@ -738,7 +731,6 @@ hr {
   }
 
   #skills {
-    height: 152%;
     img {
       height: 80px;
       width: 80px;
@@ -746,10 +738,6 @@ hr {
     .tag {
       font-size: 1.2em;
     }
-  }
-
-  #projects {
-    height: 188%;
   }
 
   .card-text {
@@ -772,7 +760,6 @@ hr {
   }
 
   #skills {
-    height: 138%;
     img {
       height: 60px;
       width: 60px;
@@ -801,20 +788,12 @@ hr {
     font-size: .9em;
   }
 
-  #projects {
-    height: 188%;
-  }
-
   #contact {
     height: 131%;
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1200px) {
-
-  #projects {
-    height: 175%;
-  }
 
   .textButton {
     .btn {
@@ -853,7 +832,6 @@ hr {
   }
 
   #skills {
-    height: 138%;
     img {
       height: 60px;
       width: 60px;
@@ -928,7 +906,6 @@ hr {
   }
 
   #skills {
-    height: 138.5%;
     img {
       height: 60px;
       width: 60px;
@@ -936,10 +913,6 @@ hr {
     .tag {
       font-size: 1em;
     }
-  }
-
-  #projects {
-    height: 169%;
   }
 
   #contact {
@@ -1001,14 +974,12 @@ hr {
   }
 
   #projects {
-    height: 191%;
     img {
       height: 200px;
     }
   }
 
   #skills {
-    height: 148%;
     img {
       height: 60px;
       width: 60px;
@@ -1040,7 +1011,6 @@ hr {
   }
 
   #skills {
-    height: 148%;
     img {
       height: 40px;
       width: 40px;
@@ -1054,10 +1024,6 @@ hr {
     p {
       font-size: 1em;
     }
-  }
-
-  #projects {
-    height: 177%;
   }
 
   .githubLink {
@@ -1107,18 +1073,10 @@ hr {
     }
   }
 
-  #skills {
-    height: 94%;
-  }
-
   #about {
     p {
       font-size: 1em;
     }
-  }
-
-  #projects {
-    height: 131%;
   }
 
   .githubLink {
@@ -1138,12 +1096,7 @@ hr {
     font-size: .9em;
   }
 
-  #projects {
-    height: 148%;
-  }
-
   #skills {
-    height: 110%;
     img {
       height: 40px;
       width: 40px;
@@ -1181,7 +1134,6 @@ hr {
 
 @media (min-width: 320px) and (max-width: 375px) {
   #skills {
-    height: 75%;
     img {
       height: 30px;
       width: 30px;
@@ -1189,10 +1141,6 @@ hr {
     .tag {
       font-size: .5em;
     }
-  }
-
-  #projects {
-    height: 306%;
   }
 
   .card {

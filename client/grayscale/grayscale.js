@@ -25,19 +25,33 @@
     target: '#mainNav',
     offset: 54
   });
+  var mainNav = $('#mainNav')
+
+  $(window).scroll(function (){
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 300) {
+      mainNav.addClass('show')
+      mainNav.fadeIn('slow');
+    }
+    else {
+      mainNav.removeClass('show')
+      mainNav.fadeOut('slow');
+    }
+  });
 
   // Collapse Navbar
-  var navbarCollapse = function() {
-    if ($("#mainNav").offset().top > 100) {
-      $("#mainNav").addClass("navbar-shrink");
-    } else {
-      $("#mainNav").removeClass("navbar-shrink");
-    }
-  };
-  // Collapse now if page is not at top
-  navbarCollapse();
-  // Collapse the navbar when page is scrolled
-  $(window).scroll(navbarCollapse);
+  // var navbarCollapse = function() {
+  //   if ($("#mainNav").offset().top > 100) {
+  //     $("#mainNav").addClass("navbar-shrink");
+  //   } else {
+  //     $("#mainNav").removeClass("navbar-shrink");
+  //   }
+  // };
+  // // Collapse now if page is not at top
+  // navbarCollapse();
+  // // Collapse the navbar when page is scrolled
+  // $(window).scroll(navbarCollapse);
 
 })(jQuery); // End of use strict
 
