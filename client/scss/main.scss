@@ -13,6 +13,7 @@ $radius: 2pt;
   padding-bottom: 8px;
   display: none;
   background-color: #101010;
+  border-bottom: .5px solid grey;
   box-shadow: 0 0 .3px 0 black;
   ul {
     li {
@@ -377,7 +378,7 @@ hr {
 .btn-custom {
   background-color: #7b8185;
   border-color: #7b8185;
-  box-shadow: 0 0 .25px .25px $color,
+  box-shadow: 0 0 .1px .1px $color,
   0 0 .5px .5px #808080,
   0 0 .75px .35px #6f7478;
   font-family: $fontFamily;
