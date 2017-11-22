@@ -3,8 +3,10 @@ $transition: .2s ease-in-out opacity;
 $navTransition: background 0.3s ease-in-out;
 $blackShadow: 0 0 .5px .5px black;
 $tShadow: 2px 2px 5px black;
+$projectShadow: inset 0 0 7px 7px;
 $color: whitesmoke;
 $radius: 2pt;
+$twinkling: 200s linear infinite;
 
 #mainNav {
   font-family: $fontFamily;
@@ -71,22 +73,8 @@ header {
   height: 5vh
 }
 
-.spacer2 {
-  position: relative;
-  top: 14px;
-}
-
 .title2 {
   line-height: 53px
-}
-
-.tag {
-  text-align: center;
-  font-family: $fontFamily;
-  font-weight: bold;
-  font-size: 1.6em;
-  color: #ffffff;
-  text-shadow: $tShadow;
 }
 
 .buttonColor {
@@ -280,19 +268,19 @@ header {
 
 @keyframes boxswitch {
   0% {
-    box-shadow: inset 0 0 7px 7px #3f5767;
+    box-shadow: $projectShadow #3f5767;
   }
   20% {
-    box-shadow: inset 0 0 7px 7px $color;
+    box-shadow: $projectShadow $color;
   }
   40% {
-    box-shadow: inset 0 0 7px 7px #3a5161;
+    box-shadow: $projectShadow #3a5161;
   }
   80% {
-    box-shadow: inset 0 0 7px 7px #BCC6CC;
+    box-shadow: $projectShadow #BCC6CC;
   }
   100% {
-    box-shadow: inset 0 0 7px 7px #4C75A3;
+    box-shadow: $projectShadow #4C75A3;
   }
 }
 
@@ -360,19 +348,6 @@ hr {
   }
 }
 
-.tag1 {
-  font-size: 1.9em;
-}
-
-.main {
-  width: 40vw;
-  opacity: .95;
-  border: 2px solid black;
-  margin-left: 30vw;
-  border-radius: 2%;
-  padding: 2%;
-}
-
 .contactButtons {
   color: $color;
 }
@@ -423,10 +398,6 @@ hr {
   margin-bottom: -60px;
 }
 
-.black {
-  background-color: black;
-}
-
 .card {
   background-color: #E8E8E8;
   height: 35vh;
@@ -463,11 +434,6 @@ hr {
   position: absolute;
   top: 2%;
   text-shadow: 2px 2px 2px black;
-}
-
-.projectInfo2 {
-  margin-bottom: 0;
-  margin-top: 2vh;
 }
 
 .githubLink {
@@ -509,6 +475,9 @@ hr {
   -webkit-animation-duration: 15s;
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
+  .container {
+    max-width: 78vw;
+  }
 }
 
 #particles-js {
@@ -537,10 +506,10 @@ hr {
   height: 100%;
   z-index: -3;
   background: url(../imgs/twinkling.png) repeat center;
-  -moz-animation: move-twink-back 200s linear infinite;
-  -o-animation: move-twink-back 200s linear infinite;
-  -webkit-animation: move-twink-back 200s linear infinite;
-  animation: move-twink-back 200s linear infinite;
+  -moz-animation: move-twink-back $twinkling;
+  -o-animation: move-twink-back $twinkling;
+  -webkit-animation: move-twink-back $twinkling;
+  animation: move-twink-back $twinkling;
 }
 
 @keyframes move-twink-back {
@@ -579,18 +548,18 @@ hr {
   }
 }
 
-#projects {
-  .container {
-    max-width: 78vw;
-  }
-}
-
 .iconRow {
   margin-right: -240px;
   margin-left: -240px;
+  .tag {
+    text-align: center;
+    font-family: $fontFamily;
+    font-weight: bold;
+    font-size: 1.6em;
+    color: #ffffff;
+    text-shadow: $tShadow;
+  }
 }
-
-
 
 #about {
   position: relative;
@@ -617,9 +586,6 @@ hr {
   -webkit-animation-duration: 25s;
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
-}
-
-#about {
   p {
     font-family: $fontFamily;
     font-size: 1.6em;
