@@ -16,7 +16,7 @@ const gulp = require('gulp'),
   }
 
 gulp.task('css', () => {
-  return gulp.src('client/css/*.css')
+  return gulp.src('client/grayscale/css/*.css')
     .pipe(init())
     .pipe(concat('vendor.css'))
     .pipe(cleanCss({
@@ -39,7 +39,7 @@ gulp.task('scss', () => {
 })
 
 gulp.task('js', () => {
-  return gulp.src(['client/js/**/*.js', 'client/grayscale/*.js'])
+  return gulp.src(['client/js/**/*.js', 'client/grayscale/js/*.js'])
     .pipe(init())
     .pipe(babel(babelConfig))
     .pipe(browserify(transforms))
@@ -67,11 +67,11 @@ gulp.task('copy', () => {
     .pipe(gulp.dest('dist/fonts'))
 
   gulp.src(['client/imgs/**'])
-    // .pipe(imagemin())
+    .pipe(imagemin())
     .pipe(gulp.dest('dist/imgs'))
 
   gulp.src(['client/icons/**'])
-    // .pipe(imagemin())
+    .pipe(imagemin())
     .pipe(gulp.dest('dist/icons'))
 
   gulp.src(['client/resume/**'])

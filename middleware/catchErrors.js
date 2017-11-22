@@ -1,4 +1,4 @@
-module.exports = function catchAsyncErrors(fn) {
+module.exports = fn => {
   return (req, res, next) => {
     const routePromise = fn(req, res, next);
     if (routePromise.catch) {

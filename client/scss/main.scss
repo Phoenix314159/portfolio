@@ -205,6 +205,8 @@ header {
 }
 
 #skills {
+  position: relative;
+  z-index: 0;
   background: url('../imgs/space2.jpg');
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -485,10 +487,10 @@ hr {
   position: relative;
   background-color: black;
   z-index: 3;
-  background-image: -moz-radial-gradient(circle, #FFFFFF .2px, #C0C0C0 .5px, transparent 2.5px),
-  -moz-radial-gradient(circle, #FFFFFF .5px, #778899 .5px, transparent 3.75px),
-  -moz-radial-gradient(ellipse, #778899 .5px, #D3D3D3 .5px, transparent 2.5px),
-  -moz-radial-gradient(ellipse, #FFFFFF, #C0C0C0 .5px, transparent 1.75px);
+  background-image: -moz-radial-gradient(circle, #FFFFFF .2px, #C0C0C0 .2px, transparent 2.5px),
+  -moz-radial-gradient(circle, #FFFFFF .25px, #778899 .25px, transparent 3.75px),
+  -moz-radial-gradient(ellipse, #778899 .2px, #D3D3D3 .5px, transparent 2.5px),
+  -moz-radial-gradient(ellipse, #FFFFFF, #C0C0C0 .2px, transparent 1.75px);
   background-image: -webkit-gradient(radial, 50% 50%, 2, 50% 50%, 2.5, from(white), color-stop(0.1, #C0C0C0), to(transparent)),
   -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 1.75, from(white), color-stop(0.1, #778899), to(transparent)),
   -webkit-gradient(radial, 50% 50%, 1, 50% 50%, 2.5, from(#778899), color-stop(0.05, #D3D3D3), to(transparent)),
@@ -587,6 +589,8 @@ hr {
   margin-right: -240px;
   margin-left: -240px;
 }
+
+
 
 #about {
   position: relative;
