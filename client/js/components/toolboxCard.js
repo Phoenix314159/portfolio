@@ -13,7 +13,8 @@ angular.module('portfolio').component('toolboxCard', {
       }, 700)
 
     vm.$onInit = async () => {
-      vm.cloudfrontUrl = await vm.parent.getImageUrl()
+      const {getImageUrl} = vm.parent
+      vm.cloudfrontUrl = await getImageUrl()
     }
     vm.show = true
     vm.showButtons = false

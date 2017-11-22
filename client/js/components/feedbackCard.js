@@ -12,7 +12,8 @@ angular.module('portfolio').component('feedbackCard', {
         $timeout.cancel(getData)
       }, 800)
     vm.$onInit = async () => {
-      vm.cloudfrontUrl = await vm.parent.getImageUrl()
+      const {getImageUrl} = vm.parent
+      vm.cloudfrontUrl = await getImageUrl()
     }
     vm.show = true
     vm.showButtons = false
