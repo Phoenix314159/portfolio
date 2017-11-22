@@ -7,8 +7,9 @@ angular.module('portfolio').component('keyboardCard', {
     const vm = this, {document} = $window,
       cardBody = document.getElementById('cardBody'),
       getData = $timeout(async () => {
-        const {keyboardText} = mainService, {data} = await keyboardText()
-        vm.keyboardText = data.text[0].paragraph
+        const {keyboardText} = mainService,
+          {data: {text}} = await keyboardText()
+        vm.keyboardText = text[0].paragraph
         $timeout.cancel(getData)
       }, 500)
 

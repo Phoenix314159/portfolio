@@ -7,8 +7,9 @@ angular.module('portfolio').component('guitarTabCard', {
     const vm = this, {document} = $window,
       cardBody = document.getElementById('cardBody10'),
       getData = $timeout(async () => {
-        const {guitarText} = mainService, {data} = await guitarText();
-        vm.guitarText = data.text[0].paragraph
+        const {guitarText} = mainService,
+          {data: {text}} = await guitarText();
+        vm.guitarText = text[0].paragraph
         $timeout.cancel(getData)
       }, 950)
 

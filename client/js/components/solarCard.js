@@ -7,8 +7,9 @@ angular.module('portfolio').component('solarCard', {
     const vm = this, {document} = $window,
       cardBody3 = document.getElementById('cardBody3'),
       getData = $timeout(async () => {
-        const {solarText} = mainService, {data} = await solarText();
-        vm.solarText = data.text[0].paragraph
+        const {solarText} = mainService,
+          {data: {text}} = await solarText();
+        vm.solarText = text[0].paragraph
         $timeout.cancel(getData)
       }, 600)
 

@@ -7,8 +7,9 @@ angular.module('portfolio').component('bloggerCard', {
     const vm = this, {document} = $window,
       cardBody9 = document.getElementById('cardBody9'),
       getData = $timeout(async () => {
-        const {bloggerText} = mainService, {data} = await bloggerText();
-        vm.bloggerText = data.text[0].paragraph
+        const {bloggerText} = mainService,
+          {data: {text}} = await bloggerText();
+        vm.bloggerText = text[0].paragraph
         $timeout.cancel(getData)
       }, 900)
 

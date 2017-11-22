@@ -7,8 +7,9 @@ angular.module('portfolio').component('youtubeCard', {
     const vm = this, {document} = $window,
       cardBody6 = document.getElementById('cardBody6'),
       getData = $timeout(async () => {
-        const {youtubeText} = mainService, {data} = await youtubeText();
-        vm.youtubeText = data.text[0].paragraph
+        const {youtubeText} = mainService,
+          {data: {text}} = await youtubeText();
+        vm.youtubeText = text[0].paragraph
         $timeout.cancel(getData)
       }, 750)
 

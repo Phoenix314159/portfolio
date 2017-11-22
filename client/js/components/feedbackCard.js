@@ -7,8 +7,9 @@ angular.module('portfolio').component('feedbackCard', {
     const vm = this, {document} = $window,
       cardBody7 = document.getElementById('cardBody7'),
       getData = $timeout(async () => {
-        const {feedbackText} = mainService, {data} = await feedbackText();
-        vm.feedbackText = data.text[0].paragraph
+        const {feedbackText} = mainService,
+          {data: {text}} = await feedbackText();
+        vm.feedbackText = text[0].paragraph
         $timeout.cancel(getData)
       }, 800)
     vm.$onInit = async () => {

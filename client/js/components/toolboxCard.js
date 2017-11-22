@@ -7,8 +7,9 @@ angular.module('portfolio').component('toolboxCard', {
     const vm = this, {document} = $window,
       cardBody5 = document.getElementById('cardBody5'),
       getData = $timeout(async () => {
-        const {toolboxText} = mainService, {data} = await toolboxText();
-        vm.toolboxText = data.text[0].paragraph
+        const {toolboxText} = mainService,
+          {data: {text}} = await toolboxText();
+        vm.toolboxText = text[0].paragraph
         $timeout.cancel(getData)
       }, 700)
 
