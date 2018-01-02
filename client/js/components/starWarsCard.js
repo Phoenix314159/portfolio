@@ -1,17 +1,17 @@
-angular.module('portfolio').component('bloggerCard', {
-  templateUrl: '/views/blogger.html',
+angular.module('portfolio').component('starWarsCard', {
+  templateUrl: '/views/starWars.html',
   require: {
     parent: '^^pictures'
   },
   controller: function (mainService, $interval, $timeout, $window) {
     const vm = this, {document} = $window,
-      cardBody9 = document.getElementById('cardBody9'),
+      cardBody11 = document.getElementById('cardBody11'),
       getData = $timeout(async () => {
-        const {bloggerText} = mainService,
-          {data: {text}} = await bloggerText();
-        vm.bloggerText = text[0].paragraph
+        const {starWarsText} = mainService,
+          {data: {text}} = await starWarsText();
+        vm.starWarsText = text[0].paragraph
         $timeout.cancel(getData)
-      }, 900)
+      }, 700)
 
     vm.$onInit = async () => {
       const {getImageUrl} = vm.parent
@@ -25,11 +25,11 @@ angular.module('portfolio').component('bloggerCard', {
       vm.text = ''
       vm.display = $timeout(() => {
         vm.textAnim = $interval(() => {
-          if (vm.text.length === 185) {
+          if (vm.text.length === 180) {
             vm.stopText()
             vm.showButtons = true
           } else {
-            vm.text += vm.bloggerText[vm.index]
+            vm.text += vm.starWarsText[vm.index]
             vm.index++
           }
         }, 15)
@@ -38,7 +38,7 @@ angular.module('portfolio').component('bloggerCard', {
     vm.stopText = () => {
       $timeout.cancel(vm.display)
       $interval.cancel(vm.textAnim)
-      if (vm.text.length !== 185) {
+      if (vm.text.length !== 180) {
         vm.backText = $interval(() => {
           if (vm.text.length === 0) {
             $interval.cancel(vm.backText)
@@ -50,23 +50,24 @@ angular.module('portfolio').component('bloggerCard', {
     }
     vm.showText = () => {
       $timeout.cancel(vm.pictureShow)
-      if (vm.text.length === 185) {
+      if (vm.text.length === 180) {
         return
       }
       vm.textShow = $timeout(() => {
-        cardBody9.classList.remove('overlay2')
-        cardBody9.className += ' overlay'
+        cardBody11.classList.remove('overlay2')
+        cardBody11.className += ' overlay'
       }, 100)
     }
     vm.showPicture = () => {
       $timeout.cancel(vm.textShow)
-      if (vm.text.length === 185) {
+      if (vm.text.length === 180) {
         return
       }
       vm.pictureShow = $timeout(() => {
-        cardBody9.classList.remove('overlay')
-        cardBody9.className += ' overlay2'
+        cardBody11.classList.remove('overlay')
+        cardBody11.className += ' overlay2'
       }, 700)
     }
   }
 })
+

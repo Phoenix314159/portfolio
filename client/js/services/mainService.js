@@ -77,6 +77,20 @@ angular.module('portfolio').service('mainService', function ($http) {
     })
   }
 
+  vm.actressesText = () => {
+    return $http({
+      method: 'GET',
+      url: '/api/actresses_text'
+    })
+  }
+
+  vm.starWarsText = () => {
+    return $http({
+      method: 'GET',
+      url: '/api/star_wars_text'
+    })
+  }
+
   vm.guitarText = () => {
     return $http({
       method: 'GET',

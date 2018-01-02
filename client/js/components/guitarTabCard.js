@@ -5,7 +5,7 @@ angular.module('portfolio').component('guitarTabCard', {
   },
   controller: function (mainService, $interval, $timeout, $window) {
     const vm = this, {document} = $window,
-      cardBody = document.getElementById('cardBody10'),
+      cardBody12 = document.getElementById('cardBody12'),
       getData = $timeout(async () => {
         const {guitarText} = mainService,
           {data: {text}} = await guitarText();
@@ -54,8 +54,8 @@ angular.module('portfolio').component('guitarTabCard', {
         return
       }
       vm.textShow = $timeout(() => {
-        cardBody.classList.remove('overlay2')
-        cardBody.className += ' overlay'
+        cardBody12.classList.remove('overlay2')
+        cardBody12.className += ' overlay'
       }, 100)
     }
     vm.showPicture = () => {
@@ -64,8 +64,8 @@ angular.module('portfolio').component('guitarTabCard', {
         return
       }
       vm.pictureShow = $timeout(() => {
-        cardBody.classList.remove('overlay')
-        cardBody.className += ' overlay2'
+        cardBody12.classList.remove('overlay')
+        cardBody12.className += ' overlay2'
       }, 700)
     }
   }

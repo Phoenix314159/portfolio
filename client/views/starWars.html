@@ -1,12 +1,11 @@
 <div class="col-sm-4 portfolio-item card"
-     ng-mouseenter="$ctrl.text.length === 185 ? null: $ctrl.displayText(); $ctrl.showText()"
-     ng-mouseleave="$ctrl.text.length === 185 ? null : $ctrl.stopText(); $ctrl.showPicture()">
-    <h4 class="card-title">Blogger</h4>
+     ng-mouseenter="$ctrl.text.length === 180 ? null: $ctrl.displayText(); $ctrl.showText()"
+     ng-mouseleave="$ctrl.text.length === 180 ? null : $ctrl.stopText(); $ctrl.showPicture()">
+    <h4 class="card-title">Star Wars</h4>
     <div class="imgWrapper">
-        <img ng-src="{{$ctrl.cloudfrontUrl}}/blogging.png" class="img-responsive" style="height: 240px"/>
+        <img ng-src="{{$ctrl.cloudfrontUrl}}/star-wars.png" class="img-responsive" style="height: 240px"/>
     </div>
-
-    <div id="cardBody9" class="card-body">
+    <div id="cardBody11" class="card-body">
         <div class="card-text">
             <div class="text23">
                 {{$ctrl.text}}
@@ -15,14 +14,13 @@
         <div class="links26">
             <div class="links25 check faded" ng-show="$ctrl.showButtons">
                 <div class="githubLink">
-                    <a href="http://13.56.178.219:4124"
+                    <a href="http://13.56.178.219:3050"
                        class="portfolio-link btn btn-custom btn-xs">Website</a>
                 </div>
                 <span class="githubLink">
-                    <a href="https://github.com/Phoenix314159/blogging-app" class="btn btn-custom btn-xs">Github</a>
+                    <a href="https://github.com/Phoenix314159/star-wars" class="btn btn-custom btn-xs">Github</a>
                 </span>
             </div>
         </div>
-
     </div>
 </div>

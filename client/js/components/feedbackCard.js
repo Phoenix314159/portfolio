@@ -24,7 +24,7 @@ angular.module('portfolio').component('feedbackCard', {
       vm.text = ''
       vm.display = $timeout(() => {
         vm.textAnim = $interval(() => {
-          if (vm.text.length === 192) {
+          if (vm.text.length === 185) {
             vm.stopText()
             vm.showButtons = true
           } else {
@@ -37,7 +37,7 @@ angular.module('portfolio').component('feedbackCard', {
     vm.stopText = () => {
       $timeout.cancel(vm.display)
       $interval.cancel(vm.textAnim)
-      if (vm.text.length !== 192) {
+      if (vm.text.length !== 185) {
         vm.backText = $interval(() => {
           if (vm.text.length === 0) {
             $interval.cancel(vm.backText)
@@ -49,7 +49,7 @@ angular.module('portfolio').component('feedbackCard', {
     }
     vm.showText = () => {
       $timeout.cancel(vm.pictureShow)
-      if (vm.text.length === 192) {
+      if (vm.text.length === 185) {
         return
       }
       vm.textShow = $timeout(() => {
@@ -59,7 +59,7 @@ angular.module('portfolio').component('feedbackCard', {
     }
     vm.showPicture = () => {
       $timeout.cancel(vm.textShow)
-      if (vm.text.length === 192) {
+      if (vm.text.length === 185) {
         return
       }
       vm.pictureShow = $timeout(() => {

@@ -25,7 +25,7 @@ angular.module('portfolio').component('weatherCard', {
       vm.text = ''
       vm.display = $timeout(() => {
         vm.textAnim = $interval(() => {
-          if (vm.text.length === 172) {
+          if (vm.text.length === 182) {
             vm.stopText()
             vm.showButtons = true
           } else {
@@ -38,7 +38,7 @@ angular.module('portfolio').component('weatherCard', {
     vm.stopText = () => {
       $timeout.cancel(vm.display)
       $interval.cancel(vm.textAnim)
-      if (vm.text.length !== 172) {
+      if (vm.text.length !== 182) {
         vm.backText = $interval(() => {
           if (vm.text.length === 0) {
             $interval.cancel(vm.backText)
@@ -50,7 +50,7 @@ angular.module('portfolio').component('weatherCard', {
     }
     vm.showText = () => {
       $timeout.cancel(vm.pictureShow)
-      if (vm.text.length === 172) {
+      if (vm.text.length === 182) {
         return
       }
       vm.textShow = $timeout(() => {
@@ -60,7 +60,7 @@ angular.module('portfolio').component('weatherCard', {
     }
     vm.showPicture = () => {
       $timeout.cancel(vm.textShow)
-      if (vm.text.length === 172) {
+      if (vm.text.length === 182) {
         return
       }
       vm.pictureShow = $timeout(() => {
